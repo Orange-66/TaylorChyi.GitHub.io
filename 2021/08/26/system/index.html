@@ -299,30 +299,39 @@
 
 
 
-  
-  
-  
-
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
-var gitment = new Gitment({
-  id: "http://taylorchyi.xyz/2021/08/26/system/",
-  owner: 'Orange-66',
-  repo: 'Orange-66.GitHub.io',
-  oauth: {
-    client_id: '30520d0131601b943293',
-    client_secret: '12ada5914bc4d0ee193f4c66987a39d9a199f1b6',
-  },
-})
-gitment.render('gitment-ctn')
+   var notify = 'true' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    new Valine({
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "SRKPDXtrHATyf1EKyeq4UlgR-gzGzoHsz",
+            app_key: "bgL9oiJfGETuzGkFRnL5ti1R",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
 </script>
+
+      </section>
+    
+  
+  
+  
+
+  
+
+  
+
   
 
 
