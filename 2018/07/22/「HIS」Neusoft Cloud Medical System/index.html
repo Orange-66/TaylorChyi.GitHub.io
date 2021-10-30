@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="R0CWCrwDwg3po6TrVRgjsPhFinNx58QUoDexrwODtp0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-flash.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"taylorchyi.xyz","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="OverviewThe system developed in this practice project is the outpatient module in Neusoft Cloud Hospital Management System, which includes the following business functions. a. Patients: registration a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「HIS」Neusoft Cloud Medical System">
+<meta property="og:url" content="http://taylorchyi.xyz/2018/07/22/%E3%80%8CHIS%E3%80%8DNeusoft%20Cloud%20Medical%20System/index.html">
+<meta property="og:site_name" content="Taylor Chyi&#39;s Blog">
+<meta property="og:description" content="OverviewThe system developed in this practice project is the outpatient module in Neusoft Cloud Hospital Management System, which includes the following business functions. a. Patients: registration a">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://taylorchyi.xyz/images/HIS/1.png">
+<meta property="og:image" content="http://taylorchyi.xyz/images/HIS/2.png">
+<meta property="og:image" content="http://taylorchyi.xyz/images/HIS/3.png">
+<meta property="og:image" content="http://taylorchyi.xyz/images/HIS/4.png">
+<meta property="og:image" content="http://taylorchyi.xyz/images/HIS/5.png">
+<meta property="og:image" content="http://taylorchyi.xyz/images/HIS/6.png">
+<meta property="og:image" content="http://taylorchyi.xyz/images/HIS/7.png">
+<meta property="og:image" content="http://taylorchyi.xyz/images/HIS/8.png">
+<meta property="article:published_time" content="2018-07-22T11:22:40.000Z">
+<meta property="article:modified_time" content="2021-10-30T17:43:31.150Z">
+<meta property="article:author" content="Taylor Chyi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://taylorchyi.xyz/images/HIS/1.png">
+
+
+<link rel="canonical" href="http://taylorchyi.xyz/2018/07/22/%E3%80%8CHIS%E3%80%8DNeusoft%20Cloud%20Medical%20System/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://taylorchyi.xyz/2018/07/22/%E3%80%8CHIS%E3%80%8DNeusoft%20Cloud%20Medical%20System/","path":"2018/07/22/「HIS」Neusoft Cloud Medical System/","title":"「HIS」Neusoft Cloud Medical System"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>「HIS」Neusoft Cloud Medical System | Taylor Chyi's Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Taylor Chyi's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">6</span></a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Implementation"><span class="nav-number">2.</span> <span class="nav-text">System Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Relevant-Technologies"><span class="nav-number">3.</span> <span class="nav-text">Relevant Technologies</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Theoretical-basis"><span class="nav-number">3.1.</span> <span class="nav-text">Theoretical basis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-development-method"><span class="nav-number">3.2.</span> <span class="nav-text">Project development method</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Analysis"><span class="nav-number">4.</span> <span class="nav-text">System Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Login"><span class="nav-number">4.1.</span> <span class="nav-text">Login</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Registration"><span class="nav-number">4.2.</span> <span class="nav-text">Registration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Return-number"><span class="nav-number">4.3.</span> <span class="nav-text">Return number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Consultation"><span class="nav-number">4.4.</span> <span class="nav-text">Consultation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Prescription"><span class="nav-number">4.5.</span> <span class="nav-text">Prescription</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Charging"><span class="nav-number">4.6.</span> <span class="nav-text">Charging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dispensing"><span class="nav-number">4.7.</span> <span class="nav-text">Dispensing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Design"><span class="nav-number">5.</span> <span class="nav-text">System Design</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overall-Design"><span class="nav-number">5.1.</span> <span class="nav-text">Overall Design</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">6.</span> <span class="nav-text">Conclusion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Link"><span class="nav-number">7.</span> <span class="nav-text">Link</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Taylor Chyi"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Taylor Chyi</p>
+  <div class="site-description" itemprop="description">Stay hungry Stay foolish</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Orange-66" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Orange-66" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:taylorchyi@icloud.com" title="E-Mail → mailto:taylorchyi@icloud.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/profile.php?id=100036259014262" title="FaceBook → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100036259014262" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FaceBook</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/tianyue-qi-61b415207/" title="Linkedin → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;tianyue-qi-61b415207&#x2F;" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i>Linkedin</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/ju-he-wu-li-98" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;ju-he-wu-li-98" rel="noopener" target="_blank"><i class="fas fa-star fa-fw"></i>ZhiHu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="wechat:Qity_66" title="WeChat → wechat:Qity_66" rel="noopener" target="_blank"><i class="fab fa-weixin fa-fw"></i>WeChat</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fas fa-child fa-fw"></i>
+      Friends
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://michaelchen.xyz/" title="https:&#x2F;&#x2F;michaelchen.xyz" rel="noopener" target="_blank">Michael Chen</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://ravenxu.top/" title="https:&#x2F;&#x2F;ravenxu.top" rel="noopener" target="_blank">Raven Xu</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://jeffreytse.net/" title="https:&#x2F;&#x2F;jeffreytse.net" rel="noopener" target="_blank">Jeffrey Tse</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://lucas-hao.github.io/" title="https:&#x2F;&#x2F;lucas-hao.github.io" rel="noopener" target="_blank">Lucas Hao</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://mhsfire.cn/" title="https:&#x2F;&#x2F;mhsfire.cn" rel="noopener" target="_blank">Hansel Ma</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2018/07/22/%E3%80%8CHIS%E3%80%8DNeusoft%20Cloud%20Medical%20System/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Taylor Chyi">
+      <meta itemprop="description" content="Stay hungry Stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taylor Chyi's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          「HIS」Neusoft Cloud Medical System
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-22 19:22:40" itemprop="dateCreated datePublished" datetime="2018-07-22T19:22:40+08:00">2018-07-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-10-31 01:43:31" itemprop="dateModified" datetime="2021-10-31T01:43:31+08:00">2021-10-31</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The system developed in this practice project is the outpatient module in Neusoft Cloud Hospital Management System, which includes the following business functions.</p>
+<p>a. Patients: registration and refund function.</p>
+<p>b. Outpatient doctor: consultation and prescription function.</p>
+<p>c. Chargers: item charging and dispensing function.</p>
+<p><strong>My work :</strong> front-end design and layout of the page using H-UI components, the use of JavaScript language, jquery components and ajax technology to achieve the local refresh of each display unit; the overall use of SSM framework to achieve back-end logic business and achieve interaction with the database.</p>
+<span id="more"></span>
+
+<h2 id="System-Implementation"><a href="#System-Implementation" class="headerlink" title="System Implementation"></a>System Implementation</h2><p><img src="/images/HIS/1.png" alt="1.png"><br><img src="/images/HIS/2.png" alt="2.png"><br><img src="/images/HIS/3.png" alt="3.png"><br><img src="/images/HIS/4.png" alt="4.png"><br><img src="/images/HIS/5.png" alt="5.png"><br><img src="/images/HIS/6.png" alt="6.png"><br><img src="/images/HIS/7.png" alt="7.png"><br><img src="/images/HIS/8.png" alt="8.png"></p>
+<h2 id="Relevant-Technologies"><a href="#Relevant-Technologies" class="headerlink" title="Relevant Technologies"></a>Relevant Technologies</h2><h3 id="Theoretical-basis"><a href="#Theoretical-basis" class="headerlink" title="Theoretical basis"></a>Theoretical basis</h3><p><strong>Maven project build:</strong> dependency management tools and project management tools to help developers automatically download artifacts. Solve the version conflict, inconsistency, dependency bloat problem.</p>
+<p><strong>SSM main framework:</strong> the entire system is divided into view layer, controller layer, service layer, DAO layer. spring MVC is responsible for request forwarding and view management; spring to achieve business object management; mybatis as the data object persistence engine. Its lightweight configuration, the annotation development to the extreme.</p>
+<p><strong>Ajax :</strong> so that the page does not need to reload, to achieve the page local update technology.</p>
+<p><strong>fastjson :</strong> third-party tools to complete the mutual transformation of objects and Json strings.</p>
+<p><strong>c3p0 connection pooling technology :</strong> it is responsible for allocating, managing and releasing database connections to avoid frequent creation and release of connections caused by a large amount of performance overhead, but also to increase the smoothness of the system operating environment; release the idle time exceeds the maximum idle time of the database connection to avoid the database connection caused by the failure to release the database connection omission.</p>
+<p><strong>Filter :</strong> interception of requests and responses to target resources, so that the system can properly handle Chinese characters.</p>
+<p><strong>interceptor :</strong> targeted interception of resources, will not meet the requirements of the request and the corresponding interception. In the project to achieve the user must login requirements.</p>
+<h3 id="Project-development-method"><a href="#Project-development-method" class="headerlink" title="Project development method"></a>Project development method</h3><p>The development of the project adopts an iterative-incremental life cycle model, in which each parent business function is subdivided into multiple sub-functional modules during the development process, and each sub-functional module is implemented step by step. Each module is tested individually after implementation, and then integrated with the developed modules of the business function.</p>
+<p>When there is a strong correlation between the functions implemented by multiple parent functional modules, these modules will be tested for integration.</p>
+<p>Finally, all the business functions will be tested for integration.</p>
+<p>At the same time, in the process of development, when it is found that the requirements design is too ideal or does not match the actual requirements, the page will be modified and the corresponding way to achieve the requirements, the sub-functional module code will be changed, and unit and integration testing will be conducted.</p>
+<p><strong>Development tools: Eclipse EE</strong></p>
+<h2 id="System-Analysis"><a href="#System-Analysis" class="headerlink" title="System Analysis"></a>System Analysis</h2><h3 id="Login"><a href="#Login" class="headerlink" title="Login"></a>Login</h3><ol>
+<li><p>Business Analysis</p>
+<p> When the user is not logged in, the user cannot access other pages under the project; the user enters the account and password, and if the input is correct, the user enters the page corresponding to the authority held by the account, and vice versa, the user is prompted with the wrong account or password input.</p>
+</li>
+<li><p>Functional analysis</p>
+<p> Set the interceptor, when the user wants to jump to other pages, check whether the user attribute exists in its Session, if it does and is not empty, it will be released, and vice versa, it will jump to the login page.</p>
+<p> Get the account number and password entered by the user, search in the database, enter the account number entered by them exists in the database and the password is correct then jump to the page corresponding to all the privileges of the account; if the account exists but the password is wrongly entered, the password is wrongly prompted; if the account does not exist, the account is wrongly entered.</p>
+</li>
+</ol>
+<h3 id="Registration"><a href="#Registration" class="headerlink" title="Registration"></a>Registration</h3><ol>
+<li><p>Business Analysis</p>
+<p> After the patient provides the operator with personal information such as medical record number or name, ID number, gender, age, birthday, address, etc., and informs the operator of the date, registration level, registered department and corresponding doctor; the operator informs the patient whether the information is reasonable, and if it is not, the patient needs to correct the information; after the patient pays the fee, the registered invoice is printed. After registration and no refund, the patient can go to the doctor’s office for consultation, otherwise the doctor cannot view his personal information.</p>
+</li>
+<li><p>Functional analysis<br> Automatically generate and display invoice number.</p>
+<p> If the patient has registered medical record, when the operator enters the medical record number, all kinds of personal basic information of the patient will be displayed in the corresponding text input box; on the contrary, the operator can generate a new medical record number for the patient and fill in the corresponding information in the personal information field to perfect it.</p>
+<p> Patients can only register the number after the day, meanwhile, as the options of date, department, doctor and registration level change, the options in each input box will make corresponding changes in time. For example, when switching the department or number, the list of doctors will be updated.</p>
+<p> When the registration number is 0, no registration will be given.</p>
+<p> Use JS to verify that the required information in the form is completely filled in, then the form will be submitted; on the contrary, an error message will pop up and the form will not be submitted.</p>
+</li>
+</ol>
+<h3 id="Return-number"><a href="#Return-number" class="headerlink" title="Return number"></a>Return number</h3><ol>
+<li><p>Business analysis</p>
+<p> When the patient wishes to refund the number, inform the operator of the specific items to be refunded and return the corresponding amount to the patient after completion.</p>
+</li>
+<li><p>Function analysis</p>
+<p> Enter the medical record number and display all the registered information of the patient for the day.</p>
+<p> Only the registered items in the status of “not seen” can perform the refund operation, the rest of the status are prompted “no refund operation is available”.</p>
+</li>
+</ol>
+<h3 id="Consultation"><a href="#Consultation" class="headerlink" title="Consultation"></a>Consultation</h3><ol>
+<li><p>Business analysis</p>
+<p> When a doctor sees a patient, he/she can fill in the description information to the “Medical Record Home” according to the patient’s own situation, including: chief complaint, current medical history, treatment of current disease, past history, allergy history, physical examination; the doctor can view the queue of patients to be seen and the queue of patients already seen at this time, and can view their personal information and make a choice of the next patient.</p>
+</li>
+<li><p>Functional analysis<br> Use JSTL loop to display the labeled patients to be seen and patients already seen in the form of a list.</p>
+<p> Click on a patient from the list to fill in the medical history information for him/her; in order to select a patient, use JS to check, pop up a prompt message, cannot fill in the medical history, and make all input fields read-only.</p>
+<p> After the patient to be seen, it will be displayed in the list of patients who have been seen until the end of the consultation.</p>
+<p> If the patient selected is a patient who has been seen, the various information previously filled in for him/her will be displayed in the case home page after he/she has been selected.</p>
+<h3 id="Prescription"><a href="#Prescription" class="headerlink" title="Prescription"></a>Prescription</h3></li>
+<li><p>Business analysis</p>
+<p> Doctors can input keywords from drug items to search and select relevant drugs, or change the search type to template and search for template. After selecting drugs or template, the corresponding drugs will be listed in the prescription column, and doctors can modify the number of drugs in the prescription column as well as add or delete items. You cannot prescribe without items. After clicking on the prescription, the patient can go to the payment counter and pay for it.</p>
+</li>
+<li><p>Functional Analysis</p>
+<p> The doctor can select the search type, drug item or template item in the search area.</p>
+<p> According to the search category, the fuzzy query will be made for it according to the keyword and displayed in the form of a list.</p>
+<p> After the doctor clicks on the item, the drug corresponding to the item will be added to the prescription column, and the doctor can add or subtract from it, and also modify the quantity of the drug.</p>
+</li>
+</ol>
+<h3 id="Charging"><a href="#Charging" class="headerlink" title="Charging"></a>Charging</h3><ol>
+<li><p>Business Analysis</p>
+<p> According to the medical record number provided by the patient, the operator searches for the items to be paid by the patient, and the patient selects the items he/she wants to pay and makes payment, and cannot pay without items.</p>
+</li>
+<li><p>Functional analysis</p>
+<p> According to the medical record number provided by the patient, the patient’s personal information will be displayed on the page for verification.</p>
+<p> By clicking on the query, all the unpaid items of the patient will be listed in the form of a JSTL loop to be realized.</p>
+<p> Click on the selection box to select or cancel a single item, and click on the select all box to select all items in the item list.</p>
+<p> Click “Charge” to calculate the amount of all the selected items and bring up the check page, enter the amount of the patient’s payment and calculate the change, click to confirm, and save the payment record to the database.</p>
+</li>
+</ol>
+<h3 id="Dispensing"><a href="#Dispensing" class="headerlink" title="Dispensing"></a>Dispensing</h3><ol>
+<li>Business Analysis The pharmacy operator searches according to the medical record number provided by the patient, checks the patient’s desirable medication, and confirms it and gives it out.</li>
+<li>Function analysis Based on the medical record number, search and display the paid but uncollected drugs, and check them for distribution. Unpaid and refunded medications will not be displayed.</li>
+</ol>
+<h2 id="System-Design"><a href="#System-Design" class="headerlink" title="System Design"></a>System Design</h2><h3 id="Overall-Design"><a href="#Overall-Design" class="headerlink" title="Overall Design"></a>Overall Design</h3><ol>
+<li><p>System architecture design</p>
+<p> a) the use of Maven deployment SSM framework for managing all the Jar package tools , borrowed from the standard set of directory structure provided to facilitate management ; where the framework is integrated by Spring, SpringMVC, MyBatis open source framework .</p>
+<p> b) Spring provides declarative things , support for the DAO layer to simplify development , as a dependency injection container and AOP implementation exists .</p>
+<p> c) SpringMVC separates the business logic , data and interface display , respectively, to accept user input and call the model and view to complete the user requirements , all data processing work and display the user’s work with the interface for data interaction .</p>
+<p> d) MyBatis encapsulates jdbc, making data more secure and simplifying data access; establishing mapping relationships between entity classes and SQL statements, simplifying code complexity and speeding up development efficiency.</p>
+</li>
+<li><p>Project directory structure design</p>
+<p> a. Project file directory</p>
+<p> The directory structure is consistent with a standard set of directory structure provided by Maven.</p>
+<ol>
+<li><p>src/main/java: store business logic classes, business logic implementation classes, entity classes, interceptor classes, data access classes, business data classes respectively.</p>
+</li>
+<li><p>src/main/resources: store the project configuration files about spring, mybatis, and mybatis database access xml files.</p>
+</li>
+<li><p>src/main/webapp/resource: store front-end pages and front-end static resource files, javascript, css, images, etc. are in this directory.</p>
+</li>
+<li><p>src/main/webapp/WEB-INF: store all jsp files, and web.xml project files.</p>
+</li>
+<li><p>src/test/java: store the test class.</p>
+</li>
+<li><p>pom.xml: store and manage the dependency library and the version information of the dependency library.</p>
+</li>
+</ol>
+<p> b. Package directory<br> PO entity class–package name: com.his.entity; role: store the entity class with the same structure as the database table.</p>
+<p> VO entity class - package name: com.his.dto; role: the entity class that stores the data required by the business logic.</p>
+<p> Data access layer - package name: com. his.dao; role: store the data access layer related interface corresponding xml mapping file.</p>
+<p> Mapper file - path: src/main/resources/mapper; role: store the database access xml file.</p>
+<p> Business logic layer - package name: com. his.service; role: store the interface and implementation classes for the concrete implementation of business logic.</p>
+<p> control layer - package name: com. his.controller; role: to store the front-end request processing, by calling the service interface, to implement a series of business logic controller class.</p>
+</li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Through the practice of this course design project, I understood the advantages and the respective roles of the single instance pattern, class diagram, and the high cohesion and low coupling knowledge introduced in the book in the actual development; at the same time, I got involved in the more popular development methods in javaWeb programming, such as SSM framework, Maven project deployment mode, and the application of front-end components. The application of front-end components. I saw the charm of back-end standardized programming, the clear division of labor modules, the role of clear interfaces; front-end HTML table formatting neat layout, in the role of JS and CSS to become friendly and aesthetic and interactive. All these experiences made me experience the process of developing a useful and usable application, and I felt that I was really creating useful values, which made me interested in WEB programming.</p>
+<p>In the process of experimentation, I really practiced my ability to solve problems and find information on my own. From ignorance of the concept of the framework, to reading a variety of online materials gradually to its role in development, such as maven’s standardized directory structure, a clear division of the discharge of different functional modules; Spring’s annotated programming, so that development does not focus on the native underlying code, focusing on how to achieve business logic, are greatly accelerated development efficiency.</p>
+<p>Similarly, in the practice process, the learning costs faced in turn were too large, taking up time that should have been spent on development; and the learning process and development process go hand in hand, with the quality of each word on the Internet varying plus the iteration of versions, making the learning system confusing from time to time, resulting in a lot of unnecessary time wasted on programming, as well as the fluctuations in mindset. At the same time, when writing the report, I realized that I was lacking in the use of SSM framework and the utilization of front-end components, and I still needed to keep learning. But the problems I encountered in the development, I let how to respond to the error report become more comfortable, but also let me feel that for new things to try, do not stick to the technology they already know and stagnate, try to understand the new technology new framework, its exercise is not only our technology, but also exercise when we are delivered new things, how to learn with a smooth mind, effective means to solve the problem. The ability.</p>
+<p>For this practice, my deepest understanding is that it is undesirable to overly study the theoretical implementation of new technologies and ignore the pain point of time constraint when giving them a quick application. After the initial understanding, you can try to use its technology for development, and gradually to achieve the needs, not only is it fast to get started, but also in the paper, the techniques and statements learned in the actual development may not be involved in this development, will cause too much time wasted.</p>
+<p>Technology will eventually become obsolete, but what is not obsolete is the ability to quickly learn and use new technologies.</p>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a target="_blank" rel="noopener" href="https://github.com/Orange-66/HIS">Github</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/05/17/%E3%80%8CNEUC%E3%80%8DNortheastern%20University%20Community/" rel="prev" title="「NEUC」Northeastern University Community">
+                  <i class="fa fa-chevron-left"></i> 「NEUC」Northeastern University Community
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/05/26/%E3%80%8CDoddle%20Shadow%E3%80%8D%20Mental%20Health/" rel="next" title="「Doddle Shadow」 Mental Health">
+                  「Doddle Shadow」 Mental Health <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fab fa-apple"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Taylor Chyi</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="250" alpha="0.5" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.12.0/dist/mermaid.min.js","integrity":"sha256-0dD7vUjUCTGJjeLnPotQQJIcSzug5fO6WDMYYyNIX4c="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

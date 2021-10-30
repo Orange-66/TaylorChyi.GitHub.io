@@ -22,8 +22,221 @@
       </tags>
   </entry>
   <entry>
+    <title>「LAPS」Doppler Spectrum Analysis System</title>
+    <url>/2021/06/28/%E3%80%8CLAPS%E3%80%8DDoppler%20Spectrum%20Analysis%20System/</url>
+    <content><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The system mainly implements functions including user information management, patient information creation, batch creation, condition search, information viewing, image viewing, information entry, information export, patient image viewing, batch import, deletion, manual edge marking, automatic edge marking, left atrial pressure value calculation based on deep learning model, and system customization. In the process of designing and implementing this system, the PyTorch deep learning development framework is used to complete the model training for left atrial pressure calculation, and the PyQt 5 GUI development framework is used to complete the writing of the interface and realize the visual operation interface, which can run under multiple platforms of Mac and Windows at the same time by the PyQt 5 feature.</p>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Left atrial pressure is an important hemodynamic parameter. Currently, the main clinical methods used are catheter method to measure left atrial pressure or small pulmonary artery Gaston’s pressure instead of left atrial pressure, both of which are invasive examinations. If Doppler spectrum is used to measure left atrial pressure, it can be a non-invasive test. However, if Doppler spectrum is analyzed manually to calculate left atrial pressure, it is not only unclear but also requires physician’s experience, so it is not easy to be used in medical field.</p>
+<h2 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h2><p><img src="/images/LAPS/Picture1.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture2.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture3.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture4.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture5.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture6.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture7.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture8.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture9.png" alt="Tree Hole.png"></p>
+<h2 id="Related-Technologies"><a href="#Related-Technologies" class="headerlink" title="Related Technologies"></a>Related Technologies</h2><p>The system uses Python as the development language and PyQt 5 GUI development framework. The layout of the front-end interface is designed and edited using Qt Designer, and QSS is used to modify the style of the interface, and a small and fully functional SQLite database is used for the database. The left room pressure numerical estimation module is the core module of this system, and the designed model is based on BCDunet with multiple polynomial fitting to train and predict the relevant data set.</p>
+<h1 id="Overall-Architecture"><a href="#Overall-Architecture" class="headerlink" title="Overall Architecture"></a>Overall Architecture</h1><p>The Doppler spectrum intelligent analysis system based on deep learning implemented in this thesis is a desktop application for medical personnel to perform rapid estimation of left atrial pressure values and provide corresponding analysis and management functions. The system provides five main functional modules: user management, patient information management, patient image management, left atrial pressure value calculation, and system management.</p>
+<p>The user management module mainly involves the implementation of user login and registration functions to record the specific users who perform operations in the system at different times. The patient information management module mainly involves the creation, deletion, modification, and deletion of patient personal information to ensure that medical personnel can maintain patient information. The patient image management module mainly involves the import, deletion, addition and modification of image related description information to ensure the maintenance of patient image information. The calculation of left atrial pressure values involves the estimation of left atrial pressure values based on the provided Doppler spectral images using either human tracing of the image edges or self-tracing based on the provided deep learning model. The operation log module mainly involves the recording of users and related operation records, which is used to record when the system throws an abnormal situation and facilitate maintenance and upgrade of the system. The outline of the overall system use case is shown in Figure 3.1.</p>
+<p><img src="/images/LAPS/11.png" alt="11.png"></p>
+<h2 id="User-Management-Module-Use-Case-Description"><a href="#User-Management-Module-Use-Case-Description" class="headerlink" title="User Management Module Use Case Description"></a>User Management Module Use Case Description</h2><p>The user management module mainly includes user login, registration, password change and logout functions. It is mainly used to distinguish the users who are operating, and prevent the operation from being unknowingly operated, resulting in operation errors and other problems. Figure 3.3 shows the use case diagram for changing password in the user management module.</p>
+<p><img src="/images/LAPS/12.png" alt="12.png"></p>
+<h2 id="Patient-Information-Management-Module-Use-Case-Description"><a href="#Patient-Information-Management-Module-Use-Case-Description" class="headerlink" title="Patient Information Management Module Use Case Description"></a>Patient Information Management Module Use Case Description</h2><p>The patient information management module mainly includes the functions of creating, modifying, querying, deleting, batch exporting and batch importing of patients’ personal information. It is mainly used to assist medical staff to manage and maintain the patients in the system. The use case diagram of the patient information management module is shown in Figure 3.4.<br><img src="/images/LAPS/13.png" alt="13.png"></p>
+<h2 id="Patient-Image-Management-Module-Use-Case-Description"><a href="#Patient-Image-Management-Module-Use-Case-Description" class="headerlink" title="Patient Image Management Module Use Case Description"></a>Patient Image Management Module Use Case Description</h2><p>The patient image management module mainly includes import, deletion, image information viewing, image switching, original image viewing, information entry, and status marking functions for patient images. The information entry includes the extended functions of undo, cancel and save for information entry. The module is designed to assist medical staff in marking patient images, to provide quick recognition and understanding of key values contained in the images, and to manage and maintain patient images. The use case diagram of the patient image management module is shown in Figure 3.5.</p>
+<p><img src="/images/LAPS/14.png" alt="14.png"></p>
+<h2 id="Illustration-of-the-use-case-of-the-left-atrial-pressure-numerical-calculation-module"><a href="#Illustration-of-the-use-case-of-the-left-atrial-pressure-numerical-calculation-module" class="headerlink" title="Illustration of the use case of the left atrial pressure numerical calculation module"></a>Illustration of the use case of the left atrial pressure numerical calculation module</h2><p>The left atrial pressure numerical calculation module mainly includes two functions: the left atrial pressure calculation based on deep learning stroke and the human drawing stroke. It is mainly used to improve the accuracy of calculation by artificially marking the image boundary when the boundary based on deep learning is not accurate. Figure 3.6 shows the use case of the left atrial pressure numerical calculation module.</p>
+<p><img src="/images/LAPS/15.png" alt="15.png"></p>
+<h2 id="System-management-module-use-case-description"><a href="#System-management-module-use-case-description" class="headerlink" title="System management module use case description"></a>System management module use case description</h2><p>The system management module mainly includes three functions: log management function, auxiliary installation function, and custom setting function. The module is mainly designed for users to operate the system more conveniently and in accordance with their own needs. Figure 3.7 shows the use case diagram of the system management module. The following is a detailed use case analysis and explanation of the specific functions of the following three modules.</p>
+<p><img src="/images/LAPS/16.png" alt="16.png"></p>
+<h1 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h1><h2 id="Automatic-Edge-Marking"><a href="#Automatic-Edge-Marking" class="headerlink" title="Automatic Edge Marking"></a>Automatic Edge Marking</h2><p>The system automatically selects the automatic edge marking function module to complete the edge marking of the original patient image each time the user performs a calculation on the image, which requires consideration of two main aspects.</p>
+<h3 id="Data-pre-processing"><a href="#Data-pre-processing" class="headerlink" title="Data pre-processing"></a>Data pre-processing</h3><p>The main task of the data pre-processing stage is to crop and scale the images. As shown in Figure 4.10, since the model only needs to segment the image inside the red box, the part inside the red box in the figure needs to be cropped before inputting the image into the model for segmentation, and this part is used as the input to the model. The advantage of cropping is that it can reduce the computation of the neural network and improve the segmentation efficiency. However, since the size of the images in the dataset used in this project is not exactly the same, and the neural network model requires the same size of the input images, it is necessary to first scale the images to reduce all the Doppler spectra to the same size, and then crop the region of interest and input it to the model for segmentation.</p>
+<p><img src="/images/LAPS/21.png" alt="21.png"><br>Figure 4.10 Sample Doppler spectrum image</p>
+<h3 id="Spectral-signal-segmentation"><a href="#Spectral-signal-segmentation" class="headerlink" title="Spectral signal segmentation"></a>Spectral signal segmentation</h3><p>The main task of the spectrum signal segmentation stage is to outline the rough curve edges using the image segmentation technique in deep learning. Image segmentation has been one of the research hotspots in the field of deep learning. The task of image segmentation is to output the outline of an object in an image given a picture, i.e., to output the class of each pixel point in the image. There are many image segmentation models based on deep learning, such as FCN, Gated-SCNN, Mask R-CNN, and so on. All of these models have demonstrated good segmentation performance. In this project, we compare the segmentation effect of both Unet and BCD-Unet models, and the comparison results are shown in Figure 4.11. The original Doppler spectrogram is shown on the left side of the figure, the Unet prediction result is shown in the middle, and the BCD-Unet prediction result is shown on the right side.</p>
+<p><img src="/images/LAPS/22.png" alt="22.png"><br>Figure 4.11 Comparison of curve prediction results</p>
+<p>The objective function used in BCD-Unet is the binary cross-entropy loss function, see Equation 4.1.</p>
+<p><img src="/images/LAPS/23.png" alt="23.png"></p>
+<p>(4.1)</p>
+<p>Since the labels of the Doppler spectrum are Mask matrices and the labels of the pixel points are one of the (0, 1) binaries, they are calculated using the binary cross-entropy loss function. Where N is the number of samples, i.e., the number of pixel points in the image; yi is the value of the true label of the sample, and p(yi) is the probability that the model predicts the sample to be yi. The model uses stochastic gradient descent to optimize this objective function during training.</p>
+<h3 id="Image-analysis-calculation"><a href="#Image-analysis-calculation" class="headerlink" title="Image analysis calculation"></a>Image analysis calculation</h3><p>After the first step of processing, the model has predicted a rough curve. However, there are two problems with this curve: first, the curve is not smooth enough and sometimes broken. Second, the curve in the figure is actually a collection of many pixel points, which are essentially many discrete points. Predicting left atrial pressure requires a continuous and smooth curve, as shown in Figure 4.12.</p>
+<p><img src="/images/LAPS/24.png" alt="24.png"></p>
+<p>Figure 4.12 Schematic diagram of the continuous Doppler spectrum of mitral regurgitation</p>
+<p>Therefore, six steps are needed to complete further processing of the curve obtained in the first step to make it more continuous and smooth, and the final output of this step is the expression f(x) of the curve.</p>
+<h3 id="Edge-fitting"><a href="#Edge-fitting" class="headerlink" title="Edge fitting"></a>Edge fitting</h3><p>This step is proposed to use polynomial fitting method. The expression of polynomial fitting is shown in Equation 4.2.</p>
+<p><img src="/images/LAPS/25.png" alt="25.png"></p>
+<p>(4.2)</p>
+<p>where M is the highest number of polynomials. If the number of samples is N, for each sample xn, using the sum-of-squares error as the loss function (i.e., least squares), the loss function is given in Equation 4.3.</p>
+<p><img src="/images/LAPS/26.png" alt="26.png"></p>
+<p>(4.3)</p>
+<p>The coefficients of each polynomial can be obtained by taking the partial derivative so that wj is 0, thus obtaining a polynomial function. Using this polynomial function, any desired value can be calculated.</p>
+<p>Although polynomial fitting can fit this nonlinear model, the coefficients of the polynomial need to be chosen carefully. If the coefficients are chosen too large, they can easily lead to overfitting, and if the coefficients are chosen too small, they will not achieve the desired results. Therefore, it is necessary to evaluate the fitting effect of different coefficients in the experiment and select the appropriate coefficients.</p>
+<h3 id="Edge-regression"><a href="#Edge-regression" class="headerlink" title="Edge regression"></a>Edge regression</h3><p>The expression of the curve f(x) can be obtained after the curve fitting operation. However, this curve expression may be deviated, so further fine-tuning of the curve is needed. The final goal is to calculate the left atrial pressure from this curve expression, so the real values of the left atrial pressure can be used as the optimization target and the curve can be fitted to these real values using the curve trainer. The trained curve is able to calculate the left atrial pressure values more accurately and has a smooth, continuous character that meets the physician’s requirements.</p>
+<h3 id="Reference-coordinate-system-construction"><a href="#Reference-coordinate-system-construction" class="headerlink" title="Reference coordinate system construction"></a>Reference coordinate system construction</h3><p>In the Doppler spectrogram, the position and scale of the coordinate axes are not always fixed, as shown in Figure 4.13.</p>
+<p><img src="/images/LAPS/27.png" alt="27.png"><br>Figure 4.13 Comparison of the scales of different Doppler spectrograms</p>
+<p>The axes on the left Doppler spectrogram are not on the same line as the right one, and the scales of the left and right vertical axes are not the same, and the Doppler spectrogram is image data, so the coordinate system cannot be extracted directly, and thus the values of t1,t2,t3 cannot be calculated. To address this problem, some techniques are needed to automatically construct a new coordinate system and map the coordinates of the pixel points on the curve to the real coordinates. The first step in constructing the coordinate system is to detect the position of the coordinate axes, and the second step is to identify the scale. After these two steps, a new coordinate system can be constructed and the curve can be mapped to the new coordinate system for calculation.</p>
+<h3 id="Axis-detection"><a href="#Axis-detection" class="headerlink" title="Axis detection"></a>Axis detection</h3><p>OCR technology will be used in the axis detection part. Optical Character Recognition (OCR) is a process in which an electronic device (such as a scanner or digital camera) examines characters printed on paper, determines their shape by detecting dark and light patterns, and then translates the shape into computer text using character recognition methods. In Python, the OCR method can be done by calling certain libraries. When detecting axes, the “m/s” text is identified and the coordinates of the text’s position in the spectrogram are output. The position coordinates of the “m/s” text can be considered as the point (0, 0) of the coordinate axis.</p>
+<h3 id="Scale-recognition"><a href="#Scale-recognition" class="headerlink" title="Scale recognition"></a>Scale recognition</h3><p>After getting the coordinates of the origin of the coordinate axis, the next step is to perform scale recognition. Since the scale of x-axis is relatively fixed in the Doppler spectrogram, a fixed scale can be chosen as the scale of x-axis. But the scale of y-axis is not fixed. Therefore, the OCR method is still used to identify the text of “1.0”, “2.0” and “3.0” on the y-axis and obtain the position coordinates of these texts in turn. The difference between the vertical coordinates of the two adjacent texts is calculated and averaged as the scale of the y-axis in the new coordinate system.</p>
+<h3 id="Calculation-of-left-room-pressure"><a href="#Calculation-of-left-room-pressure" class="headerlink" title="Calculation of left room pressure"></a>Calculation of left room pressure</h3><p>After constructing the new coordinate system and mapping the curve obtained in the second step to the new coordinate system, any desired value can be calculated from the curve. Three values, t1, t2 and t3, are needed to calculate the left atrial pressure, which correspond to moments when the blood flow velocity is 1m/s, 2m/s and 3m/s, respectively. These three moments can be calculated by entering 1m/s, 2m/s, and 3m/s into the curve expression. Once these three moments are obtained, they can be substituted into the left atrial pressure calculation formula. The left atrial pressure calculation is shown in Equation 4.4, where LAP is the value of left atrial pressure.</p>
+<p><img src="/images/LAPS/28.png" alt="28.png"></p>
+<p>(4.4)</p>
+<h1 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h1><p><a href="https://github.com/Orange-66/LAPS">GitHub</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>「Chinasofti Clould OA」Chinasoft Inter</title>
+    <url>/2020/08/05/%E3%80%8CChinasofti%20Clould%20OA%E3%80%8DChinasoft%20Inter/</url>
+    <content><![CDATA[<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>This system is an automatic office system used in the enterprise office. With the rapid development of global information technology, the traditional office has lagged behind the requirements of the development of information technology, and will be replaced by a new office. To build an internal enterprise information network and realize office automation (OA) has become an urgent requirement. OA brings us not only the ease of coping with office affairs, the realization of the entire office process computerized. More is a new office concept, is the inevitable requirements of the development of information-based society, is an infinite extension of our thinking; time and distance is no longer an obstacle to our access to information, will become an important part of our lives.</p>
+<span id="more"></span>
+
+<h1 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h1><p><img src="/images/OA/1.png" alt="1.png"><br><img src="/images/OA/2.png" alt="2.png"><br><img src="/images/OA/3.png" alt="3.png"><br><img src="/images/OA/4.png" alt="4.png"><br><img src="/images/OA/5.png" alt="5.png"><br><img src="/images/OA/6.png" alt="6.png"><br><img src="/images/OA/7.png" alt="7.png"><br><img src="/images/OA/8.png" alt="8.png"><br><img src="/images/OA/9.png" alt="9.png"><br><img src="/images/OA/10.png" alt="10.png"><br><img src="/images/OA/11.png" alt="11.png"><br><img src="/images/OA/12.png" alt="12.png"><br><img src="/images/OA/13.png" alt="13.png"><br><img src="/images/OA/14.png" alt="14.png"><br><img src="/images/OA/15.png" alt="15.png"><br><img src="/images/OA/16.png" alt="16.png"><br><img src="/images/OA/17.png" alt="17.png"><br><img src="/images/OA/18.png" alt="18.png"><br><img src="/images/OA/19.png" alt="19.png"><br><img src="/images/OA/20.png" alt="20.png"></p>
+<h1 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h1><p><em>The system is divided into ten main processes:</em></p>
+<p><em>1. Personal Center 2. System Management 3. Office Management 4. Meeting Management 5. Vehicle Management 6. Message Management 7. Approval Center 8. Outbound Business Management 9. System Announcement 10. Asset Management</em></p>
+<p><strong>Personal Center:</strong> After logging into the system, ordinary staff can enter the personal center page by clicking the personal center link, after which they can apply for leave, apply for car, apply for reimbursement, open personal folders, modify personal information, view personal business card folder and other operations.</p>
+<p><strong>System Management:</strong> After the system administrator logs in to the system, click System Management to enter the system management page. You can choose department management, role management, staff management and folder management for system maintenance.</p>
+<p><strong>Office Management:</strong> After logging into the system, ordinary staff can enter the personal office page by clicking the personal office connection. After that, you can choose to view personal to-do list, arrange others’ work, and view work arrangement authority. The office manager can then additionally perform maintenance operations on work arrangement permissions.</p>
+<p><strong>Meeting management:</strong> After logging in to the system, ordinary employees can select meeting management and enter the meeting management page. In the meeting management page, you can inquire about the meetings you are going to attend and the meeting applications you have sent. To initiate a meeting, you need to book a meeting room first, then enter the list of participants, and send the meeting information to each participant’s mailbox by email. Meeting approvers can additionally approve meeting applications, manage meeting rooms, manage meeting records and other operations.</p>
+<p><strong>Vehicle management:</strong> After clicking vehicle management to enter the vehicle management page after ordinary employees log in to the system, they can view and issue vehicle applications, view approval records and dispatch records, and export information reports. Fleet managers can additionally approve and delete vehicle applications, maintain approval records and dispatch records, and maintain vehicle information and other operations.</p>
+<p><strong>Message Management:</strong> After logging in, employees can click Message Management and enter the Message Management page to view messages in the Inbox, Outbox, Draft Box and Recycle Bin. Message super manager can additionally retrieve the message records sent by everyone in full text.</p>
+<p><strong>Approval Center:</strong> After employees with corresponding approval authority log in to the system, they can click Approval Center to jump to all corresponding approval pages and perform approval operations on the applications in the page.</p>
+<p><strong>Assignment Management:</strong> After logging into the system, the assignment manager can jump to the assignment management page by clicking Assignment Management, which includes the management of assigned employees, the management of partner companies and the management of assignment records.</p>
+<p><strong>System announcement:</strong> After logging into the system, ordinary employees can directly click the corresponding announcement title at the top scrolling announcement bar of the website to enter the announcement information viewing page, or click system announcement to enter the announcement viewing page. The announcement manager can additionally perform maintenance operations on the announcement information.</p>
+<p><strong>Asset management:</strong> After logging into the system, asset managers can see the asset management module in the left navigation bar, and can manage asset consumption and assets after clicking into it.</p>
+<h2 id="Related-technologies"><a href="#Related-technologies" class="headerlink" title="Related technologies"></a>Related technologies</h2><p>Back-end development framework: The project uses a three-tier architecture based on SpringBoot framework, SpringBoot is a lightweight open source framework based on the Spring Framework, which inherits Spring’s IOC (Inversion of Control) and AOP (Tangent-Oriented Programming) features, while simplifying the configuration process for developers in building the environment.</p>
+<p>Big Data development framework: the project uses the Hadoop framework , the use of HDFS to achieve distributed storage of unstructured data , the use of MapReduce to achieve the mapping of unstructured data to structured data and data statistics , analysis .</p>
+<p>In the front-end development framework: the project uses a front-end and back-end development, using Vue as the front-end development JavaScript framework, using elementui and bootstrapvue component library to complete the design of the page framework and effects.</p>
+<h2 id="Technical-points-involved"><a href="#Technical-points-involved" class="headerlink" title="Technical points involved"></a>Technical points involved</h2><p>In terms of database development, we mainly involve technical points such as table design, full-text search, paging query, etc. In the process of designing database tables, we basically followed the third paradigm principle (i.e., there is no dependency of non-key fields on any candidate fields in the database tables), while for some query-intensive tables, we used the inverse paradigm design to improve the retrieval efficiency by adding some redundant fields. For full-text retrieval, we used the ngram full-text parser provided by Mysql to create indexes for full-text retrieval in some of the tables. For paging query, we used PageHelper, a MyBatis-based paging query plugin, to achieve paging information retrieval.</p>
+<p>For back-end development, we used SpringBoot framework to achieve three-tier architecture development, maven to manage project dependencies, and MyBatis to achieve the Dao layer configuration and SQL file management. In the login management process, SpringBoot Security is used to achieve the management of login privileges. SpringBoot Scheduling is used to achieve the deployment of timed tasks.</p>
+<p>In the front-end development, we used independent development, built a development environment based on Vue.js, used npm to manage the dependency files, and used iView to develop the page framework and page effects. In the front-end and back-end interaction, axios is used to achieve asynchronous interaction of front-end and back-end data. At the same time, we used the echarts plugin to display the dynamic data statistics on the page.</p>
+<p>In terms of big data development, HDFS based on Hadoop framework is used to realize distributed storage of unstructured data, and MapReduce is used to realize structured mapping of unstructured data, as well as statistics and analysis. Meanwhile, fastdfs, a lightweight distributed storage system, is used for cloud file storage to achieve the management of employee cloud files. In the email filtering module, a Bayesian algorithm is used to classify word vectors and redis is used to store structured data sets to improve access efficiency.</p>
+<h2 id="Training-experience"><a href="#Training-experience" class="headerlink" title="Training experience"></a>Training experience</h2><p>After two months of online learning and coding training, I have some thoughts and experiences about the working mode of team programming and the rapid learning experience in a short period of time, as well as the conflicts between individuals and teams in the process of coding.</p>
+<p>In the process of team programming, I did not have similar experience with other team members in the group before, so I found that the initial bonding between team members was a relatively difficult and uncontrollable factor, and we needed to adapt to each other’s temperament and way of speaking as quickly as possible in the early stage, and also needed to speak politely and argue with each other to explain and hope each other to accept their views when Make the appropriate compromise or compromise. In the beginning, the “politeness” and “respect” of each other became a hidden problem when building the code later, and this miscommunication made the code written by each part of the corresponding high coupling, and also made the code between teams exist relatively reuse, and not so elegant. The code between teams is relatively reusable and not as elegant. At the same time, coupled with the fact that the online teamwork model is very different from the offline team model, it makes smooth communication more difficult, for example, everyone has to constantly switch between shared screens to explain their ideas, and everyone’s signal and equipment makes the communication not so smooth, and the frequent microphone setting problems and radio effects make the online communication far less efficient than the offline communication. efficient. But at the same time, to solve this problem, we started to use the shared screen as much as possible to communicate with each other using voice as much as possible, and we held short meetings every morning to let the team members understand each other’s code progress as much as possible. At the same time, after a period of time, there are problems need to communicate with each other when they say more straightforward efficiency has also become higher, in the case of problems with the captain can be in the leadership to decide the direction of the project to reduce the differences between groups, while reducing the frequent communication brought about by inefficiency. Therefore, I realized that, although not a glimpse to know the whole picture, but also to a certain extent to see the big picture to a small extent, in the process of teamwork, first of all, the impact of personnel changes in a team to a certain extent is huge, the cost of communication between personnel and personnel changes brought about by the cost of learning are very high time costs, during which the efficiency of staff output is extremely low. So I think, in a team of a good product manager or team leader is how important, in the project requirements can be unified as soon as possible, in the change of personnel can also quickly help the change of personnel quickly into the work, to speed up its learning efficiency. Of course, the above ideas have been more or less in the software engineering course, but this experience really let me feel how much this is under each word is how much bad collaboration experience condensed.</p>
+<p>Secondly, I decided to take charge of the front-end part of the project before the project started, so I reviewed the front-end HTML, CSS, JS and other related syntax statements again, and learned about the VUE framework at a later stage of the project, so I started to search for VUE-related practical courses on the website, and got a preliminary and simple understanding of the project from its construction to its writing. But then also concluded that there is actually a lot of hands-on teaching on CSDN to build and the corresponding knowledge summary document, more or less than watching the video learning to understand more efficient, but the advantage of the video class is to have a relatively fast I step-by-step teaching, to know how each step comes. Plus the previous writing of WeChat applets, more or less fortunately, VUE learning did not take too much learning time, while teammates have also learned part of the VUE, mutual learning will be relatively fast familiar with the VUE framework.</p>
+<p>Finally, we encountered conflicts in writing code and conflicts between the team, based on the distribution of characters, we are two people to write the front-end, relatively speaking, there are not many conflicts and not serious, but because the back-end by four people responsible for the existence of heavy common public code at the same time need to be constantly written at the same time corresponding in this class frequently burst out of the conflict, although in the Although we were aware of this problem in the early stage and designed the corresponding methods and properties or interfaces as much as possible, we still had to modify them more or less, and therefore wasted some time in dealing with conflicts. Although it is a separate development model for front-end and back-end, the development schedule of front-end and back-end and the corresponding joint testing make the collaboration at certain points in time linear division of labor, which also reduces the work efficiency, but perhaps if it is inevitable but can be reduced. Both front-end and back-end made me realize that when making changes to a public module, you can’t do it alone, you need to communicate with the team and get confirmation, otherwise when merging the code, there is a high risk of conflict leading to the failure of a good functional module. In the early stage of the problem can be solved, must be possible to discuss and deal with in the early stage, after all, as said in the way of code simplicity all after doing is no longer do, we did not communicate in the early stage of the login to save to the user information format (in fact, but there are differences in the writing) led to the middle of the time only to find at the same time need to find the properties written before in the page one by one, in order to ensure that the previous modules were still working correctly. At the same time, the real efficiency is to do the trouble at the very beginning, in the process of teamwork to, although we realize that the database JDK and other versions of different may lead to some configuration in the project need to change, although no harm, as long as every time will change it, but rather than each time to change the configuration is better at the beginning of the group to achieve a unified configuration to the efficiency, but at the same time, but whenever a time to forget the configuration of a The front-end team members do not understand the back-end, and when the error is found in the connection test with the back-end, it is difficult to communicate with the team members to explain exactly what is the reason for not connecting with the back-end good code. At the same time, the unification of the code style is also friendly to the front and back ends, the unified camel naming and unified naming rules, and then find the database, link each interface, reuse the code will be extremely fast, the same is also experienced in this cooperation, in the database due to the addition of the element name and the original naming format by a small difference, every time you need to pay special attention to a certain property to get this Whenever we get a property, we need to pay special attention to the fact that the variable is lowercase or there is a small difference in spelling, so we need to remember how to distinguish it, which increases the amount of thinking that our brain needs to do.</p>
+<p>These are the experiences and lessons learned from the teamwork programming training. Although the understanding of the use of frameworks and component libraries is only superficial, I have experienced many things in the previous soft engineering learning process, and I feel the same way about it, and I feel the difficulty of knowing and doing the same.</p>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/OA_front">Github</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>「HIS」Neusoft Cloud Medical System</title>
+    <url>/2018/07/22/%E3%80%8CHIS%E3%80%8DNeusoft%20Cloud%20Medical%20System/</url>
+    <content><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The system developed in this practice project is the outpatient module in Neusoft Cloud Hospital Management System, which includes the following business functions.</p>
+<p>a. Patients: registration and refund function.</p>
+<p>b. Outpatient doctor: consultation and prescription function.</p>
+<p>c. Chargers: item charging and dispensing function.</p>
+<p><strong>My work :</strong> front-end design and layout of the page using H-UI components, the use of JavaScript language, jquery components and ajax technology to achieve the local refresh of each display unit; the overall use of SSM framework to achieve back-end logic business and achieve interaction with the database.</p>
+<span id="more"></span>
+
+<h2 id="System-Implementation"><a href="#System-Implementation" class="headerlink" title="System Implementation"></a>System Implementation</h2><p><img src="/images/HIS/1.png" alt="1.png"><br><img src="/images/HIS/2.png" alt="2.png"><br><img src="/images/HIS/3.png" alt="3.png"><br><img src="/images/HIS/4.png" alt="4.png"><br><img src="/images/HIS/5.png" alt="5.png"><br><img src="/images/HIS/6.png" alt="6.png"><br><img src="/images/HIS/7.png" alt="7.png"><br><img src="/images/HIS/8.png" alt="8.png"></p>
+<h2 id="Relevant-Technologies"><a href="#Relevant-Technologies" class="headerlink" title="Relevant Technologies"></a>Relevant Technologies</h2><h3 id="Theoretical-basis"><a href="#Theoretical-basis" class="headerlink" title="Theoretical basis"></a>Theoretical basis</h3><p><strong>Maven project build:</strong> dependency management tools and project management tools to help developers automatically download artifacts. Solve the version conflict, inconsistency, dependency bloat problem.</p>
+<p><strong>SSM main framework:</strong> the entire system is divided into view layer, controller layer, service layer, DAO layer. spring MVC is responsible for request forwarding and view management; spring to achieve business object management; mybatis as the data object persistence engine. Its lightweight configuration, the annotation development to the extreme.</p>
+<p><strong>Ajax :</strong> so that the page does not need to reload, to achieve the page local update technology.</p>
+<p><strong>fastjson :</strong> third-party tools to complete the mutual transformation of objects and Json strings.</p>
+<p><strong>c3p0 connection pooling technology :</strong> it is responsible for allocating, managing and releasing database connections to avoid frequent creation and release of connections caused by a large amount of performance overhead, but also to increase the smoothness of the system operating environment; release the idle time exceeds the maximum idle time of the database connection to avoid the database connection caused by the failure to release the database connection omission.</p>
+<p><strong>Filter :</strong> interception of requests and responses to target resources, so that the system can properly handle Chinese characters.</p>
+<p><strong>interceptor :</strong> targeted interception of resources, will not meet the requirements of the request and the corresponding interception. In the project to achieve the user must login requirements.</p>
+<h3 id="Project-development-method"><a href="#Project-development-method" class="headerlink" title="Project development method"></a>Project development method</h3><p>The development of the project adopts an iterative-incremental life cycle model, in which each parent business function is subdivided into multiple sub-functional modules during the development process, and each sub-functional module is implemented step by step. Each module is tested individually after implementation, and then integrated with the developed modules of the business function.</p>
+<p>When there is a strong correlation between the functions implemented by multiple parent functional modules, these modules will be tested for integration.</p>
+<p>Finally, all the business functions will be tested for integration.</p>
+<p>At the same time, in the process of development, when it is found that the requirements design is too ideal or does not match the actual requirements, the page will be modified and the corresponding way to achieve the requirements, the sub-functional module code will be changed, and unit and integration testing will be conducted.</p>
+<p><strong>Development tools: Eclipse EE</strong></p>
+<h2 id="System-Analysis"><a href="#System-Analysis" class="headerlink" title="System Analysis"></a>System Analysis</h2><h3 id="Login"><a href="#Login" class="headerlink" title="Login"></a>Login</h3><ol>
+<li><p>Business Analysis</p>
+<p> When the user is not logged in, the user cannot access other pages under the project; the user enters the account and password, and if the input is correct, the user enters the page corresponding to the authority held by the account, and vice versa, the user is prompted with the wrong account or password input.</p>
+</li>
+<li><p>Functional analysis</p>
+<p> Set the interceptor, when the user wants to jump to other pages, check whether the user attribute exists in its Session, if it does and is not empty, it will be released, and vice versa, it will jump to the login page.</p>
+<p> Get the account number and password entered by the user, search in the database, enter the account number entered by them exists in the database and the password is correct then jump to the page corresponding to all the privileges of the account; if the account exists but the password is wrongly entered, the password is wrongly prompted; if the account does not exist, the account is wrongly entered.</p>
+</li>
+</ol>
+<h3 id="Registration"><a href="#Registration" class="headerlink" title="Registration"></a>Registration</h3><ol>
+<li><p>Business Analysis</p>
+<p> After the patient provides the operator with personal information such as medical record number or name, ID number, gender, age, birthday, address, etc., and informs the operator of the date, registration level, registered department and corresponding doctor; the operator informs the patient whether the information is reasonable, and if it is not, the patient needs to correct the information; after the patient pays the fee, the registered invoice is printed. After registration and no refund, the patient can go to the doctor’s office for consultation, otherwise the doctor cannot view his personal information.</p>
+</li>
+<li><p>Functional analysis<br> Automatically generate and display invoice number.</p>
+<p> If the patient has registered medical record, when the operator enters the medical record number, all kinds of personal basic information of the patient will be displayed in the corresponding text input box; on the contrary, the operator can generate a new medical record number for the patient and fill in the corresponding information in the personal information field to perfect it.</p>
+<p> Patients can only register the number after the day, meanwhile, as the options of date, department, doctor and registration level change, the options in each input box will make corresponding changes in time. For example, when switching the department or number, the list of doctors will be updated.</p>
+<p> When the registration number is 0, no registration will be given.</p>
+<p> Use JS to verify that the required information in the form is completely filled in, then the form will be submitted; on the contrary, an error message will pop up and the form will not be submitted.</p>
+</li>
+</ol>
+<h3 id="Return-number"><a href="#Return-number" class="headerlink" title="Return number"></a>Return number</h3><ol>
+<li><p>Business analysis</p>
+<p> When the patient wishes to refund the number, inform the operator of the specific items to be refunded and return the corresponding amount to the patient after completion.</p>
+</li>
+<li><p>Function analysis</p>
+<p> Enter the medical record number and display all the registered information of the patient for the day.</p>
+<p> Only the registered items in the status of “not seen” can perform the refund operation, the rest of the status are prompted “no refund operation is available”.</p>
+</li>
+</ol>
+<h3 id="Consultation"><a href="#Consultation" class="headerlink" title="Consultation"></a>Consultation</h3><ol>
+<li><p>Business analysis</p>
+<p> When a doctor sees a patient, he/she can fill in the description information to the “Medical Record Home” according to the patient’s own situation, including: chief complaint, current medical history, treatment of current disease, past history, allergy history, physical examination; the doctor can view the queue of patients to be seen and the queue of patients already seen at this time, and can view their personal information and make a choice of the next patient.</p>
+</li>
+<li><p>Functional analysis<br> Use JSTL loop to display the labeled patients to be seen and patients already seen in the form of a list.</p>
+<p> Click on a patient from the list to fill in the medical history information for him/her; in order to select a patient, use JS to check, pop up a prompt message, cannot fill in the medical history, and make all input fields read-only.</p>
+<p> After the patient to be seen, it will be displayed in the list of patients who have been seen until the end of the consultation.</p>
+<p> If the patient selected is a patient who has been seen, the various information previously filled in for him/her will be displayed in the case home page after he/she has been selected.</p>
+<h3 id="Prescription"><a href="#Prescription" class="headerlink" title="Prescription"></a>Prescription</h3></li>
+<li><p>Business analysis</p>
+<p> Doctors can input keywords from drug items to search and select relevant drugs, or change the search type to template and search for template. After selecting drugs or template, the corresponding drugs will be listed in the prescription column, and doctors can modify the number of drugs in the prescription column as well as add or delete items. You cannot prescribe without items. After clicking on the prescription, the patient can go to the payment counter and pay for it.</p>
+</li>
+<li><p>Functional Analysis</p>
+<p> The doctor can select the search type, drug item or template item in the search area.</p>
+<p> According to the search category, the fuzzy query will be made for it according to the keyword and displayed in the form of a list.</p>
+<p> After the doctor clicks on the item, the drug corresponding to the item will be added to the prescription column, and the doctor can add or subtract from it, and also modify the quantity of the drug.</p>
+</li>
+</ol>
+<h3 id="Charging"><a href="#Charging" class="headerlink" title="Charging"></a>Charging</h3><ol>
+<li><p>Business Analysis</p>
+<p> According to the medical record number provided by the patient, the operator searches for the items to be paid by the patient, and the patient selects the items he/she wants to pay and makes payment, and cannot pay without items.</p>
+</li>
+<li><p>Functional analysis</p>
+<p> According to the medical record number provided by the patient, the patient’s personal information will be displayed on the page for verification.</p>
+<p> By clicking on the query, all the unpaid items of the patient will be listed in the form of a JSTL loop to be realized.</p>
+<p> Click on the selection box to select or cancel a single item, and click on the select all box to select all items in the item list.</p>
+<p> Click “Charge” to calculate the amount of all the selected items and bring up the check page, enter the amount of the patient’s payment and calculate the change, click to confirm, and save the payment record to the database.</p>
+</li>
+</ol>
+<h3 id="Dispensing"><a href="#Dispensing" class="headerlink" title="Dispensing"></a>Dispensing</h3><ol>
+<li>Business Analysis The pharmacy operator searches according to the medical record number provided by the patient, checks the patient’s desirable medication, and confirms it and gives it out.</li>
+<li>Function analysis Based on the medical record number, search and display the paid but uncollected drugs, and check them for distribution. Unpaid and refunded medications will not be displayed.</li>
+</ol>
+<h2 id="System-Design"><a href="#System-Design" class="headerlink" title="System Design"></a>System Design</h2><h3 id="Overall-Design"><a href="#Overall-Design" class="headerlink" title="Overall Design"></a>Overall Design</h3><ol>
+<li><p>System architecture design</p>
+<p> a) the use of Maven deployment SSM framework for managing all the Jar package tools , borrowed from the standard set of directory structure provided to facilitate management ; where the framework is integrated by Spring, SpringMVC, MyBatis open source framework .</p>
+<p> b) Spring provides declarative things , support for the DAO layer to simplify development , as a dependency injection container and AOP implementation exists .</p>
+<p> c) SpringMVC separates the business logic , data and interface display , respectively, to accept user input and call the model and view to complete the user requirements , all data processing work and display the user’s work with the interface for data interaction .</p>
+<p> d) MyBatis encapsulates jdbc, making data more secure and simplifying data access; establishing mapping relationships between entity classes and SQL statements, simplifying code complexity and speeding up development efficiency.</p>
+</li>
+<li><p>Project directory structure design</p>
+<p> a. Project file directory</p>
+<p> The directory structure is consistent with a standard set of directory structure provided by Maven.</p>
+<ol>
+<li><p>src/main/java: store business logic classes, business logic implementation classes, entity classes, interceptor classes, data access classes, business data classes respectively.</p>
+</li>
+<li><p>src/main/resources: store the project configuration files about spring, mybatis, and mybatis database access xml files.</p>
+</li>
+<li><p>src/main/webapp/resource: store front-end pages and front-end static resource files, javascript, css, images, etc. are in this directory.</p>
+</li>
+<li><p>src/main/webapp/WEB-INF: store all jsp files, and web.xml project files.</p>
+</li>
+<li><p>src/test/java: store the test class.</p>
+</li>
+<li><p>pom.xml: store and manage the dependency library and the version information of the dependency library.</p>
+</li>
+</ol>
+<p> b. Package directory<br> PO entity class–package name: com.his.entity; role: store the entity class with the same structure as the database table.</p>
+<p> VO entity class - package name: com.his.dto; role: the entity class that stores the data required by the business logic.</p>
+<p> Data access layer - package name: com. his.dao; role: store the data access layer related interface corresponding xml mapping file.</p>
+<p> Mapper file - path: src/main/resources/mapper; role: store the database access xml file.</p>
+<p> Business logic layer - package name: com. his.service; role: store the interface and implementation classes for the concrete implementation of business logic.</p>
+<p> control layer - package name: com. his.controller; role: to store the front-end request processing, by calling the service interface, to implement a series of business logic controller class.</p>
+</li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Through the practice of this course design project, I understood the advantages and the respective roles of the single instance pattern, class diagram, and the high cohesion and low coupling knowledge introduced in the book in the actual development; at the same time, I got involved in the more popular development methods in javaWeb programming, such as SSM framework, Maven project deployment mode, and the application of front-end components. The application of front-end components. I saw the charm of back-end standardized programming, the clear division of labor modules, the role of clear interfaces; front-end HTML table formatting neat layout, in the role of JS and CSS to become friendly and aesthetic and interactive. All these experiences made me experience the process of developing a useful and usable application, and I felt that I was really creating useful values, which made me interested in WEB programming.</p>
+<p>In the process of experimentation, I really practiced my ability to solve problems and find information on my own. From ignorance of the concept of the framework, to reading a variety of online materials gradually to its role in development, such as maven’s standardized directory structure, a clear division of the discharge of different functional modules; Spring’s annotated programming, so that development does not focus on the native underlying code, focusing on how to achieve business logic, are greatly accelerated development efficiency.</p>
+<p>Similarly, in the practice process, the learning costs faced in turn were too large, taking up time that should have been spent on development; and the learning process and development process go hand in hand, with the quality of each word on the Internet varying plus the iteration of versions, making the learning system confusing from time to time, resulting in a lot of unnecessary time wasted on programming, as well as the fluctuations in mindset. At the same time, when writing the report, I realized that I was lacking in the use of SSM framework and the utilization of front-end components, and I still needed to keep learning. But the problems I encountered in the development, I let how to respond to the error report become more comfortable, but also let me feel that for new things to try, do not stick to the technology they already know and stagnate, try to understand the new technology new framework, its exercise is not only our technology, but also exercise when we are delivered new things, how to learn with a smooth mind, effective means to solve the problem. The ability.</p>
+<p>For this practice, my deepest understanding is that it is undesirable to overly study the theoretical implementation of new technologies and ignore the pain point of time constraint when giving them a quick application. After the initial understanding, you can try to use its technology for development, and gradually to achieve the needs, not only is it fast to get started, but also in the paper, the techniques and statements learned in the actual development may not be involved in this development, will cause too much time wasted.</p>
+<p>Technology will eventually become obsolete, but what is not obsolete is the ability to quickly learn and use new technologies.</p>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/HIS">Github</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>「SAM」Large-scale scenic spot management system</title>
-    <url>/2018/02/13/%E3%80%8CLSS%E3%80%8DLarge-scale%20scenic%20spot%20management%20system/</url>
+    <url>/2018/02/13/%E3%80%8CSAM%E3%80%8DLarge-scale%20scenic%20spot%20management%20system/</url>
     <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>This project is Northeastern University data structure coursework, using JavaFX as the front-end interface.</p>
 <span id="more"></span> 
 
@@ -36,14 +249,105 @@
 ]]></content>
   </entry>
   <entry>
-    <title>「LAPS」Doppler Spectrum Analysis System</title>
-    <url>/2021/08/26/%E3%80%8CLAPS%E3%80%8DDoppler%20Spectrum%20Analysis%20System/</url>
-    <content><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The system mainly implements functions including user information management, patient information creation, batch creation, condition search, information viewing, image viewing, information entry, information export, patient image viewing, batch import, deletion, manual edge marking, automatic edge marking, left atrial pressure value calculation based on deep learning model, and system customization. In the process of designing and implementing this system, the PyTorch deep learning development framework is used to complete the model training for left atrial pressure calculation, and the PyQt 5 GUI development framework is used to complete the writing of the interface and realize the visual operation interface, which can run under multiple platforms of Mac and Windows at the same time by the PyQt 5 feature.</p>
+    <title>「NEUC」Northeastern University Community</title>
+    <url>/2018/05/17/%E3%80%8CNEUC%E3%80%8DNortheastern%20University%20Community/</url>
+    <content><![CDATA[<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>We propose to develop a platform for college students to engage in academic communication and resource sharing. By providing a file sharing platform where students can share their learning materials and exchange their learning experiences, these learning materials can be utilized by students throughout the school. This saves students’ time in collecting materials and maximizes the use of learning materials.</p>
 <span id="more"></span>
-
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Left atrial pressure is an important hemodynamic parameter. Currently, the main clinical methods used are catheter method to measure left atrial pressure or small pulmonary artery Gaston’s pressure instead of left atrial pressure, both of which are invasive examinations. If Doppler spectrum is used to measure left atrial pressure, it can be a non-invasive test. However, if Doppler spectrum is analyzed manually to calculate left atrial pressure, it is not only unclear but also requires physician’s experience, so it is not easy to be used in medical field.</p>
-<h2 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h2><p><img src="/images/LAPS/Picture1.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture2.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture3.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture4.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture5.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture6.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture7.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture8.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture9.png" alt="Tree Hole.png"></p>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/LAPS">GitHub</a></p>
+<h2 id="Usecases-Figure"><a href="#Usecases-Figure" class="headerlink" title="Usecases Figure"></a>Usecases Figure</h2><p><img src="/images/NEUC/11.png" alt="11.png"><br><img src="/images/NEUC/12.png" alt="12.png"><br><img src="/images/NEUC/13.png" alt="13.png"></p>
+<h2 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h2><p><img src="/images/NEUC/1.png" alt="1.png"><br><img src="/images/NEUC/2.png" alt="2.png"><br><img src="/images/NEUC/3.png" alt="3.png"><br><img src="/images/NEUC/4.png" alt="4.png"><br><img src="/images/NEUC/5.png" alt="5.png"><br><img src="/images/NEUC/6.png" alt="6.png"><br><img src="/images/NEUC/7.png" alt="7.png"><br><img src="/images/NEUC/8.png" alt="8.png"><br><img src="/images/NEUC/9.png" alt="9.png"></p>
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><ul>
+<li>For some college students, access to study materials on campus is limited, and it is difficult to search for study materials related to their majors in the Internet. When students who have these learning materials are willing to share them, there is no convenient and small-scale sharing platform.</li>
+<li>When students consider changing their majors, they may need course materials of other majors, but it is difficult for students to get the latest course materials.</li>
+<li>When students collect exam-related materials, they often obtain these materials through the Internet and social connections. However, time-honored examination materials are usually difficult to obtain; at the same time, most of the examination materials on the Internet are distributed in qq groups, posting bars, and WeChat public numbers, and few people integrate them. Therefore, collecting exam materials may take up a lot of review time of exam students.</li>
+</ul>
+<h2 id="Technology"><a href="#Technology" class="headerlink" title="Technology"></a>Technology</h2><p>Using the default framework structure of WeChat applets at the front end, the view layer is realized by wxml display page and wxss style configuration, the logic layer is realized by JavaScript files, json files for page configuration and custom component invocation.</p>
+<p>In the back-end using the applet cloud development framework, which greatly simplifies the deployment of our back-end server, using the storage and database it provides to process and save data, and using cloud functions to write server-side logic to respond and process applet requests in a timely manner. </p>
+<h2 id="Project-demand-analysis"><a href="#Project-demand-analysis" class="headerlink" title="Project demand analysis"></a>Project demand analysis</h2><p><strong>Phase I :</strong> Interview and exchange with university students and understand the actual needs of the users, and determine the general direction of their needs. During the discussion, we will guide the users to think about the possible functional and non-functional requirements of the system to be developed.</p>
+<p><strong>Phase II :</strong> We will further refine it in the form of a questionnaire, and discuss with the users about the details of the project requirements. For example, how do college students usually get their materials? Are they happy to share their study materials? How many people in the university should be able to use the system? We will finalize a series of questions related to the system requirements with the users in the second phase of the requirements analysis.</p>
+<p><strong>Phase III :</strong> We will make a rapid prototype and then discuss with the user about specific details, including the transformation of the interface when using the software, how to implement the various functions of the software. And the general design of the user’s graphical interface.</p>
+<h2 id="Glossary"><a href="#Glossary" class="headerlink" title="Glossary"></a>Glossary</h2><table>
+<thead>
+<tr>
+<th>Glossary of Terms</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>User:</strong> A general term for all users of the application.</td>
+</tr>
+<tr>
+<td><strong>Poster:</strong> The user who posted the resource/question in the resource/question details.</td>
+</tr>
+<tr>
+<td><strong>Viewer:</strong> The user who did not post the resource/question in the resource/question details.</td>
+</tr>
+<tr>
+<td><strong>Courseware:</strong> Learning material files that serve a pedagogical purpose for the course in question.</td>
+</tr>
+<tr>
+<td><strong>Test Papers:</strong> Files of various test questions for the course.</td>
+</tr>
+<tr>
+<td><strong>Notes:</strong> Files of self-summarized knowledge points for the course.</td>
+</tr>
+<tr>
+<td><strong>Resources:</strong> A generic term for courseware, test papers, and notes.</td>
+</tr>
+<tr>
+<td><strong>Question:</strong> A question posted by a user about a specific course.</td>
+</tr>
+<tr>
+<td><strong>Questions and Answers:</strong> Questions posted by users after they have successfully posted.</td>
+</tr>
+<tr>
+<td><strong>Title:</strong> The focus of the resource/question.</td>
+</tr>
+<tr>
+<td><strong>Content:</strong> A short description of the resource/question.</td>
+</tr>
+<tr>
+<td><strong>Category:</strong> Specifies which of the courseware, papers, or notes the uploaded resource belongs to.</td>
+</tr>
+<tr>
+<td><strong>Resource Area:</strong> The interface where the lesson, paper, and notes are displayed.</td>
+</tr>
+<tr>
+<td><strong>Resource Details:</strong> The screen that shows the details of the lesson/paper/notes.</td>
+</tr>
+<tr>
+<td><strong>Question and Answer Area:</strong> The interface that displays questions.</td>
+</tr>
+<tr>
+<td><strong>Question and answer details:</strong> The interface that shows the details of the question.</td>
+</tr>
+<tr>
+<td><strong>Mine:</strong> The interface that displays personal information about the current user.</td>
+</tr>
+<tr>
+<td><strong>Like:</strong> Add one to the like value of the current item.</td>
+</tr>
+<tr>
+<td><strong>Comment:</strong> Give your opinion about the current resource/issue.</td>
+</tr>
+<tr>
+<td><strong>Favorite:</strong> Adds the current resource/issue to the current user’s favorites.</td>
+</tr>
+<tr>
+<td><strong>Post:</strong> Creates new content for the resource/issue.</td>
+</tr>
+<tr>
+<td><strong>Message:</strong> Notification when the resource/issue posted by the current user is commented on by other users.</td>
+</tr>
+<tr>
+<td><strong>Grade:</strong> The grade level of the current user.</td>
+</tr>
+<tr>
+<td><strong>Major:</strong> The current user’s major.</td>
+</tr>
+<tr>
+<td><strong>Nickname:</strong> The title used by the current user in the application.</td>
+</tr>
+</tbody></table>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/NEUC">Github</a></p>
 ]]></content>
   </entry>
 </search>
