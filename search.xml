@@ -35,4 +35,15 @@
 <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/SAM">GitHub</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>「LAPS」Doppler Spectrum Analysis System</title>
+    <url>/2021/08/26/%E3%80%8CLAPS%E3%80%8DDoppler%20Spectrum%20Analysis%20System/</url>
+    <content><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The system mainly implements functions including user information management, patient information creation, batch creation, condition search, information viewing, image viewing, information entry, information export, patient image viewing, batch import, deletion, manual edge marking, automatic edge marking, left atrial pressure value calculation based on deep learning model, and system customization. In the process of designing and implementing this system, the PyTorch deep learning development framework is used to complete the model training for left atrial pressure calculation, and the PyQt 5 GUI development framework is used to complete the writing of the interface and realize the visual operation interface, which can run under multiple platforms of Mac and Windows at the same time by the PyQt 5 feature.</p>
+<span id="more"></span>
+
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Left atrial pressure is an important hemodynamic parameter. Currently, the main clinical methods used are catheter method to measure left atrial pressure or small pulmonary artery Gaston’s pressure instead of left atrial pressure, both of which are invasive examinations. If Doppler spectrum is used to measure left atrial pressure, it can be a non-invasive test. However, if Doppler spectrum is analyzed manually to calculate left atrial pressure, it is not only unclear but also requires physician’s experience, so it is not easy to be used in medical field.</p>
+<h2 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h2><p><img src="/images/LAPS/Picture1.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture2.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture3.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture4.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture5.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture6.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture7.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture8.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture9.png" alt="Tree Hole.png"></p>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/LAPS">GitHub</a></p>
+]]></content>
+  </entry>
 </search>
