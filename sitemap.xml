@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://taylorchyi.xyz/2018/02/13/%E3%80%8CLSS%E3%80%8DLarge-scale%20scenic%20spot%20management%20system/</loc>
+    
+    <lastmod>2021-10-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/2020/05/26/%E3%80%8CDoddle%20Shadow%E3%80%8D%20Mental%20Health/</loc>
+    
+    <lastmod>2021-10-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://taylorchyi.xyz/about/index.html</loc>
     
     <lastmod>2021-09-05</lastmod>
@@ -43,81 +57,25 @@
     
   </url>
   
-  <url>
-    <loc>http://taylorchyi.xyz/2021/08/26/%E5%98%BB%E5%98%BB/</loc>
-    
-    <lastmod>2021-09-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/2021/08/26/system/</loc>
-    
-    <lastmod>2021-08-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/2021/08/27/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</loc>
-    
-    <lastmod>2021-08-27</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/2021/08/26/%E3%83%86%E3%82%99%E3%83%AA%E3%82%AB%E3%82%B7%E3%83%BC/</loc>
-    
-    <lastmod>2021-08-27</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/2021/08/26/TOEFL/</loc>
-    
-    <lastmod>2021-08-26</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>http://taylorchyi.xyz/</loc>
-    <lastmod>2021-09-05</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://taylorchyi.xyz/tags/%E6%97%A5%E6%9C%AC%E8%AF%AD/</loc>
-    <lastmod>2021-09-05</lastmod>
+    <loc>http://taylorchyi.xyz/tags/WeChat-MiniProgram/</loc>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://taylorchyi.xyz/tags/%E6%AD%8C%E8%AF%8D/</loc>
-    <lastmod>2021-09-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/tags/GitHub-Pages/</loc>
-    <lastmod>2021-09-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/tags/hexo/</loc>
-    <lastmod>2021-09-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/tags/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
-    <lastmod>2021-09-05</lastmod>
+    <loc>http://taylorchyi.xyz/tags/ColorUI/</loc>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
