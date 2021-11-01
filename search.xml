@@ -3,18 +3,18 @@
   <entry>
     <title>「Doddle Shadow」 Mental Health</title>
     <url>/2020/05/26/%E3%80%8CDoddle%20Shadow%E3%80%8D%20Mental%20Health/</url>
-    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>On a whim, we teamed up with three other students to participate in the 2020 College WeChat Applet Development Competition. However, due to unfamiliarity with WeChat applet development, the difficulty of online collaboration, and coinciding with practical training (time constraint), the late-stage procrastinators ended up catching up with our work in the week before submission, so the completion of our work was still lacking.</p>
-<p>The project used <a href="https://github.com/weilanwl/ColorUI">ColorUI</a>，and the Stage-Music module drawn on the <a href="https://github.com/hank583746309/wmusic">this project</a>，I would like to express our sincere thanks!</p>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The “Doddle Shadow” is a WeChat app dedicated to solving the psychological subhealth problems prevalent in our society, thus helping users to improve their self-awareness, explore their psychological potential and get out of the psychological haze.</p>
+<p>The main users of “Doddle Shadow” are people who are under high psychological stress and lack psychological treatment and self-reduction channels. “It is divided into three functional modules: psychological assessment, tree hole and spiritual station. The psychological assessment module provides users with a psychological assessment questionnaire to make a comprehensive assessment of the user and establish a psychological profile of the user to quickly help users understand their psychological status. The Tree Hole module provides an outlet for users to talk about their troubles, maximizing the release of their psychological pressure, while allowing them to receive encouragement and help from other users. The Mind Station module provides users with stress-reducing music as well as psychological articles, knowledge and therapies, so that users can conduct self-psychological guidance and self-stress reduction.</p>
 <span id="more"></span> 
 
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The “Doddle Shadow” is a WeChat app dedicated to solving the psychological subhealth problems prevalent in our society, thus helping users to improve their self-awareness, explore their psychological potential and get out of the psychological haze.</p>
-<p>The main users of “Doddle Shadow” are people who are under high psychological stress and lack psychological treatment and self-reduction channels. “It is divided into three functional modules: psychological assessment, tree hole and spiritual station. The psychological assessment module provides users with a psychological assessment questionnaire to make a comprehensive assessment of the user and establish a psychological profile of the user to quickly help users understand their psychological status. The Tree Hole module provides an outlet for users to talk about their troubles, maximizing the release of their psychological pressure, while allowing them to receive encouragement and help from other users. The Mind Station module provides users with stress-reducing music as well as psychological articles, knowledge and therapies, so that users can conduct self-psychological guidance and self-stress reduction.</p>
-<h2 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h2><h4 id="Tree-Hole"><a href="#Tree-Hole" class="headerlink" title="Tree Hole"></a>Tree Hole</h4><p><img src="https://s1.ax1x.com/2020/08/13/dpEvwD.png" alt="Tree Hole.png"></p>
-<h4 id="Stagecoach"><a href="#Stagecoach" class="headerlink" title="Stagecoach"></a>Stagecoach</h4><p><img src="https://s1.ax1x.com/2020/08/13/dpV9fA.png" alt="Stagecoach.png"></p>
-<h4 id="Music"><a href="#Music" class="headerlink" title="Music"></a>Music</h4><p><img src="https://s1.ax1x.com/2020/08/13/dpExTe.png" alt="Music.png"></p>
-<h4 id="Articles"><a href="#Articles" class="headerlink" title="Articles"></a>Articles</h4><p><img src="https://s1.ax1x.com/2020/08/13/dpVSFH.png" alt="Articles.png"></p>
-<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="https://s1.ax1x.com/2020/08/13/dpVpYd.png" alt="Methods.png"></p>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/mental-health-wechat">GitHub</a></p>
+<h2 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h2><h4 id="Tree-Hole"><a href="#Tree-Hole" class="headerlink" title="Tree Hole"></a>Tree Hole</h4><p><img src="/images/DoddleShadow/1.png" alt="Tree Hole.png"></p>
+<h4 id="Stagecoach"><a href="#Stagecoach" class="headerlink" title="Stagecoach"></a>Stagecoach</h4><p><img src="/images/DoddleShadow/2.png" alt="Stagecoach.png"></p>
+<h4 id="Music"><a href="#Music" class="headerlink" title="Music"></a>Music</h4><p><img src="/images/DoddleShadow/3.png" alt="Music.png"></p>
+<h4 id="Articles"><a href="#Articles" class="headerlink" title="Articles"></a>Articles</h4><p><img src="/images/DoddleShadow/4.png" alt="Articles.png"></p>
+<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="/images/DoddleShadow/5.png" alt="Methods.png"></p>
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>On a whim, we teamed up with three other students to participate in the 2020 College WeChat Applet Development Competition. However, due to unfamiliarity with WeChat applet development, the difficulty of online collaboration, and coinciding with practical training (time constraint), the late-stage procrastinators ended up catching up with our work in the week before submission, so the completion of our work was still lacking.</p>
+<p>The project used <a href="https://github.com/weilanwl/ColorUI">ColorUI</a>，and the Stage-Music module drawn on the <a href="https://github.com/hank583746309/wmusic">this project</a>，I would like to express our sincere thanks!</p>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="/images/DoddleShadow/6.png">GitHub</a></p>
 ]]></content>
       <tags>
         <tag>WeChat MiniProgram</tag>
@@ -74,13 +74,24 @@
 <p>(4.4)</p>
 <h1 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h1><p><a href="https://github.com/Orange-66/LAPS">GitHub</a></p>
 ]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>PyCharm</tag>
+        <tag>PyTorch</tag>
+        <tag>PyQt 5</tag>
+        <tag>Deep Learning</tag>
+        <tag>Medicine</tag>
+      </tags>
   </entry>
   <entry>
-    <title>「Chinasofti Clould OA」Chinasoft Inter</title>
+    <title>「Chinasoft Clould OA」Chinasoft Inter</title>
     <url>/2020/08/05/%E3%80%8CChinasofti%20Clould%20OA%E3%80%8DChinasoft%20Inter/</url>
-    <content><![CDATA[<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>This system is an automatic office system used in the enterprise office. With the rapid development of global information technology, the traditional office has lagged behind the requirements of the development of information technology, and will be replaced by a new office. To build an internal enterprise information network and realize office automation (OA) has become an urgent requirement. OA brings us not only the ease of coping with office affairs, the realization of the entire office process computerized. More is a new office concept, is the inevitable requirements of the development of information-based society, is an infinite extension of our thinking; time and distance is no longer an obstacle to our access to information, will become an important part of our lives.</p>
+    <content><![CDATA[<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>「Chinasoft Cloud OA」 is a cloud platform for the company’s internal network automation office, which integrates the functions of human resources such as employee management, business card information management, department management, function management, meeting management and approval, work schedule, cloud file storage, online information sending and receiving, leave process and reimbursement process approval, vehicle management, and outbound talent management. At the same time, the system realizes real-time analysis and visualization of some common data generated in daily work.</p>
+<p>In the project development process, I am mainly responsible for the front-end part of five modules: personal center, announcement management, vehicle management, cloud file management, and schedule management, as well as the linkage testing between these five modules and the back-end. Among them, personal center consists of personal center, employee information maintenance, retrieving others’ information; announcement management; vehicle management consists of vehicle information, vehicle view, dispatch pending, dispatch record; cloud file management consists of cloud storage, sharing cloud files; schedule management consists of work arrangement, schedule, comprehensive query, calendar view, substitute reading setting, pending approval several sub-modules.</p>
+<p>For the above modules, I am mainly responsible for rendering the data from the back-end to the front-end, using elementui and bootstrapvue two component libraries for front-end layout, unified front-end style style, each new, modify, view details of the business button pop-up style unified pop-up box, after saving, unified style style prompted the user processing results. When submitting the form, first verify whether the user input is reasonable, the main aspects are: whether the format of cell phone number, qq number and email is reasonable; whether the format of birthday, start date, end date and arrangement date is reasonable and the start date and end date cannot be later than the end date; and all the input contents that cannot be empty cannot be empty when submitting; the above submissions that do not meet the conditions will be organized in the The above non-compliant submissions will be organized in the front-end and prompted accordingly. Write form components that can cover the entire project, support search box, add, export, list, list operation as a single button, or drop-down menu, and pager, so as to ensure that after writing a component, in multiple pages, by passing parameters can control the components that appear in the page and the corresponding style.</p>
 <span id="more"></span>
 
+<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>This system is an automatic office system used in the enterprise office. With the rapid development of global information technology, the traditional office has lagged behind the requirements of the development of information technology, and will be replaced by a new office. To build an internal enterprise information network and realize office automation (OA) has become an urgent requirement. OA brings us not only the ease of coping with office affairs, the realization of the entire office process computerized. More is a new office concept, is the inevitable requirements of the development of information-based society, is an infinite extension of our thinking; time and distance is no longer an obstacle to our access to information, will become an important part of our lives.</p>
 <h1 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h1><p><img src="/images/OA/1.png" alt="1.png"><br><img src="/images/OA/2.png" alt="2.png"><br><img src="/images/OA/3.png" alt="3.png"><br><img src="/images/OA/4.png" alt="4.png"><br><img src="/images/OA/5.png" alt="5.png"><br><img src="/images/OA/6.png" alt="6.png"><br><img src="/images/OA/7.png" alt="7.png"><br><img src="/images/OA/8.png" alt="8.png"><br><img src="/images/OA/9.png" alt="9.png"><br><img src="/images/OA/10.png" alt="10.png"><br><img src="/images/OA/11.png" alt="11.png"><br><img src="/images/OA/12.png" alt="12.png"><br><img src="/images/OA/13.png" alt="13.png"><br><img src="/images/OA/14.png" alt="14.png"><br><img src="/images/OA/15.png" alt="15.png"><br><img src="/images/OA/16.png" alt="16.png"><br><img src="/images/OA/17.png" alt="17.png"><br><img src="/images/OA/18.png" alt="18.png"><br><img src="/images/OA/19.png" alt="19.png"><br><img src="/images/OA/20.png" alt="20.png"></p>
 <h1 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h1><p><em>The system is divided into ten main processes:</em></p>
 <p><em>1. Personal Center 2. System Management 3. Office Management 4. Meeting Management 5. Vehicle Management 6. Message Management 7. Approval Center 8. Outbound Business Management 9. System Announcement 10. Asset Management</em></p>
@@ -108,6 +119,15 @@
 <p>These are the experiences and lessons learned from the teamwork programming training. Although the understanding of the use of frameworks and component libraries is only superficial, I have experienced many things in the previous soft engineering learning process, and I feel the same way about it, and I feel the difficulty of knowing and doing the same.</p>
 <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/OA_front">Github</a></p>
 ]]></content>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Bootstrap</tag>
+        <tag>Java</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>ElementUI</tag>
+        <tag>Front-end</tag>
+      </tags>
   </entry>
   <entry>
     <title>「HIS」Neusoft Cloud Medical System</title>
@@ -233,20 +253,34 @@
 <p>Technology will eventually become obsolete, but what is not obsolete is the ability to quickly learn and use new technologies.</p>
 <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/HIS">Github</a></p>
 ]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>SSM</tag>
+        <tag>Spring</tag>
+        <tag>Maven</tag>
+        <tag>Hui-UI</tag>
+        <tag>MySQL</tag>
+        <tag>JavaScript</tag>
+      </tags>
   </entry>
   <entry>
     <title>「SAM」Large-scale scenic spot management system</title>
     <url>/2018/02/13/%E3%80%8CSAM%E3%80%8DLarge-scale%20scenic%20spot%20management%20system/</url>
-    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>This project is Northeastern University data structure coursework, using JavaFX as the front-end interface.</p>
+    <content><![CDATA[<h2 id="functions"><a href="#functions" class="headerlink" title="functions"></a>functions</h2><p>(1) output scenic distribution map The system should combine the attractions and paths, generate the adjacency table and the adjacency matrix, and show a more intuitive form to visitors and administrators. (2) Attractions search The system should take a reasonable way to search for attractions, and give hints when the data input by visitors is empty. When visitors enter keywords, the system should output all the attractions containing the keywords. (3) Attractions sorting The system should sort the attractions quickly according to their hotness and the number of turns of attractions and display them to the visitors. (4) Query the shortest path between attractions The system should query the shortest path according to the two attractions inputted by tourists, and display the path to tourists. (5) Query guide road map The system should plan a guide road map according to the starting point and ending point inputted by tourists, and should give the corresponding prompt if it does not exist. (6) Add and delete attractions and paths The system should be able to add and delete attractions and paths and persist the data. (7) Publish and display announcements The system displays announcements to visitors and publishes announcements through the administrator, and the announcement data should be persistent. (8) Management of parking lot: parking and exit The system should manage the parking and exit of the parking lot through the administrator, and when the parking lot is full, the cars should be parked in the right-of-way. There is only one gate in the parking lot, and it is a long and narrow passage. (9) Administrator login</p>
 <span id="more"></span> 
-
-<h2 id="The-use-of-instructions"><a href="#The-use-of-instructions" class="headerlink" title="The use of instructions"></a>The use of instructions</h2><p>Click the Main class to enter the program can run the command-line interface or GUI interface Administrator username: mhs Administrator password: 123456</p>
-<h2 id="functions"><a href="#functions" class="headerlink" title="functions"></a>functions</h2><p>(1) output scenic distribution map The system should combine the attractions and paths, generate the adjacency table and the adjacency matrix, and show a more intuitive form to visitors and administrators. (2) Attractions search The system should take a reasonable way to search for attractions, and give hints when the data input by visitors is empty. When visitors enter keywords, the system should output all the attractions containing the keywords. (3) Attractions sorting The system should sort the attractions quickly according to their hotness and the number of turns of attractions and display them to the visitors. (4) Query the shortest path between attractions The system should query the shortest path according to the two attractions inputted by tourists, and display the path to tourists. (5) Query guide road map The system should plan a guide road map according to the starting point and ending point inputted by tourists, and should give the corresponding prompt if it does not exist. (6) Add and delete attractions and paths The system should be able to add and delete attractions and paths and persist the data. (7) Publish and display announcements The system displays announcements to visitors and publishes announcements through the administrator, and the announcement data should be persistent. (8) Management of parking lot: parking and exit The system should manage the parking and exit of the parking lot through the administrator, and when the parking lot is full, the cars should be parked in the right-of-way. There is only one gate in the parking lot, and it is a long and narrow passage. (9) Administrator login</p>
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>This project is Northeastern University data structure coursework, using JavaFX as the front-end interface.</p>
+<h2 id="The-use-of-instructions"><a href="#The-use-of-instructions" class="headerlink" title="The use of instructions"></a>The use of instructions</h2><p>Click the Main class to enter the program can run the command-line interface or GUI interface Administrator username: qty Administrator password: 123456</p>
 <h2 id="API-documentation"><a href="#API-documentation" class="headerlink" title="API documentation"></a>API documentation</h2><p>AdjacencyList class: traverseENode traverse edges, addENode add edges, outputGraph output adjacency table, outputMatrix output adjacency matrix, returnGraph return adjacency matrix, addNewVNode add nodes, deleteVNode delete nodes, addNewENode add new edges, deleteENode delete edges, findScenic find points of interest, sortByPop sort by hotness, sortByWay sort by turnoff</p>
 <p>Graph class: initializeALGraph initialize graph, addScenicVertex add points of interest, deleteScenicVertex delete points of interest, addScenicPath add paths, deleteScenicPath delete paths, findScenic find points of interest, sortByPop sort by sort by hotness, sortByWay sort by number of turnoffs, findShotestPath find shortest path, findGuideLoop find guide map, findSho output reachable matrix by Freud, addNotice add announcement, updateNotice update announcement</p>
 <p>ParkingLot class: parkCar park, leaverCar exit, isParkingAll whether the parking lot is full, isWaitEmpty whether the lane is empty, ifCarIDExist whether the license plate number already exists, putIntoList put the license plate number, chgPositionInWaiting change the position of cars in the lane, printAllParkingCars output all cars.</p>
 <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/SAM">GitHub</a></p>
 ]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>Algorithm</tag>
+      </tags>
   </entry>
   <entry>
     <title>「NEUC」Northeastern University Community</title>
@@ -349,5 +383,8 @@
 </tbody></table>
 <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/NEUC">Github</a></p>
 ]]></content>
+      <tags>
+        <tag>WeChat MiniProgram</tag>
+      </tags>
   </entry>
 </search>

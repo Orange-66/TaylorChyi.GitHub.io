@@ -2,7 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://taylorchyi.xyz/2018/05/17/%E3%80%8CNEUC%E3%80%8DNortheastern%20University%20Community/</loc>
+    
+    <lastmod>2021-11-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/2018/02/13/%E3%80%8CSAM%E3%80%8DLarge-scale%20scenic%20spot%20management%20system/</loc>
+    
+    <lastmod>2021-11-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://taylorchyi.xyz/2021/06/28/%E3%80%8CLAPS%E3%80%8DDoppler%20Spectrum%20Analysis%20System/</loc>
+    
+    <lastmod>2021-11-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/2018/07/22/%E3%80%8CHIS%E3%80%8DNeusoft%20Cloud%20Medical%20System/</loc>
     
     <lastmod>2021-11-01</lastmod>
     
@@ -11,42 +32,21 @@
   <url>
     <loc>http://taylorchyi.xyz/2020/08/05/%E3%80%8CChinasofti%20Clould%20OA%E3%80%8DChinasoft%20Inter/</loc>
     
-    <lastmod>2021-10-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/2018/07/22/%E3%80%8CHIS%E3%80%8DNeusoft%20Cloud%20Medical%20System/</loc>
-    
-    <lastmod>2021-10-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/2018/05/17/%E3%80%8CNEUC%E3%80%8DNortheastern%20University%20Community/</loc>
-    
-    <lastmod>2021-10-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/2018/02/13/%E3%80%8CSAM%E3%80%8DLarge-scale%20scenic%20spot%20management%20system/</loc>
-    
-    <lastmod>2021-10-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://taylorchyi.xyz/2020/05/26/%E3%80%8CDoddle%20Shadow%E3%80%8D%20Mental%20Health/</loc>
-    
-    <lastmod>2021-10-30</lastmod>
+    <lastmod>2021-11-01</lastmod>
     
   </url>
   
   <url>
     <loc>http://taylorchyi.xyz/about/index.html</loc>
     
-    <lastmod>2021-09-05</lastmod>
+    <lastmod>2021-11-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/2020/05/26/%E3%80%8CDoddle%20Shadow%E3%80%8D%20Mental%20Health/</loc>
+    
+    <lastmod>2021-11-01</lastmod>
     
   </url>
   
@@ -103,6 +103,146 @@
   
   <url>
     <loc>http://taylorchyi.xyz/tags/ColorUI/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Vue/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Bootstrap/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Java/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/HTML/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/CSS/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/ElementUI/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Front-end/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/SSM/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Spring/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Maven/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Hui-UI/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/MySQL/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/JavaScript/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Python/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/PyCharm/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/PyTorch/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/PyQt-5/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Deep-Learning/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Medicine/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/Algorithm/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
