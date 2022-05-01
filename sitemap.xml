@@ -332,6 +332,27 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://taylorchyi.xyz/tags/python/</loc>
+    <lastmod>2022-05-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/pycharm/</loc>
+    <lastmod>2022-05-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://taylorchyi.xyz/tags/%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2022-05-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
 </urlset>
