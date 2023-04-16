@@ -1,555 +1,393 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>「Doddle Shadow」 Mental Health</title>
-    <url>/2020/05/26/%E3%80%8CDoddle%20Shadow%E3%80%8D%20Mental%20Health/</url>
-    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The “Doddle Shadow” is a WeChat app dedicated to solving the psychological subhealth problems prevalent in our society, thus helping users to improve their self-awareness, explore their psychological potential and get out of the psychological haze.</p>
-<p>The main users of “Doddle Shadow” are people who are under high psychological stress and lack psychological treatment and self-reduction channels. “It is divided into three functional modules: psychological assessment, tree hole and spiritual station. The psychological assessment module provides users with a psychological assessment questionnaire to make a comprehensive assessment of the user and establish a psychological profile of the user to quickly help users understand their psychological status. The Tree Hole module provides an outlet for users to talk about their troubles, maximizing the release of their psychological pressure, while allowing them to receive encouragement and help from other users. The Mind Station module provides users with stress-reducing music as well as psychological articles, knowledge and therapies, so that users can conduct self-psychological guidance and self-stress reduction.</p>
-<span id="more"></span> 
-
-<h2 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h2><h4 id="Tree-Hole"><a href="#Tree-Hole" class="headerlink" title="Tree Hole"></a>Tree Hole</h4><p><img src="/images/DoddleShadow/1.png" alt="Tree Hole.png"></p>
-<h4 id="Stagecoach"><a href="#Stagecoach" class="headerlink" title="Stagecoach"></a>Stagecoach</h4><p><img src="/images/DoddleShadow/2.png" alt="Stagecoach.png"></p>
-<h4 id="Music"><a href="#Music" class="headerlink" title="Music"></a>Music</h4><p><img src="/images/DoddleShadow/3.png" alt="Music.png"></p>
-<h4 id="Articles"><a href="#Articles" class="headerlink" title="Articles"></a>Articles</h4><p><img src="/images/DoddleShadow/4.png" alt="Articles.png"></p>
-<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="/images/DoddleShadow/5.png" alt="Methods.png"></p>
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>On a whim, we teamed up with three other students to participate in the 2020 College WeChat Applet Development Competition. However, due to unfamiliarity with WeChat applet development, the difficulty of online collaboration, and coinciding with practical training (time constraint), the late-stage procrastinators ended up catching up with our work in the week before submission, so the completion of our work was still lacking.</p>
-<p>The project used <a href="https://github.com/weilanwl/ColorUI">ColorUI</a>，and the Stage-Music module drawn on the <a href="https://github.com/hank583746309/wmusic">this project</a>，I would like to express our sincere thanks!</p>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="/images/DoddleShadow/6.png">GitHub</a></p>
-]]></content>
-      <tags>
-        <tag>WeChat MiniProgram</tag>
-        <tag>ColorUI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「SAM」Large-scale scenic spot management system</title>
-    <url>/2018/02/13/%E3%80%8CSAM%E3%80%8DLarge-scale%20scenic%20spot%20management%20system/</url>
-    <content><![CDATA[<h2 id="functions"><a href="#functions" class="headerlink" title="functions"></a>functions</h2><p>(1) output scenic distribution map The system should combine the attractions and paths, generate the adjacency table and the adjacency matrix, and show a more intuitive form to visitors and administrators. (2) Attractions search The system should take a reasonable way to search for attractions, and give hints when the data input by visitors is empty. When visitors enter keywords, the system should output all the attractions containing the keywords. (3) Attractions sorting The system should sort the attractions quickly according to their hotness and the number of turns of attractions and display them to the visitors. (4) Query the shortest path between attractions The system should query the shortest path according to the two attractions inputted by tourists, and display the path to tourists. (5) Query guide road map The system should plan a guide road map according to the starting point and ending point inputted by tourists, and should give the corresponding prompt if it does not exist. (6) Add and delete attractions and paths The system should be able to add and delete attractions and paths and persist the data. (7) Publish and display announcements The system displays announcements to visitors and publishes announcements through the administrator, and the announcement data should be persistent. (8) Management of parking lot: parking and exit The system should manage the parking and exit of the parking lot through the administrator, and when the parking lot is full, the cars should be parked in the right-of-way. There is only one gate in the parking lot, and it is a long and narrow passage. (9) Administrator login</p>
-<span id="more"></span> 
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>This project is Northeastern University data structure coursework, using JavaFX as the front-end interface.</p>
-<h2 id="The-use-of-instructions"><a href="#The-use-of-instructions" class="headerlink" title="The use of instructions"></a>The use of instructions</h2><p>Click the Main class to enter the program can run the command-line interface or GUI interface Administrator username: qty Administrator password: 123456</p>
-<h2 id="API-documentation"><a href="#API-documentation" class="headerlink" title="API documentation"></a>API documentation</h2><p>AdjacencyList class: traverseENode traverse edges, addENode add edges, outputGraph output adjacency table, outputMatrix output adjacency matrix, returnGraph return adjacency matrix, addNewVNode add nodes, deleteVNode delete nodes, addNewENode add new edges, deleteENode delete edges, findScenic find points of interest, sortByPop sort by hotness, sortByWay sort by turnoff</p>
-<p>Graph class: initializeALGraph initialize graph, addScenicVertex add points of interest, deleteScenicVertex delete points of interest, addScenicPath add paths, deleteScenicPath delete paths, findScenic find points of interest, sortByPop sort by sort by hotness, sortByWay sort by number of turnoffs, findShotestPath find shortest path, findGuideLoop find guide map, findSho output reachable matrix by Freud, addNotice add announcement, updateNotice update announcement</p>
-<p>ParkingLot class: parkCar park, leaverCar exit, isParkingAll whether the parking lot is full, isWaitEmpty whether the lane is empty, ifCarIDExist whether the license plate number already exists, putIntoList put the license plate number, chgPositionInWaiting change the position of cars in the lane, printAllParkingCars output all cars.</p>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/SAM">GitHub</a></p>
-]]></content>
-      <tags>
-        <tag>Java</tag>
-        <tag>Algorithm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「NEUC」Northeastern University Community</title>
-    <url>/2018/05/17/%E3%80%8CNEUC%E3%80%8DNortheastern%20University%20Community/</url>
-    <content><![CDATA[<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>We propose to develop a platform for college students to engage in academic communication and resource sharing. By providing a file sharing platform where students can share their learning materials and exchange their learning experiences, these learning materials can be utilized by students throughout the school. This saves students’ time in collecting materials and maximizes the use of learning materials.</p>
-<span id="more"></span>
-<h2 id="Usecases-Figure"><a href="#Usecases-Figure" class="headerlink" title="Usecases Figure"></a>Usecases Figure</h2><p><img src="/images/NEUC/11.png" alt="11.png"><br><img src="/images/NEUC/12.png" alt="12.png"><br><img src="/images/NEUC/13.png" alt="13.png"></p>
-<h2 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h2><p><img src="/images/NEUC/1.png" alt="1.png"><br><img src="/images/NEUC/2.png" alt="2.png"><br><img src="/images/NEUC/3.png" alt="3.png"><br><img src="/images/NEUC/4.png" alt="4.png"><br><img src="/images/NEUC/5.png" alt="5.png"><br><img src="/images/NEUC/6.png" alt="6.png"><br><img src="/images/NEUC/7.png" alt="7.png"><br><img src="/images/NEUC/8.png" alt="8.png"><br><img src="/images/NEUC/9.png" alt="9.png"></p>
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><ul>
-<li>For some college students, access to study materials on campus is limited, and it is difficult to search for study materials related to their majors in the Internet. When students who have these learning materials are willing to share them, there is no convenient and small-scale sharing platform.</li>
-<li>When students consider changing their majors, they may need course materials of other majors, but it is difficult for students to get the latest course materials.</li>
-<li>When students collect exam-related materials, they often obtain these materials through the Internet and social connections. However, time-honored examination materials are usually difficult to obtain; at the same time, most of the examination materials on the Internet are distributed in qq groups, posting bars, and WeChat public numbers, and few people integrate them. Therefore, collecting exam materials may take up a lot of review time of exam students.</li>
-</ul>
-<h2 id="Technology"><a href="#Technology" class="headerlink" title="Technology"></a>Technology</h2><p>Using the default framework structure of WeChat applets at the front end, the view layer is realized by wxml display page and wxss style configuration, the logic layer is realized by JavaScript files, json files for page configuration and custom component invocation.</p>
-<p>In the back-end using the applet cloud development framework, which greatly simplifies the deployment of our back-end server, using the storage and database it provides to process and save data, and using cloud functions to write server-side logic to respond and process applet requests in a timely manner. </p>
-<h2 id="Project-demand-analysis"><a href="#Project-demand-analysis" class="headerlink" title="Project demand analysis"></a>Project demand analysis</h2><p><strong>Phase I :</strong> Interview and exchange with university students and understand the actual needs of the users, and determine the general direction of their needs. During the discussion, we will guide the users to think about the possible functional and non-functional requirements of the system to be developed.</p>
-<p><strong>Phase II :</strong> We will further refine it in the form of a questionnaire, and discuss with the users about the details of the project requirements. For example, how do college students usually get their materials? Are they happy to share their study materials? How many people in the university should be able to use the system? We will finalize a series of questions related to the system requirements with the users in the second phase of the requirements analysis.</p>
-<p><strong>Phase III :</strong> We will make a rapid prototype and then discuss with the user about specific details, including the transformation of the interface when using the software, how to implement the various functions of the software. And the general design of the user’s graphical interface.</p>
-<h2 id="Glossary"><a href="#Glossary" class="headerlink" title="Glossary"></a>Glossary</h2><table>
-<thead>
-<tr>
-<th>Glossary of Terms</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>User:</strong> A general term for all users of the application.</td>
-</tr>
-<tr>
-<td><strong>Poster:</strong> The user who posted the resource/question in the resource/question details.</td>
-</tr>
-<tr>
-<td><strong>Viewer:</strong> The user who did not post the resource/question in the resource/question details.</td>
-</tr>
-<tr>
-<td><strong>Courseware:</strong> Learning material files that serve a pedagogical purpose for the course in question.</td>
-</tr>
-<tr>
-<td><strong>Test Papers:</strong> Files of various test questions for the course.</td>
-</tr>
-<tr>
-<td><strong>Notes:</strong> Files of self-summarized knowledge points for the course.</td>
-</tr>
-<tr>
-<td><strong>Resources:</strong> A generic term for courseware, test papers, and notes.</td>
-</tr>
-<tr>
-<td><strong>Question:</strong> A question posted by a user about a specific course.</td>
-</tr>
-<tr>
-<td><strong>Questions and Answers:</strong> Questions posted by users after they have successfully posted.</td>
-</tr>
-<tr>
-<td><strong>Title:</strong> The focus of the resource/question.</td>
-</tr>
-<tr>
-<td><strong>Content:</strong> A short description of the resource/question.</td>
-</tr>
-<tr>
-<td><strong>Category:</strong> Specifies which of the courseware, papers, or notes the uploaded resource belongs to.</td>
-</tr>
-<tr>
-<td><strong>Resource Area:</strong> The interface where the lesson, paper, and notes are displayed.</td>
-</tr>
-<tr>
-<td><strong>Resource Details:</strong> The screen that shows the details of the lesson/paper/notes.</td>
-</tr>
-<tr>
-<td><strong>Question and Answer Area:</strong> The interface that displays questions.</td>
-</tr>
-<tr>
-<td><strong>Question and answer details:</strong> The interface that shows the details of the question.</td>
-</tr>
-<tr>
-<td><strong>Mine:</strong> The interface that displays personal information about the current user.</td>
-</tr>
-<tr>
-<td><strong>Like:</strong> Add one to the like value of the current item.</td>
-</tr>
-<tr>
-<td><strong>Comment:</strong> Give your opinion about the current resource/issue.</td>
-</tr>
-<tr>
-<td><strong>Favorite:</strong> Adds the current resource/issue to the current user’s favorites.</td>
-</tr>
-<tr>
-<td><strong>Post:</strong> Creates new content for the resource/issue.</td>
-</tr>
-<tr>
-<td><strong>Message:</strong> Notification when the resource/issue posted by the current user is commented on by other users.</td>
-</tr>
-<tr>
-<td><strong>Grade:</strong> The grade level of the current user.</td>
-</tr>
-<tr>
-<td><strong>Major:</strong> The current user’s major.</td>
-</tr>
-<tr>
-<td><strong>Nickname:</strong> The title used by the current user in the application.</td>
-</tr>
-</tbody></table>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/NEUC">Github</a></p>
-]]></content>
-      <tags>
-        <tag>WeChat MiniProgram</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「LAPS」Doppler Spectrum Analysis System</title>
-    <url>/2021/06/28/%E3%80%8CLAPS%E3%80%8DDoppler%20Spectrum%20Analysis%20System/</url>
-    <content><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The system mainly implements functions including user information management, patient information creation, batch creation, condition search, information viewing, image viewing, information entry, information export, patient image viewing, batch import, deletion, manual edge marking, automatic edge marking, left atrial pressure value calculation based on deep learning model, and system customization. In the process of designing and implementing this system, the PyTorch deep learning development framework is used to complete the model training for left atrial pressure calculation, and the PyQt 5 GUI development framework is used to complete the writing of the interface and realize the visual operation interface, which can run under multiple platforms of Mac and Windows at the same time by the PyQt 5 feature.</p>
-<span id="more"></span>
-
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Left atrial pressure is an important hemodynamic parameter. Currently, the main clinical methods used are catheter method to measure left atrial pressure or small pulmonary artery Gaston’s pressure instead of left atrial pressure, both of which are invasive examinations. If Doppler spectrum is used to measure left atrial pressure, it can be a non-invasive test. However, if Doppler spectrum is analyzed manually to calculate left atrial pressure, it is not only unclear but also requires physician’s experience, so it is not easy to be used in medical field.</p>
-<h2 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h2><p><img src="/images/LAPS/Picture1.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture2.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture3.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture4.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture5.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture6.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture7.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture8.png" alt="Tree Hole.png"><br><img src="/images/LAPS/Picture9.png" alt="Tree Hole.png"></p>
-<h2 id="Related-Technologies"><a href="#Related-Technologies" class="headerlink" title="Related Technologies"></a>Related Technologies</h2><p>The system uses Python as the development language and PyQt 5 GUI development framework. The layout of the front-end interface is designed and edited using Qt Designer, and QSS is used to modify the style of the interface, and a small and fully functional SQLite database is used for the database. The left room pressure numerical estimation module is the core module of this system, and the designed model is based on BCDunet with multiple polynomial fitting to train and predict the relevant data set.</p>
-<h1 id="Overall-Architecture"><a href="#Overall-Architecture" class="headerlink" title="Overall Architecture"></a>Overall Architecture</h1><p>The Doppler spectrum intelligent analysis system based on deep learning implemented in this thesis is a desktop application for medical personnel to perform rapid estimation of left atrial pressure values and provide corresponding analysis and management functions. The system provides five main functional modules: user management, patient information management, patient image management, left atrial pressure value calculation, and system management.</p>
-<p>The user management module mainly involves the implementation of user login and registration functions to record the specific users who perform operations in the system at different times. The patient information management module mainly involves the creation, deletion, modification, and deletion of patient personal information to ensure that medical personnel can maintain patient information. The patient image management module mainly involves the import, deletion, addition and modification of image related description information to ensure the maintenance of patient image information. The calculation of left atrial pressure values involves the estimation of left atrial pressure values based on the provided Doppler spectral images using either human tracing of the image edges or self-tracing based on the provided deep learning model. The operation log module mainly involves the recording of users and related operation records, which is used to record when the system throws an abnormal situation and facilitate maintenance and upgrade of the system. The outline of the overall system use case is shown in Figure 3.1.</p>
-<p><img src="/images/LAPS/11.png" alt="11.png"></p>
-<h2 id="User-Management-Module-Use-Case-Description"><a href="#User-Management-Module-Use-Case-Description" class="headerlink" title="User Management Module Use Case Description"></a>User Management Module Use Case Description</h2><p>The user management module mainly includes user login, registration, password change and logout functions. It is mainly used to distinguish the users who are operating, and prevent the operation from being unknowingly operated, resulting in operation errors and other problems. Figure 3.3 shows the use case diagram for changing password in the user management module.</p>
-<p><img src="/images/LAPS/12.png" alt="12.png"></p>
-<h2 id="Patient-Information-Management-Module-Use-Case-Description"><a href="#Patient-Information-Management-Module-Use-Case-Description" class="headerlink" title="Patient Information Management Module Use Case Description"></a>Patient Information Management Module Use Case Description</h2><p>The patient information management module mainly includes the functions of creating, modifying, querying, deleting, batch exporting and batch importing of patients’ personal information. It is mainly used to assist medical staff to manage and maintain the patients in the system. The use case diagram of the patient information management module is shown in Figure 3.4.<br><img src="/images/LAPS/13.png" alt="13.png"></p>
-<h2 id="Patient-Image-Management-Module-Use-Case-Description"><a href="#Patient-Image-Management-Module-Use-Case-Description" class="headerlink" title="Patient Image Management Module Use Case Description"></a>Patient Image Management Module Use Case Description</h2><p>The patient image management module mainly includes import, deletion, image information viewing, image switching, original image viewing, information entry, and status marking functions for patient images. The information entry includes the extended functions of undo, cancel and save for information entry. The module is designed to assist medical staff in marking patient images, to provide quick recognition and understanding of key values contained in the images, and to manage and maintain patient images. The use case diagram of the patient image management module is shown in Figure 3.5.</p>
-<p><img src="/images/LAPS/14.png" alt="14.png"></p>
-<h2 id="Illustration-of-the-use-case-of-the-left-atrial-pressure-numerical-calculation-module"><a href="#Illustration-of-the-use-case-of-the-left-atrial-pressure-numerical-calculation-module" class="headerlink" title="Illustration of the use case of the left atrial pressure numerical calculation module"></a>Illustration of the use case of the left atrial pressure numerical calculation module</h2><p>The left atrial pressure numerical calculation module mainly includes two functions: the left atrial pressure calculation based on deep learning stroke and the human drawing stroke. It is mainly used to improve the accuracy of calculation by artificially marking the image boundary when the boundary based on deep learning is not accurate. Figure 3.6 shows the use case of the left atrial pressure numerical calculation module.</p>
-<p><img src="/images/LAPS/15.png" alt="15.png"></p>
-<h2 id="System-management-module-use-case-description"><a href="#System-management-module-use-case-description" class="headerlink" title="System management module use case description"></a>System management module use case description</h2><p>The system management module mainly includes three functions: log management function, auxiliary installation function, and custom setting function. The module is mainly designed for users to operate the system more conveniently and in accordance with their own needs. Figure 3.7 shows the use case diagram of the system management module. The following is a detailed use case analysis and explanation of the specific functions of the following three modules.</p>
-<p><img src="/images/LAPS/16.png" alt="16.png"></p>
-<h1 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h1><h2 id="Automatic-Edge-Marking"><a href="#Automatic-Edge-Marking" class="headerlink" title="Automatic Edge Marking"></a>Automatic Edge Marking</h2><p>The system automatically selects the automatic edge marking function module to complete the edge marking of the original patient image each time the user performs a calculation on the image, which requires consideration of two main aspects.</p>
-<h3 id="Data-pre-processing"><a href="#Data-pre-processing" class="headerlink" title="Data pre-processing"></a>Data pre-processing</h3><p>The main task of the data pre-processing stage is to crop and scale the images. As shown in Figure 4.10, since the model only needs to segment the image inside the red box, the part inside the red box in the figure needs to be cropped before inputting the image into the model for segmentation, and this part is used as the input to the model. The advantage of cropping is that it can reduce the computation of the neural network and improve the segmentation efficiency. However, since the size of the images in the dataset used in this project is not exactly the same, and the neural network model requires the same size of the input images, it is necessary to first scale the images to reduce all the Doppler spectra to the same size, and then crop the region of interest and input it to the model for segmentation.</p>
-<p><img src="/images/LAPS/21.png" alt="21.png"><br>Figure 4.10 Sample Doppler spectrum image</p>
-<h3 id="Spectral-signal-segmentation"><a href="#Spectral-signal-segmentation" class="headerlink" title="Spectral signal segmentation"></a>Spectral signal segmentation</h3><p>The main task of the spectrum signal segmentation stage is to outline the rough curve edges using the image segmentation technique in deep learning. Image segmentation has been one of the research hotspots in the field of deep learning. The task of image segmentation is to output the outline of an object in an image given a picture, i.e., to output the class of each pixel point in the image. There are many image segmentation models based on deep learning, such as FCN, Gated-SCNN, Mask R-CNN, and so on. All of these models have demonstrated good segmentation performance. In this project, we compare the segmentation effect of both Unet and BCD-Unet models, and the comparison results are shown in Figure 4.11. The original Doppler spectrogram is shown on the left side of the figure, the Unet prediction result is shown in the middle, and the BCD-Unet prediction result is shown on the right side.</p>
-<p><img src="/images/LAPS/22.png" alt="22.png"><br>Figure 4.11 Comparison of curve prediction results</p>
-<p>The objective function used in BCD-Unet is the binary cross-entropy loss function, see Equation 4.1.</p>
-<p><img src="/images/LAPS/23.png" alt="23.png"></p>
-<p>(4.1)</p>
-<p>Since the labels of the Doppler spectrum are Mask matrices and the labels of the pixel points are one of the (0, 1) binaries, they are calculated using the binary cross-entropy loss function. Where N is the number of samples, i.e., the number of pixel points in the image; yi is the value of the true label of the sample, and p(yi) is the probability that the model predicts the sample to be yi. The model uses stochastic gradient descent to optimize this objective function during training.</p>
-<h3 id="Image-analysis-calculation"><a href="#Image-analysis-calculation" class="headerlink" title="Image analysis calculation"></a>Image analysis calculation</h3><p>After the first step of processing, the model has predicted a rough curve. However, there are two problems with this curve: first, the curve is not smooth enough and sometimes broken. Second, the curve in the figure is actually a collection of many pixel points, which are essentially many discrete points. Predicting left atrial pressure requires a continuous and smooth curve, as shown in Figure 4.12.</p>
-<p><img src="/images/LAPS/24.png" alt="24.png"></p>
-<p>Figure 4.12 Schematic diagram of the continuous Doppler spectrum of mitral regurgitation</p>
-<p>Therefore, six steps are needed to complete further processing of the curve obtained in the first step to make it more continuous and smooth, and the final output of this step is the expression f(x) of the curve.</p>
-<h3 id="Edge-fitting"><a href="#Edge-fitting" class="headerlink" title="Edge fitting"></a>Edge fitting</h3><p>This step is proposed to use polynomial fitting method. The expression of polynomial fitting is shown in Equation 4.2.</p>
-<p><img src="/images/LAPS/25.png" alt="25.png"></p>
-<p>(4.2)</p>
-<p>where M is the highest number of polynomials. If the number of samples is N, for each sample xn, using the sum-of-squares error as the loss function (i.e., least squares), the loss function is given in Equation 4.3.</p>
-<p><img src="/images/LAPS/26.png" alt="26.png"></p>
-<p>(4.3)</p>
-<p>The coefficients of each polynomial can be obtained by taking the partial derivative so that wj is 0, thus obtaining a polynomial function. Using this polynomial function, any desired value can be calculated.</p>
-<p>Although polynomial fitting can fit this nonlinear model, the coefficients of the polynomial need to be chosen carefully. If the coefficients are chosen too large, they can easily lead to overfitting, and if the coefficients are chosen too small, they will not achieve the desired results. Therefore, it is necessary to evaluate the fitting effect of different coefficients in the experiment and select the appropriate coefficients.</p>
-<h3 id="Edge-regression"><a href="#Edge-regression" class="headerlink" title="Edge regression"></a>Edge regression</h3><p>The expression of the curve f(x) can be obtained after the curve fitting operation. However, this curve expression may be deviated, so further fine-tuning of the curve is needed. The final goal is to calculate the left atrial pressure from this curve expression, so the real values of the left atrial pressure can be used as the optimization target and the curve can be fitted to these real values using the curve trainer. The trained curve is able to calculate the left atrial pressure values more accurately and has a smooth, continuous character that meets the physician’s requirements.</p>
-<h3 id="Reference-coordinate-system-construction"><a href="#Reference-coordinate-system-construction" class="headerlink" title="Reference coordinate system construction"></a>Reference coordinate system construction</h3><p>In the Doppler spectrogram, the position and scale of the coordinate axes are not always fixed, as shown in Figure 4.13.</p>
-<p><img src="/images/LAPS/27.png" alt="27.png"><br>Figure 4.13 Comparison of the scales of different Doppler spectrograms</p>
-<p>The axes on the left Doppler spectrogram are not on the same line as the right one, and the scales of the left and right vertical axes are not the same, and the Doppler spectrogram is image data, so the coordinate system cannot be extracted directly, and thus the values of t1,t2,t3 cannot be calculated. To address this problem, some techniques are needed to automatically construct a new coordinate system and map the coordinates of the pixel points on the curve to the real coordinates. The first step in constructing the coordinate system is to detect the position of the coordinate axes, and the second step is to identify the scale. After these two steps, a new coordinate system can be constructed and the curve can be mapped to the new coordinate system for calculation.</p>
-<h3 id="Axis-detection"><a href="#Axis-detection" class="headerlink" title="Axis detection"></a>Axis detection</h3><p>OCR technology will be used in the axis detection part. Optical Character Recognition (OCR) is a process in which an electronic device (such as a scanner or digital camera) examines characters printed on paper, determines their shape by detecting dark and light patterns, and then translates the shape into computer text using character recognition methods. In Python, the OCR method can be done by calling certain libraries. When detecting axes, the “m/s” text is identified and the coordinates of the text’s position in the spectrogram are output. The position coordinates of the “m/s” text can be considered as the point (0, 0) of the coordinate axis.</p>
-<h3 id="Scale-recognition"><a href="#Scale-recognition" class="headerlink" title="Scale recognition"></a>Scale recognition</h3><p>After getting the coordinates of the origin of the coordinate axis, the next step is to perform scale recognition. Since the scale of x-axis is relatively fixed in the Doppler spectrogram, a fixed scale can be chosen as the scale of x-axis. But the scale of y-axis is not fixed. Therefore, the OCR method is still used to identify the text of “1.0”, “2.0” and “3.0” on the y-axis and obtain the position coordinates of these texts in turn. The difference between the vertical coordinates of the two adjacent texts is calculated and averaged as the scale of the y-axis in the new coordinate system.</p>
-<h3 id="Calculation-of-left-room-pressure"><a href="#Calculation-of-left-room-pressure" class="headerlink" title="Calculation of left room pressure"></a>Calculation of left room pressure</h3><p>After constructing the new coordinate system and mapping the curve obtained in the second step to the new coordinate system, any desired value can be calculated from the curve. Three values, t1, t2 and t3, are needed to calculate the left atrial pressure, which correspond to moments when the blood flow velocity is 1m/s, 2m/s and 3m/s, respectively. These three moments can be calculated by entering 1m/s, 2m/s, and 3m/s into the curve expression. Once these three moments are obtained, they can be substituted into the left atrial pressure calculation formula. The left atrial pressure calculation is shown in Equation 4.4, where LAP is the value of left atrial pressure.</p>
-<p><img src="/images/LAPS/28.png" alt="28.png"></p>
-<p>(4.4)</p>
-<h1 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h1><p><a href="https://github.com/Orange-66/LAPS">GitHub</a></p>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-        <tag>PyCharm</tag>
-        <tag>PyTorch</tag>
-        <tag>PyQt 5</tag>
-        <tag>Deep Learning</tag>
-        <tag>Medicine</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「Chinasoft Clould OA」Chinasoft Inter</title>
-    <url>/2020/08/05/%E3%80%8CChinasofti%20Clould%20OA%E3%80%8DChinasoft%20Inter/</url>
-    <content><![CDATA[<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>「Chinasoft Cloud OA」 is a cloud platform for the company’s internal network automation office, which integrates the functions of human resources such as employee management, business card information management, department management, function management, meeting management and approval, work schedule, cloud file storage, online information sending and receiving, leave process and reimbursement process approval, vehicle management, and outbound talent management. At the same time, the system realizes real-time analysis and visualization of some common data generated in daily work.</p>
-<p>In the project development process, I am mainly responsible for the front-end part of five modules: personal center, announcement management, vehicle management, cloud file management, and schedule management, as well as the linkage testing between these five modules and the back-end. Among them, personal center consists of personal center, employee information maintenance, retrieving others’ information; announcement management; vehicle management consists of vehicle information, vehicle view, dispatch pending, dispatch record; cloud file management consists of cloud storage, sharing cloud files; schedule management consists of work arrangement, schedule, comprehensive query, calendar view, substitute reading setting, pending approval several sub-modules.</p>
-<p>For the above modules, I am mainly responsible for rendering the data from the back-end to the front-end, using elementui and bootstrapvue two component libraries for front-end layout, unified front-end style style, each new, modify, view details of the business button pop-up style unified pop-up box, after saving, unified style style prompted the user processing results. When submitting the form, first verify whether the user input is reasonable, the main aspects are: whether the format of cell phone number, qq number and email is reasonable; whether the format of birthday, start date, end date and arrangement date is reasonable and the start date and end date cannot be later than the end date; and all the input contents that cannot be empty cannot be empty when submitting; the above submissions that do not meet the conditions will be organized in the The above non-compliant submissions will be organized in the front-end and prompted accordingly. Write form components that can cover the entire project, support search box, add, export, list, list operation as a single button, or drop-down menu, and pager, so as to ensure that after writing a component, in multiple pages, by passing parameters can control the components that appear in the page and the corresponding style.</p>
-<span id="more"></span>
-
-<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>This system is an automatic office system used in the enterprise office. With the rapid development of global information technology, the traditional office has lagged behind the requirements of the development of information technology, and will be replaced by a new office. To build an internal enterprise information network and realize office automation (OA) has become an urgent requirement. OA brings us not only the ease of coping with office affairs, the realization of the entire office process computerized. More is a new office concept, is the inevitable requirements of the development of information-based society, is an infinite extension of our thinking; time and distance is no longer an obstacle to our access to information, will become an important part of our lives.</p>
-<h1 id="Screenshot"><a href="#Screenshot" class="headerlink" title="Screenshot"></a>Screenshot</h1><p><img src="/images/OA/1.png" alt="1.png"><br><img src="/images/OA/2.png" alt="2.png"><br><img src="/images/OA/3.png" alt="3.png"><br><img src="/images/OA/4.png" alt="4.png"><br><img src="/images/OA/5.png" alt="5.png"><br><img src="/images/OA/6.png" alt="6.png"><br><img src="/images/OA/7.png" alt="7.png"><br><img src="/images/OA/8.png" alt="8.png"><br><img src="/images/OA/9.png" alt="9.png"><br><img src="/images/OA/10.png" alt="10.png"><br><img src="/images/OA/11.png" alt="11.png"><br><img src="/images/OA/12.png" alt="12.png"><br><img src="/images/OA/13.png" alt="13.png"><br><img src="/images/OA/14.png" alt="14.png"><br><img src="/images/OA/15.png" alt="15.png"><br><img src="/images/OA/16.png" alt="16.png"><br><img src="/images/OA/17.png" alt="17.png"><br><img src="/images/OA/18.png" alt="18.png"><br><img src="/images/OA/19.png" alt="19.png"><br><img src="/images/OA/20.png" alt="20.png"></p>
-<h1 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h1><p><em>The system is divided into ten main processes:</em></p>
-<p><em>1. Personal Center 2. System Management 3. Office Management 4. Meeting Management 5. Vehicle Management 6. Message Management 7. Approval Center 8. Outbound Business Management 9. System Announcement 10. Asset Management</em></p>
-<p><strong>Personal Center:</strong> After logging into the system, ordinary staff can enter the personal center page by clicking the personal center link, after which they can apply for leave, apply for car, apply for reimbursement, open personal folders, modify personal information, view personal business card folder and other operations.</p>
-<p><strong>System Management:</strong> After the system administrator logs in to the system, click System Management to enter the system management page. You can choose department management, role management, staff management and folder management for system maintenance.</p>
-<p><strong>Office Management:</strong> After logging into the system, ordinary staff can enter the personal office page by clicking the personal office connection. After that, you can choose to view personal to-do list, arrange others’ work, and view work arrangement authority. The office manager can then additionally perform maintenance operations on work arrangement permissions.</p>
-<p><strong>Meeting management:</strong> After logging in to the system, ordinary employees can select meeting management and enter the meeting management page. In the meeting management page, you can inquire about the meetings you are going to attend and the meeting applications you have sent. To initiate a meeting, you need to book a meeting room first, then enter the list of participants, and send the meeting information to each participant’s mailbox by email. Meeting approvers can additionally approve meeting applications, manage meeting rooms, manage meeting records and other operations.</p>
-<p><strong>Vehicle management:</strong> After clicking vehicle management to enter the vehicle management page after ordinary employees log in to the system, they can view and issue vehicle applications, view approval records and dispatch records, and export information reports. Fleet managers can additionally approve and delete vehicle applications, maintain approval records and dispatch records, and maintain vehicle information and other operations.</p>
-<p><strong>Message Management:</strong> After logging in, employees can click Message Management and enter the Message Management page to view messages in the Inbox, Outbox, Draft Box and Recycle Bin. Message super manager can additionally retrieve the message records sent by everyone in full text.</p>
-<p><strong>Approval Center:</strong> After employees with corresponding approval authority log in to the system, they can click Approval Center to jump to all corresponding approval pages and perform approval operations on the applications in the page.</p>
-<p><strong>Assignment Management:</strong> After logging into the system, the assignment manager can jump to the assignment management page by clicking Assignment Management, which includes the management of assigned employees, the management of partner companies and the management of assignment records.</p>
-<p><strong>System announcement:</strong> After logging into the system, ordinary employees can directly click the corresponding announcement title at the top scrolling announcement bar of the website to enter the announcement information viewing page, or click system announcement to enter the announcement viewing page. The announcement manager can additionally perform maintenance operations on the announcement information.</p>
-<p><strong>Asset management:</strong> After logging into the system, asset managers can see the asset management module in the left navigation bar, and can manage asset consumption and assets after clicking into it.</p>
-<h2 id="Related-technologies"><a href="#Related-technologies" class="headerlink" title="Related technologies"></a>Related technologies</h2><p>Back-end development framework: The project uses a three-tier architecture based on SpringBoot framework, SpringBoot is a lightweight open source framework based on the Spring Framework, which inherits Spring’s IOC (Inversion of Control) and AOP (Tangent-Oriented Programming) features, while simplifying the configuration process for developers in building the environment.</p>
-<p>Big Data development framework: the project uses the Hadoop framework , the use of HDFS to achieve distributed storage of unstructured data , the use of MapReduce to achieve the mapping of unstructured data to structured data and data statistics , analysis .</p>
-<p>In the front-end development framework: the project uses a front-end and back-end development, using Vue as the front-end development JavaScript framework, using elementui and bootstrapvue component library to complete the design of the page framework and effects.</p>
-<h2 id="Technical-points-involved"><a href="#Technical-points-involved" class="headerlink" title="Technical points involved"></a>Technical points involved</h2><p>In terms of database development, we mainly involve technical points such as table design, full-text search, paging query, etc. In the process of designing database tables, we basically followed the third paradigm principle (i.e., there is no dependency of non-key fields on any candidate fields in the database tables), while for some query-intensive tables, we used the inverse paradigm design to improve the retrieval efficiency by adding some redundant fields. For full-text retrieval, we used the ngram full-text parser provided by Mysql to create indexes for full-text retrieval in some of the tables. For paging query, we used PageHelper, a MyBatis-based paging query plugin, to achieve paging information retrieval.</p>
-<p>For back-end development, we used SpringBoot framework to achieve three-tier architecture development, maven to manage project dependencies, and MyBatis to achieve the Dao layer configuration and SQL file management. In the login management process, SpringBoot Security is used to achieve the management of login privileges. SpringBoot Scheduling is used to achieve the deployment of timed tasks.</p>
-<p>In the front-end development, we used independent development, built a development environment based on Vue.js, used npm to manage the dependency files, and used iView to develop the page framework and page effects. In the front-end and back-end interaction, axios is used to achieve asynchronous interaction of front-end and back-end data. At the same time, we used the echarts plugin to display the dynamic data statistics on the page.</p>
-<p>In terms of big data development, HDFS based on Hadoop framework is used to realize distributed storage of unstructured data, and MapReduce is used to realize structured mapping of unstructured data, as well as statistics and analysis. Meanwhile, fastdfs, a lightweight distributed storage system, is used for cloud file storage to achieve the management of employee cloud files. In the email filtering module, a Bayesian algorithm is used to classify word vectors and redis is used to store structured data sets to improve access efficiency.</p>
-<h2 id="Training-experience"><a href="#Training-experience" class="headerlink" title="Training experience"></a>Training experience</h2><p>After two months of online learning and coding training, I have some thoughts and experiences about the working mode of team programming and the rapid learning experience in a short period of time, as well as the conflicts between individuals and teams in the process of coding.</p>
-<p>In the process of team programming, I did not have similar experience with other team members in the group before, so I found that the initial bonding between team members was a relatively difficult and uncontrollable factor, and we needed to adapt to each other’s temperament and way of speaking as quickly as possible in the early stage, and also needed to speak politely and argue with each other to explain and hope each other to accept their views when Make the appropriate compromise or compromise. In the beginning, the “politeness” and “respect” of each other became a hidden problem when building the code later, and this miscommunication made the code written by each part of the corresponding high coupling, and also made the code between teams exist relatively reuse, and not so elegant. The code between teams is relatively reusable and not as elegant. At the same time, coupled with the fact that the online teamwork model is very different from the offline team model, it makes smooth communication more difficult, for example, everyone has to constantly switch between shared screens to explain their ideas, and everyone’s signal and equipment makes the communication not so smooth, and the frequent microphone setting problems and radio effects make the online communication far less efficient than the offline communication. efficient. But at the same time, to solve this problem, we started to use the shared screen as much as possible to communicate with each other using voice as much as possible, and we held short meetings every morning to let the team members understand each other’s code progress as much as possible. At the same time, after a period of time, there are problems need to communicate with each other when they say more straightforward efficiency has also become higher, in the case of problems with the captain can be in the leadership to decide the direction of the project to reduce the differences between groups, while reducing the frequent communication brought about by inefficiency. Therefore, I realized that, although not a glimpse to know the whole picture, but also to a certain extent to see the big picture to a small extent, in the process of teamwork, first of all, the impact of personnel changes in a team to a certain extent is huge, the cost of communication between personnel and personnel changes brought about by the cost of learning are very high time costs, during which the efficiency of staff output is extremely low. So I think, in a team of a good product manager or team leader is how important, in the project requirements can be unified as soon as possible, in the change of personnel can also quickly help the change of personnel quickly into the work, to speed up its learning efficiency. Of course, the above ideas have been more or less in the software engineering course, but this experience really let me feel how much this is under each word is how much bad collaboration experience condensed.</p>
-<p>Secondly, I decided to take charge of the front-end part of the project before the project started, so I reviewed the front-end HTML, CSS, JS and other related syntax statements again, and learned about the VUE framework at a later stage of the project, so I started to search for VUE-related practical courses on the website, and got a preliminary and simple understanding of the project from its construction to its writing. But then also concluded that there is actually a lot of hands-on teaching on CSDN to build and the corresponding knowledge summary document, more or less than watching the video learning to understand more efficient, but the advantage of the video class is to have a relatively fast I step-by-step teaching, to know how each step comes. Plus the previous writing of WeChat applets, more or less fortunately, VUE learning did not take too much learning time, while teammates have also learned part of the VUE, mutual learning will be relatively fast familiar with the VUE framework.</p>
-<p>Finally, we encountered conflicts in writing code and conflicts between the team, based on the distribution of characters, we are two people to write the front-end, relatively speaking, there are not many conflicts and not serious, but because the back-end by four people responsible for the existence of heavy common public code at the same time need to be constantly written at the same time corresponding in this class frequently burst out of the conflict, although in the Although we were aware of this problem in the early stage and designed the corresponding methods and properties or interfaces as much as possible, we still had to modify them more or less, and therefore wasted some time in dealing with conflicts. Although it is a separate development model for front-end and back-end, the development schedule of front-end and back-end and the corresponding joint testing make the collaboration at certain points in time linear division of labor, which also reduces the work efficiency, but perhaps if it is inevitable but can be reduced. Both front-end and back-end made me realize that when making changes to a public module, you can’t do it alone, you need to communicate with the team and get confirmation, otherwise when merging the code, there is a high risk of conflict leading to the failure of a good functional module. In the early stage of the problem can be solved, must be possible to discuss and deal with in the early stage, after all, as said in the way of code simplicity all after doing is no longer do, we did not communicate in the early stage of the login to save to the user information format (in fact, but there are differences in the writing) led to the middle of the time only to find at the same time need to find the properties written before in the page one by one, in order to ensure that the previous modules were still working correctly. At the same time, the real efficiency is to do the trouble at the very beginning, in the process of teamwork to, although we realize that the database JDK and other versions of different may lead to some configuration in the project need to change, although no harm, as long as every time will change it, but rather than each time to change the configuration is better at the beginning of the group to achieve a unified configuration to the efficiency, but at the same time, but whenever a time to forget the configuration of a The front-end team members do not understand the back-end, and when the error is found in the connection test with the back-end, it is difficult to communicate with the team members to explain exactly what is the reason for not connecting with the back-end good code. At the same time, the unification of the code style is also friendly to the front and back ends, the unified camel naming and unified naming rules, and then find the database, link each interface, reuse the code will be extremely fast, the same is also experienced in this cooperation, in the database due to the addition of the element name and the original naming format by a small difference, every time you need to pay special attention to a certain property to get this Whenever we get a property, we need to pay special attention to the fact that the variable is lowercase or there is a small difference in spelling, so we need to remember how to distinguish it, which increases the amount of thinking that our brain needs to do.</p>
-<p>These are the experiences and lessons learned from the teamwork programming training. Although the understanding of the use of frameworks and component libraries is only superficial, I have experienced many things in the previous soft engineering learning process, and I feel the same way about it, and I feel the difficulty of knowing and doing the same.</p>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/OA_front">Github</a></p>
-]]></content>
-      <tags>
-        <tag>Java</tag>
-        <tag>Vue</tag>
-        <tag>Bootstrap</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>ElementUI</tag>
-        <tag>Front-end</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「HIS」Neusoft Cloud Medical System</title>
-    <url>/2018/07/22/%E3%80%8CHIS%E3%80%8DNeusoft%20Cloud%20Medical%20System/</url>
-    <content><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The system developed in this practice project is the outpatient module in Neusoft Cloud Hospital Management System, which includes the following business functions.</p>
-<p>a. Patients: registration and refund function.</p>
-<p>b. Outpatient doctor: consultation and prescription function.</p>
-<p>c. Chargers: item charging and dispensing function.</p>
-<p><strong>My work :</strong> front-end design and layout of the page using H-UI components, the use of JavaScript language, jquery components and ajax technology to achieve the local refresh of each display unit; the overall use of SSM framework to achieve back-end logic business and achieve interaction with the database.</p>
-<span id="more"></span>
-
-<h2 id="System-Implementation"><a href="#System-Implementation" class="headerlink" title="System Implementation"></a>System Implementation</h2><p><img src="/images/HIS/1.png" alt="1.png"><br><img src="/images/HIS/2.png" alt="2.png"><br><img src="/images/HIS/3.png" alt="3.png"><br><img src="/images/HIS/4.png" alt="4.png"><br><img src="/images/HIS/5.png" alt="5.png"><br><img src="/images/HIS/6.png" alt="6.png"><br><img src="/images/HIS/7.png" alt="7.png"><br><img src="/images/HIS/8.png" alt="8.png"></p>
-<h2 id="Relevant-Technologies"><a href="#Relevant-Technologies" class="headerlink" title="Relevant Technologies"></a>Relevant Technologies</h2><h3 id="Theoretical-basis"><a href="#Theoretical-basis" class="headerlink" title="Theoretical basis"></a>Theoretical basis</h3><p><strong>Maven project build:</strong> dependency management tools and project management tools to help developers automatically download artifacts. Solve the version conflict, inconsistency, dependency bloat problem.</p>
-<p><strong>SSM main framework:</strong> the entire system is divided into view layer, controller layer, service layer, DAO layer. spring MVC is responsible for request forwarding and view management; spring to achieve business object management; mybatis as the data object persistence engine. Its lightweight configuration, the annotation development to the extreme.</p>
-<p><strong>Ajax :</strong> so that the page does not need to reload, to achieve the page local update technology.</p>
-<p><strong>fastjson :</strong> third-party tools to complete the mutual transformation of objects and Json strings.</p>
-<p><strong>c3p0 connection pooling technology :</strong> it is responsible for allocating, managing and releasing database connections to avoid frequent creation and release of connections caused by a large amount of performance overhead, but also to increase the smoothness of the system operating environment; release the idle time exceeds the maximum idle time of the database connection to avoid the database connection caused by the failure to release the database connection omission.</p>
-<p><strong>Filter :</strong> interception of requests and responses to target resources, so that the system can properly handle Chinese characters.</p>
-<p><strong>interceptor :</strong> targeted interception of resources, will not meet the requirements of the request and the corresponding interception. In the project to achieve the user must login requirements.</p>
-<h3 id="Project-development-method"><a href="#Project-development-method" class="headerlink" title="Project development method"></a>Project development method</h3><p>The development of the project adopts an iterative-incremental life cycle model, in which each parent business function is subdivided into multiple sub-functional modules during the development process, and each sub-functional module is implemented step by step. Each module is tested individually after implementation, and then integrated with the developed modules of the business function.</p>
-<p>When there is a strong correlation between the functions implemented by multiple parent functional modules, these modules will be tested for integration.</p>
-<p>Finally, all the business functions will be tested for integration.</p>
-<p>At the same time, in the process of development, when it is found that the requirements design is too ideal or does not match the actual requirements, the page will be modified and the corresponding way to achieve the requirements, the sub-functional module code will be changed, and unit and integration testing will be conducted.</p>
-<p><strong>Development tools: Eclipse EE</strong></p>
-<h2 id="System-Analysis"><a href="#System-Analysis" class="headerlink" title="System Analysis"></a>System Analysis</h2><h3 id="Login"><a href="#Login" class="headerlink" title="Login"></a>Login</h3><ol>
-<li><p>Business Analysis</p>
-<p> When the user is not logged in, the user cannot access other pages under the project; the user enters the account and password, and if the input is correct, the user enters the page corresponding to the authority held by the account, and vice versa, the user is prompted with the wrong account or password input.</p>
-</li>
-<li><p>Functional analysis</p>
-<p> Set the interceptor, when the user wants to jump to other pages, check whether the user attribute exists in its Session, if it does and is not empty, it will be released, and vice versa, it will jump to the login page.</p>
-<p> Get the account number and password entered by the user, search in the database, enter the account number entered by them exists in the database and the password is correct then jump to the page corresponding to all the privileges of the account; if the account exists but the password is wrongly entered, the password is wrongly prompted; if the account does not exist, the account is wrongly entered.</p>
-</li>
-</ol>
-<h3 id="Registration"><a href="#Registration" class="headerlink" title="Registration"></a>Registration</h3><ol>
-<li><p>Business Analysis</p>
-<p> After the patient provides the operator with personal information such as medical record number or name, ID number, gender, age, birthday, address, etc., and informs the operator of the date, registration level, registered department and corresponding doctor; the operator informs the patient whether the information is reasonable, and if it is not, the patient needs to correct the information; after the patient pays the fee, the registered invoice is printed. After registration and no refund, the patient can go to the doctor’s office for consultation, otherwise the doctor cannot view his personal information.</p>
-</li>
-<li><p>Functional analysis<br> Automatically generate and display invoice number.</p>
-<p> If the patient has registered medical record, when the operator enters the medical record number, all kinds of personal basic information of the patient will be displayed in the corresponding text input box; on the contrary, the operator can generate a new medical record number for the patient and fill in the corresponding information in the personal information field to perfect it.</p>
-<p> Patients can only register the number after the day, meanwhile, as the options of date, department, doctor and registration level change, the options in each input box will make corresponding changes in time. For example, when switching the department or number, the list of doctors will be updated.</p>
-<p> When the registration number is 0, no registration will be given.</p>
-<p> Use JS to verify that the required information in the form is completely filled in, then the form will be submitted; on the contrary, an error message will pop up and the form will not be submitted.</p>
-</li>
-</ol>
-<h3 id="Return-number"><a href="#Return-number" class="headerlink" title="Return number"></a>Return number</h3><ol>
-<li><p>Business analysis</p>
-<p> When the patient wishes to refund the number, inform the operator of the specific items to be refunded and return the corresponding amount to the patient after completion.</p>
-</li>
-<li><p>Function analysis</p>
-<p> Enter the medical record number and display all the registered information of the patient for the day.</p>
-<p> Only the registered items in the status of “not seen” can perform the refund operation, the rest of the status are prompted “no refund operation is available”.</p>
-</li>
-</ol>
-<h3 id="Consultation"><a href="#Consultation" class="headerlink" title="Consultation"></a>Consultation</h3><ol>
-<li><p>Business analysis</p>
-<p> When a doctor sees a patient, he/she can fill in the description information to the “Medical Record Home” according to the patient’s own situation, including: chief complaint, current medical history, treatment of current disease, past history, allergy history, physical examination; the doctor can view the queue of patients to be seen and the queue of patients already seen at this time, and can view their personal information and make a choice of the next patient.</p>
-</li>
-<li><p>Functional analysis<br> Use JSTL loop to display the labeled patients to be seen and patients already seen in the form of a list.</p>
-<p> Click on a patient from the list to fill in the medical history information for him/her; in order to select a patient, use JS to check, pop up a prompt message, cannot fill in the medical history, and make all input fields read-only.</p>
-<p> After the patient to be seen, it will be displayed in the list of patients who have been seen until the end of the consultation.</p>
-<p> If the patient selected is a patient who has been seen, the various information previously filled in for him/her will be displayed in the case home page after he/she has been selected.</p>
-<h3 id="Prescription"><a href="#Prescription" class="headerlink" title="Prescription"></a>Prescription</h3></li>
-<li><p>Business analysis</p>
-<p> Doctors can input keywords from drug items to search and select relevant drugs, or change the search type to template and search for template. After selecting drugs or template, the corresponding drugs will be listed in the prescription column, and doctors can modify the number of drugs in the prescription column as well as add or delete items. You cannot prescribe without items. After clicking on the prescription, the patient can go to the payment counter and pay for it.</p>
-</li>
-<li><p>Functional Analysis</p>
-<p> The doctor can select the search type, drug item or template item in the search area.</p>
-<p> According to the search category, the fuzzy query will be made for it according to the keyword and displayed in the form of a list.</p>
-<p> After the doctor clicks on the item, the drug corresponding to the item will be added to the prescription column, and the doctor can add or subtract from it, and also modify the quantity of the drug.</p>
-</li>
-</ol>
-<h3 id="Charging"><a href="#Charging" class="headerlink" title="Charging"></a>Charging</h3><ol>
-<li><p>Business Analysis</p>
-<p> According to the medical record number provided by the patient, the operator searches for the items to be paid by the patient, and the patient selects the items he/she wants to pay and makes payment, and cannot pay without items.</p>
-</li>
-<li><p>Functional analysis</p>
-<p> According to the medical record number provided by the patient, the patient’s personal information will be displayed on the page for verification.</p>
-<p> By clicking on the query, all the unpaid items of the patient will be listed in the form of a JSTL loop to be realized.</p>
-<p> Click on the selection box to select or cancel a single item, and click on the select all box to select all items in the item list.</p>
-<p> Click “Charge” to calculate the amount of all the selected items and bring up the check page, enter the amount of the patient’s payment and calculate the change, click to confirm, and save the payment record to the database.</p>
-</li>
-</ol>
-<h3 id="Dispensing"><a href="#Dispensing" class="headerlink" title="Dispensing"></a>Dispensing</h3><ol>
-<li>Business Analysis The pharmacy operator searches according to the medical record number provided by the patient, checks the patient’s desirable medication, and confirms it and gives it out.</li>
-<li>Function analysis Based on the medical record number, search and display the paid but uncollected drugs, and check them for distribution. Unpaid and refunded medications will not be displayed.</li>
-</ol>
-<h2 id="System-Design"><a href="#System-Design" class="headerlink" title="System Design"></a>System Design</h2><h3 id="Overall-Design"><a href="#Overall-Design" class="headerlink" title="Overall Design"></a>Overall Design</h3><ol>
-<li><p>System architecture design</p>
-<p> a) the use of Maven deployment SSM framework for managing all the Jar package tools , borrowed from the standard set of directory structure provided to facilitate management ; where the framework is integrated by Spring, SpringMVC, MyBatis open source framework .</p>
-<p> b) Spring provides declarative things , support for the DAO layer to simplify development , as a dependency injection container and AOP implementation exists .</p>
-<p> c) SpringMVC separates the business logic , data and interface display , respectively, to accept user input and call the model and view to complete the user requirements , all data processing work and display the user’s work with the interface for data interaction .</p>
-<p> d) MyBatis encapsulates jdbc, making data more secure and simplifying data access; establishing mapping relationships between entity classes and SQL statements, simplifying code complexity and speeding up development efficiency.</p>
-</li>
-<li><p>Project directory structure design</p>
-<p> a. Project file directory</p>
-<p> The directory structure is consistent with a standard set of directory structure provided by Maven.</p>
-<ol>
-<li><p>src/main/java: store business logic classes, business logic implementation classes, entity classes, interceptor classes, data access classes, business data classes respectively.</p>
-</li>
-<li><p>src/main/resources: store the project configuration files about spring, mybatis, and mybatis database access xml files.</p>
-</li>
-<li><p>src/main/webapp/resource: store front-end pages and front-end static resource files, javascript, css, images, etc. are in this directory.</p>
-</li>
-<li><p>src/main/webapp/WEB-INF: store all jsp files, and web.xml project files.</p>
-</li>
-<li><p>src/test/java: store the test class.</p>
-</li>
-<li><p>pom.xml: store and manage the dependency library and the version information of the dependency library.</p>
-</li>
-</ol>
-<p> b. Package directory<br> PO entity class–package name: com.his.entity; role: store the entity class with the same structure as the database table.</p>
-<p> VO entity class - package name: com.his.dto; role: the entity class that stores the data required by the business logic.</p>
-<p> Data access layer - package name: com. his.dao; role: store the data access layer related interface corresponding xml mapping file.</p>
-<p> Mapper file - path: src/main/resources/mapper; role: store the database access xml file.</p>
-<p> Business logic layer - package name: com. his.service; role: store the interface and implementation classes for the concrete implementation of business logic.</p>
-<p> control layer - package name: com. his.controller; role: to store the front-end request processing, by calling the service interface, to implement a series of business logic controller class.</p>
-</li>
-</ol>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Through the practice of this course design project, I understood the advantages and the respective roles of the single instance pattern, class diagram, and the high cohesion and low coupling knowledge introduced in the book in the actual development; at the same time, I got involved in the more popular development methods in javaWeb programming, such as SSM framework, Maven project deployment mode, and the application of front-end components. The application of front-end components. I saw the charm of back-end standardized programming, the clear division of labor modules, the role of clear interfaces; front-end HTML table formatting neat layout, in the role of JS and CSS to become friendly and aesthetic and interactive. All these experiences made me experience the process of developing a useful and usable application, and I felt that I was really creating useful values, which made me interested in WEB programming.</p>
-<p>In the process of experimentation, I really practiced my ability to solve problems and find information on my own. From ignorance of the concept of the framework, to reading a variety of online materials gradually to its role in development, such as maven’s standardized directory structure, a clear division of the discharge of different functional modules; Spring’s annotated programming, so that development does not focus on the native underlying code, focusing on how to achieve business logic, are greatly accelerated development efficiency.</p>
-<p>Similarly, in the practice process, the learning costs faced in turn were too large, taking up time that should have been spent on development; and the learning process and development process go hand in hand, with the quality of each word on the Internet varying plus the iteration of versions, making the learning system confusing from time to time, resulting in a lot of unnecessary time wasted on programming, as well as the fluctuations in mindset. At the same time, when writing the report, I realized that I was lacking in the use of SSM framework and the utilization of front-end components, and I still needed to keep learning. But the problems I encountered in the development, I let how to respond to the error report become more comfortable, but also let me feel that for new things to try, do not stick to the technology they already know and stagnate, try to understand the new technology new framework, its exercise is not only our technology, but also exercise when we are delivered new things, how to learn with a smooth mind, effective means to solve the problem. The ability.</p>
-<p>For this practice, my deepest understanding is that it is undesirable to overly study the theoretical implementation of new technologies and ignore the pain point of time constraint when giving them a quick application. After the initial understanding, you can try to use its technology for development, and gradually to achieve the needs, not only is it fast to get started, but also in the paper, the techniques and statements learned in the actual development may not be involved in this development, will cause too much time wasted.</p>
-<p>Technology will eventually become obsolete, but what is not obsolete is the ability to quickly learn and use new technologies.</p>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p><a href="https://github.com/Orange-66/HIS">Github</a></p>
-]]></content>
-      <tags>
-        <tag>Java</tag>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>SSM</tag>
-        <tag>Spring</tag>
-        <tag>Maven</tag>
-        <tag>Hui-UI</tag>
-        <tag>MySQL</tag>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Web前端开发实习备考知识调研</title>
-    <url>/2022/02/09/Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AE%9E%E4%B9%A0%E5%A4%87%E8%80%83%E7%9F%A5%E8%AF%86%E8%B0%83%E7%A0%94/</url>
-    <content><![CDATA[<h1 id="计算机基础知识"><a href="#计算机基础知识" class="headerlink" title="计算机基础知识"></a>计算机基础知识</h1><p>浏览器渲染原理、HTTP协议（计算机网络）</p>
-<p>算法</p>
-<p>数据结构</p>
-<p>了解MVVM框架定义</p>
-<p>设计模式</p>
-<span id="more"></span> 
-
-<p>了解DOM、BOM、Ajax、JSON、jQuery、bootstrap</p>
-<p>JavaScript的模块化开发、单元测试、性能测试、压缩混淆</p>
-<p>了解MVC框架定义</p>
-<p>理解RIA</p>
-<p>熟悉WebSocket</p>
-<p>常见前端技术栈以及工具</p>
-<p>Hybrid开发经验（Weex、React Native、Flutter）</p>
-<h1 id="主流前端框架"><a href="#主流前端框架" class="headerlink" title="主流前端框架"></a>主流前端框架</h1><p>React(全家桶)</p>
-<p>hooks</p>
-<p>Vue</p>
-<p>Angular</p>
-<p>Redux</p>
-<h1 id="可视化框架"><a href="#可视化框架" class="headerlink" title="可视化框架"></a>可视化框架</h1><p>echart、d3</p>
-<h1 id="开发语言"><a href="#开发语言" class="headerlink" title="开发语言"></a>开发语言</h1><p>HTML</p>
-<p>CSS</p>
-<p>JavaScript（ES6）</p>
-<p>Node.js</p>
-<p>Typescript</p>
+    <title>Java中为什么没有虚字段表来实现方法调用和字段访问的一致性？</title>
+    <url>/2023/04/16/Java%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89%E8%99%9A%E5%AD%97%E6%AE%B5%E8%A1%A8%E6%9D%A5%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%E5%92%8C%E5%AD%97%E6%AE%B5%E8%AE%BF%E9%97%AE%E7%9A%84%E4%B8%80%E8%87%B4%E6%80%A7%EF%BC%9F/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #多态 #虚方法表 #字段访问 #设计原则</p>
 <hr>
-<p>Golang</p>
-<p>Python</p>
-<p>Linux</p>
-<h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><p>webpack</p>
-<p>git</p>
-<p>gulp</p>
-<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p>MySQL、Oracle</p>
-]]></content>
-      <tags>
-        <tag>Front-End</tag>
-        <tag>Interview</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计模式-单例模式</title>
-    <url>/2022/05/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>Design Patterns</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>抽象类与接口</title>
-    <url>/2022/04/26/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[<h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><p>抽象类中不是只能有抽象方法，也可以有具体方法。</p>
-<p>抽象方法只有定义没有实现。</p>
-<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><p>接口是一个与类相似的结构，只包含常量和抽象方法。</p>
-<p>接口的很多方面都和抽象类很相似，但是它的目的是指明相关或者不相关类的多个对象的共同行为。（无视类与类之间的关系，专注于的是方法本身）</p>
-<p>类和接口之间的关系称为「接口继承」（interface inheritance）-&gt; 因为接口继承和类继承本质上是相同的。</p>
-<p>开发调用的是接口，接口规划功能，接口的具体实现在接口继承的方法中。</p>
-<p>接口可以继承其他接口</p>
-<p>问题：接口是如何实现对于类进行隐藏，让程序员只专注于暴露的接口的呢？程序员看不到类本身么？好像也是可以看到的呀？在代码中拿不到么？好像也拿得到呀？所以接口更像是的君子协议而已？当我们看到如下代码的时候，类不也自然是暴露出来了么？</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">doFilter</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FilterDemo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Filter filter;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        filter = <span class="keyword">new</span> AgeFilter();</span><br><span class="line">        filter.doFilter();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AgeFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;AgeFilter&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <tags>
-        <tag>Abstract Class</tag>
-        <tag>Interface</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>工厂模式</title>
-    <url>/2022/04/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><ul>
-<li><p>  简单工厂</p>
-</li>
-<li><p>工厂方法</p>
-<p>  疑问1: 工厂方法为什么相对来讲有是个好模式呢？让所有的汽车都实现Car接口，又设计CarFactory接口来让所有的汽车工厂实现，这和直接调用所有汽车类的方法有什么区别么？</p>
-</li>
-<li><p>  抽象工厂</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Design Patterns</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>栈、堆、执行栈及栈帧的辨析</title>
-    <url>/2022/05/01/%E6%A0%88%E3%80%81%E5%A0%86%E3%80%81%E6%89%A7%E8%A1%8C%E6%A0%88%E5%8F%8A%E6%A0%88%E5%B8%A7%E7%9A%84%E8%BE%A8%E6%9E%90/</url>
-    <content><![CDATA[<h1 id="堆-heap-和栈-stack"><a href="#堆-heap-和栈-stack" class="headerlink" title="堆(heap)和栈(stack)"></a>堆(heap)和栈(stack)</h1><p>js数据类型分为「基本类型」和「引用类型」，「基本类型」在内存中占据固定大小的空间，引用类型大小不定，比如：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">23</span> <span class="comment">// 变量声明后可知多少字节</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">tz</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// tz里面写了什么只有调用的时候才会知道，函数tz声明后会在内存开辟一段空间</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>  结论：栈(stack)自动分配内存空间，存放基本类型和引用类型值的地址；堆动态分配的内存，存放引用类型,可以使用栈中的键名来取得。</li>
-</ul>
-<p>js引擎不能直接操作堆内存中的数据，这就造成了对同一个变量赋不同类型的值，会出现完全不同的效果：为一个变量赋基本值时，实际上是创建一个新值，然后把该值赋给新变量，可以说这是一种真正意义上的赋值。 为一个变量赋引用值时，实际上是为新变量添加一个指针，指向堆内存中的一个对象，属于一种赋址操作。——摘自</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">let a = <span class="number">23</span>;</span><br><span class="line">let obj = &#123;a:&#123;b:<span class="number">1</span>&#125;&#125;</span><br><span class="line">let obj2 = obj</span><br><span class="line"></span><br><span class="line"><span class="comment">//变量a直接存储在栈中，变量obj和obj2指向堆中的同一个对象，属于该对象的指针。</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="执行栈"><a href="#执行栈" class="headerlink" title="执行栈"></a>执行栈</h1><p>每个函数被调用时会创建自己的执行上下文，主程序代码函数多了就会有自己独特的管理方式。<br>js引擎创建了执行栈来管理执行上下文。可以把执行栈认为是一个存储函数调用的栈结构，遵循先进后出的原则。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    fn2()</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   fn3()</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn3</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.trace()</span><br><span class="line">&#125;</span><br><span class="line">fn1()</span><br></pre></td></tr></table></figure>
-
-<p>fn3最后进入栈顶，但最先执行完，其执行上下文（这里理解为函数的当前执行环境）最先出栈并等待垃圾回收，遵循了后进先出的原则，fn2、fn1以此类推。</p>
-<ul>
-<li>  总结如下：</li>
-</ul>
-<p>JavaScript执行在单线程上，所有的代码都是排队执行。<br>一开始浏览器执行全局的代码时，首先创建全局的执行上下文，压入执行栈的顶部。<br>每当进入一个函数的执行就会创建函数的执行上下文，并且把它压入执行栈的顶部。当前函数执行完成后，当前函数的执行上下文出栈，并等待垃圾回收。<br>浏览器的 JS 执行引擎总是访问栈顶的执行上下文。<br>全局上下文只有唯一的一个，它在浏览器关闭时出栈。</p>
-<h1 id="栈帧"><a href="#栈帧" class="headerlink" title="栈帧"></a>栈帧</h1><p>栈帧是指为一个函数调用单独分配的那部分栈空间。<br>运行的程序从当前函数调用另外一个函数时，就会为下一个函数建立一个新的栈帧，并且进入这个栈帧，这个栈帧称为当前帧。而原来的函数也有一个对应的栈帧，被称为调用帧。每一个栈帧里面都会存入当前函数的局部变量</p>
-<p>当函数被调用时，就会被加入到调用栈顶部，执行结束之后，就会从调用栈顶部移除该函数。并将程序运行权利（帧指针）交给此时栈顶的栈帧。这种后进后出的结构也就是函数的调用栈。</p>
 <blockquote>
-<p>  引用：<a href="https://blog.csdn.net/weixin_40594127/article/details/106790866">https://blog.csdn.net/weixin_40594127/article/details/106790866</a></p>
+<p>那为什么 Java 不设计一个虚字段表来实现方法调用和字段访问的结果一致呢</p>
 </blockquote>
+<p>虽然在某些情况下，实现一个虚字段表似乎能让方法调用和字段访问的行为保持一致，但这并不符合 Java 的设计原则。在 Java 中，方法和字段的作用和原理是有所不同的：</p>
+<ol>
+<li>方法是用于定义对象的行为的，它们可以被子类覆盖以实现不同的行为。这是多态的核心，它允许我们以统一的方式处理不同类型的对象。为了实现多态，Java引入了虚方法表，使得方法调用在运行时可以根据实际对象类型执行相应的方法。</li>
+<li>另一方面，字段用于存储对象的状态。通常，我们希望字段在编译时就能确定，以避免意外地改变对象的状态。将字段设置为私有并通过方法（getter和setter）访问，是一种常见的封装实践，以确保字段访问的正确性和安全性。</li>
+</ol>
+<p>设计一个虚字段表可能会引入额外的复杂性，并使得字段访问的性能受到影响。在Java中，编译时字段访问和运行时方法调用的不同行为是有意为之，以确保代码的可读性、可维护性和执行效率。</p>
+<p>总之，Java之所以没有引入虚字段表，是因为它违背了字段和方法的基本设计原则。在处理多态时，我们应该通过方法调用来实现多态行为，而不是直接访问字段。</p>
 ]]></content>
       <tags>
-        <tag>heap</tag>
-        <tag>stack</tag>
+        <tag>Java</tag>
+        <tag>多态</tag>
+        <tag>虚方法表</tag>
+        <tag>字段访问</tag>
+        <tag>设计原则</tag>
       </tags>
   </entry>
   <entry>
-    <title>OOP 七大原则</title>
-    <url>/2022/04/29/OOP%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/</url>
-    <content><![CDATA[<p>开放封闭原则 -&gt; 对扩展开放，对修改关闭</p>
-<p>里氏替换原则 -&gt; 继承必须确保超类所拥有的性质在子类中仍然成立</p>
-<p>依赖倒置原则 -&gt; 要面向接口编程，不要面对实现编程</p>
-<p>单一职责原则 -&gt; 控制类的粒度大小，将对象解耦、提高其内聚性</p>
-<p>接口隔离原则 -&gt; 要为各个类江宁里他们需要的专用接口</p>
-<p>迪米特法则 -&gt; 只与你的直接朋友交谈，不跟“陌生人说话”</p>
-<p>合成复用原则  -&gt; 尽量先使用组合或聚合等关系来实现，其次才考虑继承关系来实现</p>
+    <title>Java中static、final和private方法为什么不是动态绑定</title>
+    <url>/2023/04/16/Java%E4%B8%ADstatic%E3%80%81final%E5%92%8Cprivate%E6%96%B9%E6%B3%95%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #Java #静态方法 #final方法 #private方法 #动态绑定 #静态绑定</p>
+<hr>
+<p>在Java中，静态方法、final方法和private方法（隐式final）都不是动态绑定的，而是静态绑定的。以下是对这几种方法为什么不是动态绑定的解释：</p>
+<ol>
+<li> static方法：</li>
+</ol>
+<p>静态方法是类级别的方法，它们不依赖于具体的实例，而是与类本身相关。因此，当调用静态方法时，编译器可以在编译时确定要调用哪个类的静态方法。不需要等到运行时去查找实际的实现。所以，静态方法不需要动态绑定，而是采用静态绑定。</p>
+<p>举例：假设我们有一个父类<code>Parent</code>和一个子类<code>Child</code>，它们都有一个静态方法<code>staticMethod</code>。当我们调用<code>Parent.staticMethod()</code>或<code>Child.staticMethod()</code>时，我们直接告诉编译器要调用哪个类的静态方法，不需要动态绑定。</p>
+<ol start="2">
+<li> final方法：</li>
+</ol>
+<p>final方法是不允许被子类重写的方法。这意味着，当调用一个final方法时，编译器可以确保在编译时确定要调用的具体实现，而无需等到运行时去查找。因此，final方法也采用静态绑定。</p>
+<p>举例：假设我们有一个父类<code>Parent</code>，其中有一个final方法<code>finalMethod</code>。如果有一个子类<code>Child</code>继承自<code>Parent</code>，那么<code>Child</code>不能重写<code>finalMethod</code>。因此，当我们调用<code>Parent.finalMethod()</code>或<code>Child.finalMethod()</code>时，编译器已经知道要调用的是<code>Parent</code>类的<code>finalMethod</code>，无需动态绑定。</p>
+<ol start="3">
+<li> private方法（隐式final）：</li>
+</ol>
+<p>private方法是类的私有方法，它们不能被子类访问或重写。实际上，它们对子类是不可见的。因此，当调用一个private方法时，编译器可以在编译时确定要调用的具体实现。这使得private方法也采用静态绑定。</p>
+<p>举例：假设我们有一个类<code>MyClass</code>，其中有一个private方法<code>privateMethod</code>。当我们调用<code>MyClass.privateMethod()</code>时，编译器已经知道要调用的是<code>MyClass</code>的<code>privateMethod</code>，无需动态绑定。</p>
+<p>综上所述，由于静态方法、final方法和private方法在编译时就可以确定具体的实现，它们不需要动态绑定，而是采用静态绑定。</p>
 ]]></content>
       <tags>
-        <tag>Design Patterns</tag>
+        <tag>Java</tag>
+        <tag>静态方法</tag>
+        <tag>final方法</tag>
+        <tag>private方法</tag>
+        <tag>动态绑定</tag>
+        <tag>静态绑定</tag>
       </tags>
   </entry>
   <entry>
-    <title>「dictionary」和「python package」的区别</title>
-    <url>/2022/05/01/%E3%80%8Cdictionary%E3%80%8D%E5%92%8C%E3%80%8Cpython%20package%E3%80%8D%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
-    <content><![CDATA[<h1 id="简论"><a href="#简论" class="headerlink" title="简论"></a>简论</h1><p>在 pycharm 中新建 python package 文件 下会有一个空的 __init__.py 文件，而 dictionary 文件没有。</p>
-<span id="more"></span> 
+    <title>is-like-a关系中向上转型的示例</title>
+    <url>/2023/04/16/is-like-a%E5%85%B3%E7%B3%BB%E4%B8%AD%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B%E7%9A%84%E7%A4%BA%E4%BE%8B/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #多态 #向上转型 #is-like-a关系 </p>
+<hr>
+<p>假设我们有一个基类 Animal 和两个子类 Dog 和 Bird。其中，Dog 类扩展了 Animal 类并添加了一个新方法 <code>bark()</code>，Bird 类也扩展了 Animal 类并添加了一个新方法 <code>fly()</code>。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Animal is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dog is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bark</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dog is barking.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bird</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Bird is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Bird is flying.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h1><p>dictionary 在pycharm 中就是一个普通的文件夹，用于划分项目内部各文件间关系。</p>
-<h1 id="python-package"><a href="#python-package" class="headerlink" title="python package"></a>python package</h1><p>对于 python package 文件夹而言，其会额外自动创建 __init__.py 文件。简单来说，python package 就是一个目录，其中包含一组模块和个 __init__.py 文件</p>
-<h2 id="init-py"><a href="#init-py" class="headerlink" title="__init__.py"></a>__init__.py</h2><p>该文件是 python package的唯一标识， 如果删除 __init__.py 文件，则python package会变成 dictionary。</p>
-<h2 id="包的导入"><a href="#包的导入" class="headerlink" title="包的导入"></a>包的导入</h2><p>python 中包和模块有两种导入包方式：精确导入 和 模糊导入。</p>
-<p>例如：在function 文件夹下，func.py 中有 func1()，func2()，func3() 三个方法。</p>
-<p><strong>精准导入</strong> :</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> function.func <span class="keyword">import</span> func1,func2</span><br></pre></td></tr></table></figure>
-
-<p>**模糊导入 **:</p>
- <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> function.func <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><blockquote>
-<p>  <a href="https://blog.csdn.net/weixin_44250149/article/details/102909411">https://blog.csdn.net/weixin_44250149/article/details/102909411</a></p>
-</blockquote>
+<p>现在假设我们有一个方法 <code>makeAnimalEat</code>，这个方法接受一个 Animal 对象，并调用它的 <code>eat()</code> 方法。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">makeAnimalEat</span><span class="params">(Animal animal)</span> </span>&#123;</span><br><span class="line">    animal.eat();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个方法中，我们不关心传入对象的具体类型，只要它是 Animal 或其子类即可。现在，我们可以创建 Dog 和 Bird 对象，并将它们向上转型为 Animal 类型，传递给 <code>makeAnimalEat</code> 方法。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Dog dog = <span class="keyword">new</span> Dog();</span><br><span class="line">Bird bird = <span class="keyword">new</span> Bird();</span><br><span class="line"></span><br><span class="line">makeAnimalEat(dog); <span class="comment">// 向上转型为Animal</span></span><br><span class="line">makeAnimalEat(bird); <span class="comment">// 向上转型为Animal</span></span><br></pre></td></tr></table></figure>
+<p>在这个例子中，向上转型允许我们将Dog和Bird对象视为Animal对象，并通过<code>makeAnimalEat</code>方法调用它们的<code>eat()</code>方法。然而，这也意味着我们不能在<code>makeAnimalEat</code>方法中直接调用Dog的<code>bark()</code>方法或Bird的<code>fly()</code>方法，因为这些方法不属于Animal类的接口。</p>
+<p>在某些情况下，我们可能需要在 <code>makeAnimalEat</code> 方法中根据传入对象的确切类型执行一些特定操作。例如，我们希望让 Dog 在吃东西之前先叫一下。为了实现这个功能，我们需要重新确定对象的类型，然后调用相应的扩展方法。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">makeAnimalEat</span><span class="params">(Animal animal)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (animal <span class="keyword">instanceof</span> Dog) &#123;</span><br><span class="line">        ((Dog) animal).bark();</span><br><span class="line">    &#125;</span><br><span class="line">    animal.eat();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们使用<code>instanceof</code>操作符检查对象是否为Dog类型，如果是，则向下转型并调用<code>bark()</code>方法。注意，这种类型检查和向下转型的操作会降低代码的灵活性，并可能导致不易维护的代码。但在某些情况下，这种方法可能是必要的。</p>
 ]]></content>
       <tags>
-        <tag>python</tag>
-        <tag>pycharm</tag>
-        <tag>基础</tag>
+        <tag>Java</tag>
+        <tag>多态</tag>
+        <tag>向上转型</tag>
+        <tag>is-like-a关系</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>一条通用准则</title>
+    <url>/2023/04/16/%E4%B8%80%E6%9D%A1%E9%80%9A%E7%94%A8%E5%87%86%E5%88%99/</url>
+    <content><![CDATA[<p>使用继承表达行为的差异，使用属性表达状态的变化。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>为什么不使用接口实现eat方法</title>
+    <url>/2023/04/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0eat%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #多态 #继承 #接口 </p>
+<hr>
+<p>在某些情况下，使用接口确实是一个更好的选择，尤其是当我们希望保证类遵循某个特定的约定（比如具有 <code>eat()</code> 方法）时。如果我们认为 Animal 类不需要包含任何默认实现或共享状态（属性），那么使用接口可能是一个更合适的选择。</p>
+<p>以下是一个使用接口的例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Eatable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">Eatable</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dog is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bark</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dog is barking.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bird</span> <span class="keyword">implements</span> <span class="title">Eatable</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Bird is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Bird is flying.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用接口的好处是它可以让我们保证所有实现了 Eatable 接口的类都必须提供 <code>eat()</code> 方法的实现。这使得我们可以在需要 Eatable 对象时，确保它们都具有该方法。</p>
+<p>然而，使用接口并不总是更好。在某些情况下，使用继承可能更适合。例如，如果Animal类包含一些共享的状态（属性）和方法实现，那么使用继承将使我们能够更轻松地在子类中复用这些共享代码。此外，我们还可以利用继承在子类中覆盖基类方法，以提供更具体的实现。</p>
+<p>总之，在确定是否使用接口或继承时，需要考虑类之间的关系、代码重用、以及预期的扩展性。根据具体情况，我们可能会选择实现接口，或者继承一个基类，或者同时使用这两种方法。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>多态</tag>
+        <tag>继承</tag>
+        <tag>接口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么构造器中的动态绑定方法绑定了子类方法</title>
+    <url>/2023/04/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9E%84%E9%80%A0%E5%99%A8%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%96%B9%E6%B3%95%E7%BB%91%E5%AE%9A%E4%BA%86%E5%AD%90%E7%B1%BB%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #多态 #构造器 #动态绑定 </p>
+<hr>
+<p>在 Java 中，除了 <code>static</code> 和 <code>final</code> 方法（<code>private</code> 方法也是隐式的 <code>final</code>）以外，其他所有方法都是后期绑定，即动态绑定。这意味着在编译时并不确定要调用哪个方法，而是在运行时根据对象的实际类型来确定要调用哪个方法。</p>
+<p>在你提供的示例中，<code>Base</code> 类的构造器中调用了 <code>show()</code> 方法。当我们创建一个 <code>Derived</code> 类的实例时，它首先会调用父类 <code>Base</code> 的构造器。此时，虽然是在父类构造器中调用 <code>show()</code> 方法，但实际创建的对象是 <code>Derived</code> 类型。由于 <code>show()</code> 方法是动态绑定的，因此在运行时，Java 会根据对象的实际类型（<code>Derived</code> 类型）来确定调用哪个方法。因此，此时调用的是 <code>Derived</code> 类中重写的 <code>show()</code> 方法，而不是 <code>Base</code> 类中的 <code>show()</code> 方法。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>多态</tag>
+        <tag>动态绑定</tag>
+        <tag>构造器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用继承复用共享代码的例子</title>
+    <url>/2023/04/16/%E4%BD%BF%E7%94%A8%E7%BB%A7%E6%89%BF%E5%A4%8D%E7%94%A8%E5%85%B1%E4%BA%AB%E4%BB%A3%E7%A0%81%E7%9A%84%E4%BE%8B%E5%AD%90/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #继承 #代码复用</p>
+<hr>
+<p>以下是一个使用继承来复用共享代码的例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Animal</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot; is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sleep</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot; is sleeping.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bark</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot; is barking.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bird</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Bird</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot; is flying.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>在这个例子中，<code>Animal</code> 类有两个属性 <code>name</code> 和 <code>age</code>，以及一些共享的方法 <code>eat()</code>、<code>sleep()</code>、<code>getName()</code> 和 <code>getAge()</code>。通过继承 <code>Animal</code> 类，我们可以在 <code>Dog</code> 和 <code>Bird</code> 子类中复用这些共享的代码。</p>
+<p>注意，在子类中我们使用<code>super()</code>调用来调用父类的构造方法，这样我们就可以在子类中设置<code>name</code>和<code>age</code>属性。另外，我们可以通过<code>getName()</code>和<code>getAge()</code>方法访问这些属性，从而在子类中实现自定义行为，如<code>bark()</code>和<code>fly()</code>方法。</p>
+<p>继承使我们能够在不修改<code>Animal</code>类的情况下轻松地为<code>Dog</code>和<code>Bird</code>类添加新功能，同时保持共享代码的一致性。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>继承</tag>
+        <tag>代码复用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在选择接口实现和继承关系时的考虑因素</title>
+    <url>/2023/04/16/%E5%9C%A8%E9%80%89%E6%8B%A9%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E5%92%8C%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E6%97%B6%E7%9A%84%E8%80%83%E8%99%91%E5%9B%A0%E7%B4%A0/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #接口 #继承 #设计原则 </p>
+<hr>
+<blockquote>
+<p>所以我们可以说，在选用接口实现还是继承关系上，我们可以通过判断到底是各各类之之间只是行为上相似，还是在不仅仅行为上、状态上也有信息需要共享，是这样么？希望更正或补充，如果表述上有欠缺的。</p>
+</blockquote>
+<p>是的，您的理解是正确的。在选择使用接口实现还是继承关系时，我们需要根据类之间的关系来判断。以下是一些关键点，可以帮助您决定使用哪种方式：</p>
+<ol>
+<li>如果类之间存在共享的状态（属性）和行为（方法实现），那么使用继承关系可能更合适。这样可以通过父类来复用这些共享代码，同时保持代码的一致性。</li>
+<li>如果类之间仅仅在行为上相似，但没有共享的状态或方法实现，那么使用接口实现更合适。接口可以定义一组共享的行为，强制实现类遵循这些行为，但不强制它们共享任何状态或方法实现。</li>
+<li>另外，还要考虑”单一职责原则”和”开闭原则”等设计原则。遵循这些原则可以帮助您创建更加灵活、易于维护的代码。</li>
+</ol>
+<p>总之，在选择使用接口实现还是继承关系时，关键是了解类之间的关系，以及它们之间需要共享的信息。您可以根据这些信息来决定使用哪种方式，以满足代码的复用、扩展和维护需求。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>设计原则</tag>
+        <tag>继承</tag>
+        <tag>接口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多态、接口与抽象类的关系与意义</title>
+    <url>/2023/04/16/%E5%A4%9A%E6%80%81%E3%80%81%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E6%84%8F%E4%B9%89/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #多态 #接口 #抽象类 #设计</p>
+<hr>
+<blockquote>
+<p>当我们已经有多态这一机制了之后，为什么还有 implements 这一设计呢？直接设计一个最上层的父类然后设计很多需要子类实现的抽象方法不就好了么？如果这样的方式不是多态的目的，那么抽象方法本身存在的意义又是什么呢？能否同时举例说明上述问题？</p>
+</blockquote>
+<p>多态是一种编程范式，它允许我们使用一个通用的接口引用不同类型的对象，并在运行时动态调用相应的方法。接口和抽象类都是实现多态的方式，但它们有不同的用途和特点。</p>
+<ol>
+<li> 接口（implements）：</li>
+</ol>
+<p>接口定义了一组规范，强调了类实现的“能做什么”。接口可以被多个类实现，这样可以实现多重继承的效果。当一个类实现了一个接口时，它承诺实现接口中定义的所有方法。这对于定义一些通用的行为和功能非常有用。接口还允许我们将实现和使用分离，使代码更加灵活和易于维护。</p>
+<ol start="2">
+<li> 抽象类（extends）：</li>
+</ol>
+<p>抽象类是一个特殊的类，它不能被实例化，只能被继承。抽象类中可以包含抽象方法和非抽象方法。抽象方法没有具体的实现，需要子类去实现。抽象类强调类之间的“是什么”关系，即子类“是一种”父类。抽象类适用于在类之间共享部分实现的情况。</p>
+<p>以下是一个举例说明：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 接口：表示可飞行的对象</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Flyable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 抽象类：表示鸟类，包含共享的属性和方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Bird</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Bird</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot; is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">sing</span><span class="params">()</span></span>; <span class="comment">// 抽象方法</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 具体类：鹦鹉，继承自Bird类，实现Flyable接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Parrot</span> <span class="keyword">extends</span> <span class="title">Bird</span> <span class="keyword">implements</span> <span class="title">Flyable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Parrot</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Parrot is flying.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Parrot is singing.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们定义了一个 <code>Flyable</code> 接口和一个 <code>Bird</code> 抽象类。<code>Parrot</code> 类继承了 <code>Bird</code> 类，并实现了 <code>Flyable</code> 接口。这样，我们可以使用多态的特性，将 <code>Parrot</code> 类的对象赋值给 <code>Bird</code> 类型或 <code>Flyable</code> 类型的引用，并在运行时动态调用相应的方法。</p>
+<p>总之，接口和抽象类都是实现多态的方式，但它们有不同的目的和使用场景。接口强调行为和功能，适用于定义通用的规范；抽象类强调类之间的关系，适用于在类之间共享部分实现。在实际的软件设计中，我们通常根据需求选择合适的方式来实现多态。</p>
+<p>对于你提到的“为什么还有implements这一设计”的问题，这是因为Java不支持多重继承，即一个类不能继承多个父类。通过接口，我们可以实现类似多重继承的效果。接口允许我们定义一组行为，并可以被多个类实现，使得代码更加灵活和模块化。</p>
+<p>关于抽象方法的存在意义，抽象方法强制子类去实现某些特定的行为。当我们定义一个抽象类时，我们可以预见到子类需要实现某些共同的行为，但这些行为的具体实现可能因子类而异。通过抽象方法，我们可以确保所有的子类都会实现这些行为，而不需要在每个子类中重复编写相同的代码。</p>
+<p>例如，在上述的例子中，<code>Bird</code> 抽象类中的 <code>sing</code> 方法是一个抽象方法。这表示所有继承自 <code>Bird</code> 的子类都必须实现 <code>sing</code> 方法，以确保它们都具有唱歌的行为。这样，我们可以在处理 <code>Bird</code> 类型的对象时，确保它们都可以调用 <code>sing</code> 方法，而不需要关心具体的实现细节。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>多态</tag>
+        <tag>接口</tag>
+        <tag>抽象类</tag>
+        <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多态的实现机制</title>
+    <url>/2023/04/16/%E5%A4%9A%E6%80%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #多态 #实现机制 #示例 </p>
+<blockquote>
+<p>一旦学会了多态，就可以以多态的思维方式考虑每件事。然而，只有普通的方法调用可以是多态的。例如，如果你直接访问一个属性，该访问会在编译时解析： </p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// polymorphism/FieldAccess.java </span></span><br><span class="line"><span class="comment">// Direct field access is determined at compile time </span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Super</span> </span>&#123; </span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> field = <span class="number">0</span>; </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getField</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> field; </span><br><span class="line">	&#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sub</span> <span class="keyword">extends</span> <span class="title">Super</span> </span>&#123; </span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> field = <span class="number">1</span>; </span><br><span class="line">	<span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getField</span><span class="params">()</span> </span>&#123; </span><br><span class="line">		<span class="keyword">return</span> field; </span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSuperField</span><span class="params">()</span> </span>&#123; </span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">super</span>.field; </span><br><span class="line">	&#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FieldAccess</span> </span>&#123; </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; </span><br><span class="line">		Super sup = <span class="keyword">new</span> Sub(); </span><br><span class="line">		<span class="comment">// Upcast </span></span><br><span class="line">		System.out.println(<span class="string">&quot;sup.field = &quot;</span> + sup.field + <span class="string">&quot;, sup.getField() = &quot;</span> + sup.getField()); </span><br><span class="line">		Sub sub = <span class="keyword">new</span> Sub(); </span><br><span class="line">		System.out.println(<span class="string">&quot;sub.field = &quot;</span> + sub.field + <span class="string">&quot;, sub.getField() = &quot;</span> + sub.getField() + <span class="string">&quot;, sub.getSuperField() = &quot;</span> + sub.getSuperField()) </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出： sup.field = 0, sup.getField() = 1 sub.field = 1, sub.getField() = 1, sub.getSuperField() = 0 </span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>我注意到上述的代码中 sup.field = 0, sup.getField() = 1，这样我对于 Java 底层实现多态的机制有些迷惑，他是如何确定到底是哪个方法要被执行的呢，是否是有个存储方法的栈之类的呢？</p>
+</blockquote>
+<p>在 Java 中，多态仅适用于方法调用，而不适用于字段访问。这就是为什么在上面的例子中，<code>sup.field</code> 的值为0，而 <code>sup.getField()</code> 的值为1。字段的访问在编译时就已经确定，而方法调用则在运行时动态绑定。</p>
+<p>在这个例子中，当我们执行以下语句：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Super sup = <span class="keyword">new</span> Sub(); <span class="comment">// Upcast</span></span><br></pre></td></tr></table></figure>
+<p><code>sup</code> 是一个 <code>Super</code> 类型的引用，但它实际上引用了一个 <code>Sub</code> 类型的对象。当我们访问字段 <code>sup.field</code> 时，编译器在编译时就已经确定我们访问的是 <code>Super</code> 类型的 <code>field</code>，因此返回值为0。</p>
+<p>然而，当我们调用 <code>sup.getField()</code> 时，JVM会在运行时检查<code>sup</code>引用的实际对象类型（即 <code>Sub</code> 类型），并调用 <code>Sub</code> 类中的 <code>getField()</code> 方法。这就是为什么 <code>sup.getField()</code> 返回1的原因。</p>
+<p>多态背后的原理是利用了一种称为“虚方法表”（vtable）的机制。简而言之，当一个类被加载时，JVM会为其创建一个包含其所有方法的表。对于继承自父类的方法，子类中若有重写的方法，虚方法表中的对应条目将被子类方法替换。当我们通过一个引用调用一个方法时，JVM会根据引用的实际对象类型查找对应的虚方法表，然后调用表中对应的方法。</p>
+<p>这就是Java实现多态的基本机制。要注意的是，多态仅适用于方法调用，不适用于字段访问。因此，在处理多态时，需要确保只通过方法调用来实现多态行为。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>多态</tag>
+        <tag>实现机制</tag>
+        <tag>示例</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开闭原则</title>
+    <url>/2023/04/16/%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #设计原则 #开闭原则 #面向对象设计</p>
+<hr>
+<p>开闭原则（Open-Closed Principle，OCP）是面向对象设计和编程中的一种重要设计原则。该原则的核心思想是：</p>
+<p>软件实体（类、模块、函数等）应该对扩展开放，对修改关闭。这意味着在设计软件时，应当允许在不修改现有代码的情况下，添加新功能或者行为。</p>
+<p>开闭原则的主要优点是提高了软件系统的可维护性和可复用性。遵循开闭原则可以使软件更容易适应变化，因为在添加新功能时，不需要对现有代码进行大量修改。这减少了引入新错误的风险，同时降低了维护成本。</p>
+<p>为了实现开闭原则，通常需要使用以下技术和设计模式：</p>
+<ol>
+<li>抽象和封装：通过定义抽象类或接口，将可变的部分与不可变的部分分离，使得在不修改现有代码的情况下，可以通过继承或实现接口来扩展功能。</li>
+<li>组合和聚合：通过将不同的功能模块组合在一起，可以在不修改现有代码的情况下，为系统添加新功能。</li>
+<li>使用设计模式：很多设计模式，如策略模式、模板方法模式、装饰器模式等，都可以帮助实现开闭原则。</li>
+</ol>
+<p>当然，实际应用中，完全遵循开闭原则可能是非常困难的。然而，作为一种理念，开闭原则提醒我们在设计软件时要关注可维护性和可扩展性，尽量降低对现有代码的修改。</p>
+]]></content>
+      <tags>
+        <tag>设计原则</tag>
+        <tag>开闭原则</tag>
+        <tag>面向对象设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多态与接口的实际生产案例</title>
+    <url>/2023/04/16/%E5%A4%9A%E6%80%81%E4%B8%8E%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E9%99%85%E7%94%9F%E4%BA%A7%E6%A1%88%E4%BE%8B/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #Java #多态 #接口 #实例</p>
+<p>以下是一个简化的网球场地预约系统的例子，以展示多态和接口在实际生产中的应用。</p>
+<p>首先，我们定义一个接口 <code>PaymentMethod</code>，表示不同的支付方式：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PaymentMethod</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">processPayment</span><span class="params">(<span class="keyword">double</span> amount)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下来，我们为不同的支付方式创建实现类，例如 <code>CreditCard</code> 和 <code>PayPal</code>：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreditCard</span> <span class="keyword">implements</span> <span class="title">PaymentMethod</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processPayment</span><span class="params">(<span class="keyword">double</span> amount)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Processing credit card payment: $&quot;</span> + amount);</span><br><span class="line">        <span class="comment">// 实际的信用卡支付处理逻辑...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PayPal</span> <span class="keyword">implements</span> <span class="title">PaymentMethod</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processPayment</span><span class="params">(<span class="keyword">double</span> amount)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Processing PayPal payment: $&quot;</span> + amount);</span><br><span class="line">        <span class="comment">// 实际的PayPal支付处理逻辑...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在，我们有一个 <code>Booking</code> 类，表示预约。这个类可以接受一个 <code>PaymentMethod</code> 类型的对象，以便在完成预约时处理支付：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Booking</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> PaymentMethod paymentMethod;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Booking</span><span class="params">(PaymentMethod paymentMethod)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.paymentMethod = paymentMethod;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">completeBooking</span><span class="params">(<span class="keyword">double</span> amount)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Completing booking...&quot;</span>);</span><br><span class="line">        paymentMethod.processPayment(amount);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，我们使用了接口和多态的概念。<code>PaymentMethod</code> 接口定义了一个规范，而 <code>CreditCard</code> 和 <code>PayPal</code> 类提供了具体的实现。这样，我们可以灵活地为 <code>Booking</code> 类添加新的支付方式，而不需要修改 <code>Booking</code> 类的代码。多态使得我们可以将不同支付方式的实现类对象赋值给 <code>PaymentMethod</code> 类型的引用，从而在运行时动态调用正确的方法。</p>
+<p>在实际生产中，我们可以利用这种设计更轻松地添加新的支付方式，例如 <code>Alipay</code>、<code>WeChatPay</code> 等，只需要创建新的实现类并实现 <code>PaymentMethod</code> 接口即可。</p>
+<p>以下是一个简单的测试代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        PaymentMethod creditCard = <span class="keyword">new</span> CreditCard();</span><br><span class="line">        PaymentMethod payPal = <span class="keyword">new</span> PayPal();</span><br><span class="line"></span><br><span class="line">        Booking booking1 = <span class="keyword">new</span> Booking(creditCard);</span><br><span class="line">        Booking booking2 = <span class="keyword">new</span> Booking(payPal);</span><br><span class="line"></span><br><span class="line">        booking1.completeBooking(<span class="number">100</span>);</span><br><span class="line">        booking2.completeBooking(<span class="number">150</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过这个例子，我们可以看到多态和接口在实际生产中的应用，以及它们是如何提高代码的灵活性和可扩展性的。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>多态</tag>
+        <tag>接口</tag>
+        <tag>实例</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>构造器中调用动态绑定方法的隐患</title>
+    <url>/2023/04/16/%E6%9E%84%E9%80%A0%E5%99%A8%E4%B8%AD%E8%B0%83%E7%94%A8%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%96%B9%E6%B3%95%E7%9A%84%E9%9A%90%E6%82%A3/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #多态 #构造器 #动态绑定 #隐蔽的bug</p>
+<hr>
+<blockquote>
+<p>如果在构造器中调用了动态绑定方法，就会用到那个方法的重写定义。然而，调用的结果难以预料因为被重写的方法在对象被完全构造出来之前已经被调用，这使得一些 bug 很隐蔽，难以发现。<br>———<br>为什么调用结果是难以预料的，举例解释下？ 为什么这些 bug 就是隐蔽的了呢？</p>
+</blockquote>
+<p>调用构造器中动态绑定方法的结果难以预料，是因为在对象完全构造出来之前，重写的方法就已经被调用。这可能导致不完全初始化的对象状态或数据。我们来看一个例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Base</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        show(); <span class="comment">// 动态绑定方法</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Base show&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> value = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Derived show, value: &quot;</span> + value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Derived derived = <span class="keyword">new</span> Derived();</span><br><span class="line">        derived.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Derived show, value: 0</span><br><span class="line">Derived show, value: 10</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>Derived</code> 类继承了 <code>Base</code> 类，并重写了 <code>show()</code> 方法。当我们创建一个 <code>Derived</code> 类的实例时，会先调用父类 <code>Base</code> 的构造器。在 <code>Base</code> 构造器中，调用了动态绑定方法 <code>show()</code>，此时会调用 <code>Derived</code> 类中重写的 <code>show()</code> 方法。然而，此时 <code>Derived</code> 类的构造器尚未执行，<code>value</code> 字段还没有被初始化为 10，所以输出的 <code>value</code> 值是 0。这就是为什么调用结果难以预料。</p>
+<p>这些bug隐蔽的原因是，程序员可能没有意识到在构造器中调用动态绑定方法会导致这样的问题，而且问题表现为数据不一致，这使得在调试时难以发现问题的根源。因此，在构造器中调用动态绑定方法可能导致难以追踪和定位的bug。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>多态</tag>
+        <tag>动态绑定</tag>
+        <tag>构造器</tag>
+        <tag>隐蔽的bug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抽象和封装示例</title>
+    <url>/2023/04/16/%E6%8A%BD%E8%B1%A1%E5%92%8C%E5%B0%81%E8%A3%85%E7%A4%BA%E4%BE%8B/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #抽象 #封装 #面向对象设计 #开闭原则 </p>
+<hr>
+<p>以下是一个关于图形绘制的例子，展示了如何使用抽象和封装实现开闭原则：</p>
+<p>首先，我们创建一个抽象类<code>Shape</code>，定义了一个抽象方法<code>draw()</code>，用于绘制图形：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下来，我们可以创建不同的图形类，如 <code>Circle</code> 和 <code>Rectangle</code>，分别继承 <code>Shape</code> 类，并实现 <code>draw()</code> 方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span> <span class="keyword">extends</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;绘制一个圆形&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> <span class="keyword">extends</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;绘制一个矩形&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在，我们可以创建一个 <code>Drawing</code> 类，它接收一个 <code>Shape</code> 类型的列表，并提供一个 <code>drawAll()</code> 方法来绘制所有图形：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Drawing</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Shape&gt; shapes;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Drawing</span><span class="params">(List&lt;Shape&gt; shapes)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.shapes = shapes;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawAll</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (Shape shape : shapes) &#123;</span><br><span class="line">            shape.draw();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们通过抽象类 <code>Shape</code> 将图形的绘制行为抽象出来，并通过封装将不同图形的具体实现细节隐藏起来。这样，当我们需要添加新的图形类型时（例如三角形），只需要创建一个新的类（如 <code>Triangle</code>），继承 <code>Shape</code> 并实现 <code>draw()</code> 方法。我们不需要修改 <code>Drawing</code> 类或其他现有代码。</p>
+<p>这个例子展示了如何通过抽象和封装实现开闭原则，使得软件系统易于扩展和维护。</p>
+]]></content>
+      <tags>
+        <tag>开闭原则</tag>
+        <tag>面向对象设计</tag>
+        <tag>抽象</tag>
+        <tag>封装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抽象方法与接口在概念上的异同</title>
+    <url>/2023/04/16/%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8E%A5%E5%8F%A3%E5%9C%A8%E6%A6%82%E5%BF%B5%E4%B8%8A%E7%9A%84%E5%BC%82%E5%90%8C/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #抽象类 #抽象概念 #接口 #约束机制 #继承 #抽象方法 #父类 #子类 </p>
+<hr>
+<blockquote>
+<p>在一定程度上，我是否可以理解为一个父类中的抽象方法就是这个父类承诺的这个类的子类们自身要实现的所有方法，如果将接口比喻成一个标签用以表示一个类承诺实现了这个标签所代表的所有方法，那么抽象方法本身也是一种形式的标签</p>
+</blockquote>
+<p>是的，在一定程度上，你可以这样理解。抽象方法是父类对子类的一种约束，表示子类必须实现这个方法。这种约束关系确保了在父类中定义的抽象方法在所有子类中都有具体的实现。从这个角度看，抽象方法确实可以看作是一种”标签”，它告诉子类应该实现某些行为。</p>
+<p>与接口相比，抽象方法在父类中定义，而接口是一种独立的结构，可以被多个类实现。接口也可以看作是一种”标签”，表示实现了该接口的类承诺实现了接口中定义的所有方法。</p>
+<p>总的来说，抽象方法和接口都是一种约束机制，用于确保实现它们的类具有某些特定的行为。抽象方法主要用于继承关系中，而接口则可以实现更灵活的多重继承效果。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>继承</tag>
+        <tag>接口</tag>
+        <tag>抽象类</tag>
+        <tag>抽象概念</tag>
+        <tag>约束机制</tag>
+        <tag>抽象方法</tag>
+        <tag>父类</tag>
+        <tag>子类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>理解纯is-a关系和is-like-a关系</title>
+    <url>/2023/04/16/%E7%90%86%E8%A7%A3%E7%BA%AFis-a%E5%85%B3%E7%B3%BB%E5%92%8Cis-like-a%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #多态 #继承 #is-a关系 #is-like-a关系</p>
+<hr>
+<p>这段文字主要在讨论两种不同的继承关系：纯 is-a 关系和 is-like-a 关系。</p>
+<ol>
+<li> 纯is-a关系：在这种关系中，子类只覆盖（重写）基类的方法，而不添加任何新方法。这意味着子类对象可以完美地替换基类对象，因为它们具有相同的接口。在这种情况下，多态会处理一切，你不需要知道子类的额外信息。</li>
+</ol>
+<p>这种方式看起来是继承的理想方式，但它并非适用于所有场景。</p>
+<ol start="2">
+<li> is-like-a关系：在这种关系中，子类不仅覆盖基类的方法，还扩展了基类的接口，添加了额外的方法。子类与基类具有相同的基本接口，但还具有其他特性，需要额外的方法来实现。</li>
+</ol>
+<p>这种方法在某些情况下也是有用的，但它有一个缺点。一旦你向上转型（upcast），你就不能调用子类中扩展的那部分接口的方法。在某些情况下，你可能需要重新发现对象的确切类型，以便访问该类型的扩展方法。</p>
+<p>这段文字的目的是让你了解在设计类的继承结构时，可能会遇到这两种不同的情况。在日常开发过程中，根据问题的具体需求，你可能会遇到这两种情况。关键是理解这两种关系的优缺点，并在实际情况中做出合适的设计选择。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>多态</tag>
+        <tag>is-like-a关系</tag>
+        <tag>继承</tag>
+        <tag>is-a关系</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>理解接口（Interface）的抽象概念</title>
+    <url>/2023/04/16/%E7%90%86%E8%A7%A3%E6%8E%A5%E5%8F%A3%EF%BC%88Interface%EF%BC%89%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #接口 #面向对象 #抽象概念</p>
+<hr>
+<blockquote>
+<p>我注意到一件事，在我们学习 onjava8这本书的时候，里面是不是的会提及接口（interface）这一概念，但是有的时候似乎并不是说的关键字 interface，而是一种抽象概念的接口—用以表达的是一个类对外开放的那些实现的方，是一种基于 java 面向对象思想而设计的一种抽象层面，即，对外提供接口而不暴露具体实现的这么一种思想，的表述？</p>
+</blockquote>
+<p>你的理解是正确的。在 Java 中，当我们谈论接口（interface）时，它可能有两层含义。一种是具体的关键字 <code>interface</code>，它用于创建一种特殊的类型，这种类型只包含抽象方法和静态常量。另一种含义是抽象概念上的接口，它表示一个类对外暴露的方法和属性，用于与其他类进行交互。</p>
+<p>抽象概念上的接口强调了面向对象编程的一种思想：封装。封装是指将实现细节隐藏起来，仅向外界提供有限的、可控的访问途径。这样，外部代码只需要关注类的接口（即暴露的方法和属性），而不需要了解其内部实现。这使得我们可以在不影响其他代码的情况下，随时更改类的内部实现。</p>
+<p>Java的关键字 <code>interface</code> 实际上也是基于这种抽象概念的接口思想设计的。通过使用关键字 <code>interface</code> 创建的接口类型，我们可以定义一组方法，表示一种规范或协议，实现该接口的类需要遵循这个规范。这样，我们就可以基于接口而非具体实现编写代码，从而提高了代码的灵活性和可扩展性。</p>
+<p>总之，Java中的接口（interface）既可以表示一种具体的类型（关键字 <code>interface</code>），也可以表示一种抽象概念（类对外暴露的方法和属性）。这两种含义都是基于面向对象编程的封装思想而设计的，旨在提高代码的可维护性和可扩展性。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>接口</tag>
+        <tag>抽象概念</tag>
+        <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编写构造器的一条良好规范</title>
+    <url>/2023/04/16/%E7%BC%96%E5%86%99%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E4%B8%80%E6%9D%A1%E8%89%AF%E5%A5%BD%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<p>做尽量少的事让对象进入良好状态。如果有可能的话，尽量不要调用类中的任何方法。在基类的构造器中能安全调用的只有基类的 <strong>final</strong> 方法（这也适用于可被看作是 <strong>final</strong> 的 <strong>private</strong> 方法）。这些方法不能被重写，因此不会产生意想不到的结果。你可能无法永远遵循这条规范，但应该朝着它努力。</p>
+]]></content>
   </entry>
 </search>
