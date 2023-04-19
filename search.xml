@@ -880,7 +880,7 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>使用hexo发布博客</title>
     <url>/2023/04/19/%E4%BD%BF%E7%94%A8hexo%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>时间：2023-04-18<br>标签： #hexo #github #GitHubPages #shell #blog</p>
 <hr>
@@ -914,6 +914,13 @@
 </ol>
 <p>完成这些步骤后，您的Markdown文章就会发布到Hexo博客上。</p>
 ]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>GitHubPages</tag>
+        <tag>shell</tag>
+        <tag>blog</tag>
+      </tags>
   </entry>
   <entry>
     <title>使用抽象类阻止实例化</title>

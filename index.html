@@ -86,7 +86,7 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">101</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">105</span></a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
@@ -165,7 +165,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-count">105</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -239,100 +239,6 @@
 
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E4%BD%BF%E7%94%A8hexo%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Taylor Chyi">
-      <meta itemprop="description" content="幸福属于那些自得其乐的人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taylor Chyi's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/%E4%BD%BF%E7%94%A8hexo%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-04-19 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T04:42:47+01:00">2023-04-19</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #hexo #github #GitHubPages #shell #blog</p>
-<hr>
-<p>按照以下步骤将您的 Markdown 文件发布到博客上：</p>
-<ol>
-<li> <strong>创建新文章</strong>：在 Hexo 项目目录中，运行以下命令以创建一个新的文章文件：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &quot;文章标题&quot;</span><br></pre></td></tr></table></figure>
-<p>这将在 <code>source/_posts</code> 目录下创建一个新的 Markdown 文件，您可以用文本编辑器打开它。</p>
-<ol start="2">
-<li><p> <strong>编辑文章</strong>：将您已经编写好的 Markdown 文件内容复制到新创建的文章文件中。如果需要，您可以在文件顶部的 front matter 中添加或编辑元数据（如标题、日期、标签等）。例如：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">&quot;文章标题&quot;</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2023-04-15</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签2</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">文章正文...</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li><p> <strong>生成静态页面</strong>：在项目目录中，运行以下命令以生成静态页面：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>这将在 <code>public</code> 文件夹中生成静态网页文件。</p>
-</li>
-<li><p> <strong>部署到 GitHub Pages</strong>：在 Hexo 项目目录中的 <code>_config.yml</code> 文件中，配置好您的 GitHub Pages 仓库信息：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/your-username/your-username.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
-<p>然后安装 hexo-deployer-git 插件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>部署博客：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>这将把生成的静态页面推送到您的 GitHub Pages 仓库。</p>
-</li>
-<li><p> <strong>查看博客</strong>：访问<code>https://your-username.github.io</code>，您应该能看到更新后的博客。请注意，GitHub Pages可能需要几分钟的时间来部署更新。</p>
-</li>
-</ol>
-<p>完成这些步骤后，您的Markdown文章就会发布到Hexo博客上。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -473,6 +379,85 @@
 <p>总之，Java中的<code>this</code>关键字用于引用当前对象，它在解决命名冲突、调用其他构造器和实现链式方法调用等场景中非常有用。</p>
 </li>
 </ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Java%20%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%20super%20%E8%A1%A8%E7%A4%BA%E7%88%B6%E7%B1%BB%E8%80%8C%E4%B8%8D%E6%98%AF%20base/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Taylor Chyi">
+      <meta itemprop="description" content="幸福属于那些自得其乐的人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taylor Chyi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/19/Java%20%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%20super%20%E8%A1%A8%E7%A4%BA%E7%88%B6%E7%B1%BB%E8%80%8C%E4%B8%8D%E6%98%AF%20base/" class="post-title-link" itemprop="url">Java 中为什么使用 super 表示父类而不是 base</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>时间：2023-04-11<br>标签： #Java #super #父类 #历史背景</p>
+<hr>
+<blockquote>
+<p>为什么我们在 java 中使用 super 来表示父类而不是用 base，这是因为什么原因，有什么历史因素或背后的故事么</p>
+</blockquote>
+<p>在 Java 中，我们使用 super 关键字来表示父类，而不是使用 base。这个设计决策的背后有一定的历史因素和原因：</p>
+<ol>
+<li><p>语言设计者的选择：<br>Java 的创建者 James Gosling 和他的团队在设计 Java 语言时，选择了”super”作为访问父类成员的关键字。这种选择可能是基于他们的编程经验、对现有编程语言的了解，以及他们对 Java 语言的愿景。</p>
+</li>
+<li><p>与其他语言的区分：<br>当时已有的一些编程语言，如 C++和 Object Pascal（Delphi）等，使用其他关键字表示父类。例如，C++中使用”:: “操作符，Object Pascal 中使用”inherited”关键字。Java 选择使用 super 作为父类表示，可以帮助区分这些编程语言。</p>
+</li>
+<li><p>表达清晰：<br>Super 这个词在英语中表示”上级”或”超级”，在这个语境下，表示”父类”是合适的。这个词简洁、易懂，可以清晰地表达出父类的概念。</p>
+</li>
+</ol>
+<p>总之，Java 中使用 super 表示父类而不是 base，主要是由于语言设计者的选择和对其他编程语言的区分。在实际编程过程中，使用 super 关键字可以清晰地表示出访问父类成员的意图，使代码易于理解。</p>
 
       
     </div>

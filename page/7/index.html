@@ -86,7 +86,7 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">101</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">105</span></a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
@@ -165,7 +165,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-count">105</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E4%BD%BF%E7%94%A8@Override%20%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%A5%BD%E5%A4%84/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E4%BD%BF%E7%94%A8hexo%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/%E4%BD%BF%E7%94%A8@Override%20%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%A5%BD%E5%A4%84/" class="post-title-link" itemprop="url">使用@Override 注解的好处</a>
+          <a href="/2023/04/19/%E4%BD%BF%E7%94%A8hexo%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">使用hexo发布博客</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 05:00:32" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -286,23 +286,37 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-11<br>标签： #Java  #注解  #Override</p>
+          <p>时间：2023-04-18<br>标签： #hexo #github #GitHubPages #shell #blog</p>
 <hr>
-<blockquote>
-<p>@Override 是可选的，但它有助于验证你没有拼写错误 (或者更微妙地说，大小写字母输入错误)。</p>
-</blockquote>
-<p>在 Java 编程中，<code>@Override</code> 注解确实是可选的，但它具有一定的好处，可以提高代码的可读性和减少错误。下面列举了几个使用 <code>@Override</code> 注解的优点：</p>
+<p>按照以下步骤将您的 Markdown 文件发布到博客上：</p>
 <ol>
-<li><p><strong>增强代码可读性</strong>：<br>使用<code>@Override</code>注解表明这个方法是重写父类或实现接口的方法，这使得代码阅读者更容易理解代码的结构和意图。</p>
+<li> <strong>创建新文章</strong>：在 Hexo 项目目录中，运行以下命令以创建一个新的文章文件：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &quot;文章标题&quot;</span><br></pre></td></tr></table></figure>
+<p>这将在 <code>source/_posts</code> 目录下创建一个新的 Markdown 文件，您可以用文本编辑器打开它。</p>
+<ol start="2">
+<li><p> <strong>编辑文章</strong>：将您已经编写好的 Markdown 文件内容复制到新创建的文章文件中。如果需要，您可以在文件顶部的 front matter 中添加或编辑元数据（如标题、日期、标签等）。例如：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">&quot;文章标题&quot;</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2023-04-15</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签2</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">文章正文...</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p> <strong>生成静态页面</strong>：在项目目录中，运行以下命令以生成静态页面：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>这将在 <code>public</code> 文件夹中生成静态网页文件。</p>
 </li>
-<li><p><strong>避免拼写错误和大小写敏感错误</strong>：<br>如果你使用了<code>@Override</code>注解，编译器会检查该方法是否确实重写了父类或接口的方法。这有助于防止因为方法名拼写错误或大小写输入错误而导致的问题。</p>
+<li><p> <strong>部署到 GitHub Pages</strong>：在 Hexo 项目目录中的 <code>_config.yml</code> 文件中，配置好您的 GitHub Pages 仓库信息：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/your-username/your-username.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+<p>然后安装 hexo-deployer-git 插件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>部署博客：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>这将把生成的静态页面推送到您的 GitHub Pages 仓库。</p>
 </li>
-<li><p><strong>捕获重构引入的错误</strong>：<br>当父类或接口的方法签名发生变化时，使用<code>@Override</code>注解的子类方法会报编译错误。这有助于开发者在重构过程中捕获到问题，并及时修复错误。</p>
-</li>
-<li><p><strong>避免意外的方法重载</strong>：<br>在没有使用<code>@Override</code>的情况下，你可能会意外地重载父类的方法，而不是重写它。使用<code>@Override</code>可以确保你的方法确实是重写父类的方法，而不是创建一个新的重载方法。</p>
+<li><p> <strong>查看博客</strong>：访问<code>https://your-username.github.io</code>，您应该能看到更新后的博客。请注意，GitHub Pages可能需要几分钟的时间来部署更新。</p>
 </li>
 </ol>
-<p>总结：虽然<code>@Override</code>注解在Java中是可选的，但它可以提高代码的可读性，减少错误，并在重构过程中捕获潜在问题。因此，建议在重写父类或实现接口的方法时，使用<code>@Override</code>注解。</p>
+<p>完成这些步骤后，您的Markdown文章就会发布到Hexo博客上。</p>
 
       
     </div>
