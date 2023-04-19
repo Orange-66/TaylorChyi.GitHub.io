@@ -86,8 +86,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">33</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">18</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">101</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -159,13 +159,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">101</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E4%B8%80%E6%9D%A1%E9%80%9A%E7%94%A8%E5%87%86%E5%88%99/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Java%20%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%20super%20%E8%A1%A8%E7%A4%BA%E7%88%B6%E7%B1%BB%E8%80%8C%E4%B8%8D%E6%98%AF%20base/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E4%B8%80%E6%9D%A1%E9%80%9A%E7%94%A8%E5%87%86%E5%88%99/" class="post-title-link" itemprop="url">一条通用准则</a>
+          <a href="/2023/04/19/Java%20%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%20super%20%E8%A1%A8%E7%A4%BA%E7%88%B6%E7%B1%BB%E8%80%8C%E4%B8%8D%E6%98%AF%20base/" class="post-title-link" itemprop="url">Java 中为什么使用 super 表示父类而不是 base</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -286,7 +286,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>使用继承表达行为的差异，使用属性表达状态的变化。</p>
+          <p>时间：2023-04-11<br>标签： #Java #super #父类 #历史背景</p>
+<hr>
+<blockquote>
+<p>为什么我们在 java 中使用 super 来表示父类而不是用 base，这是因为什么原因，有什么历史因素或背后的故事么</p>
+</blockquote>
+<p>在 Java 中，我们使用 super 关键字来表示父类，而不是使用 base。这个设计决策的背后有一定的历史因素和原因：</p>
+<ol>
+<li><p>语言设计者的选择：<br>Java 的创建者 James Gosling 和他的团队在设计 Java 语言时，选择了”super”作为访问父类成员的关键字。这种选择可能是基于他们的编程经验、对现有编程语言的了解，以及他们对 Java 语言的愿景。</p>
+</li>
+<li><p>与其他语言的区分：<br>当时已有的一些编程语言，如 C++和 Object Pascal（Delphi）等，使用其他关键字表示父类。例如，C++中使用”:: “操作符，Object Pascal 中使用”inherited”关键字。Java 选择使用 super 作为父类表示，可以帮助区分这些编程语言。</p>
+</li>
+<li><p>表达清晰：<br>Super 这个词在英语中表示”上级”或”超级”，在这个语境下，表示”父类”是合适的。这个词简洁、易懂，可以清晰地表达出父类的概念。</p>
+</li>
+</ol>
+<p>总之，Java 中使用 super 表示父类而不是 base，主要是由于语言设计者的选择和对其他编程语言的区分。在实际编程过程中，使用 super 关键字可以清晰地表示出访问父类成员的意图，使代码易于理解。</p>
 
       
     </div>
@@ -313,7 +327,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0eat%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Path%20%E4%B8%8E%20Paths%20%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -326,7 +340,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0eat%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">为什么不使用接口实现eat方法</a>
+          <a href="/2023/04/19/Path%20%E4%B8%8E%20Paths%20%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">Path 与 Paths 的关系与区别</a>
         </h2>
 
         <div class="post-meta-container">
@@ -338,7 +352,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -351,14 +365,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #多态 #继承 #接口 </p>
+          <p>时间：2023-04-18<br>标签： #Java #Path #Paths</p>
 <hr>
-<p>在某些情况下，使用接口确实是一个更好的选择，尤其是当我们希望保证类遵循某个特定的约定（比如具有 <code>eat()</code> 方法）时。如果我们认为 Animal 类不需要包含任何默认实现或共享状态（属性），那么使用接口可能是一个更合适的选择。</p>
-<p>以下是一个使用接口的例子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Eatable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">Eatable</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dog is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bark</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dog is barking.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bird</span> <span class="keyword">implements</span> <span class="title">Eatable</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Bird is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Bird is flying.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用接口的好处是它可以让我们保证所有实现了 Eatable 接口的类都必须提供 <code>eat()</code> 方法的实现。这使得我们可以在需要 Eatable 对象时，确保它们都具有该方法。</p>
-<p>然而，使用接口并不总是更好。在某些情况下，使用继承可能更适合。例如，如果Animal类包含一些共享的状态（属性）和方法实现，那么使用继承将使我们能够更轻松地在子类中复用这些共享代码。此外，我们还可以利用继承在子类中覆盖基类方法，以提供更具体的实现。</p>
-<p>总之，在确定是否使用接口或继承时，需要考虑类之间的关系、代码重用、以及预期的扩展性。根据具体情况，我们可能会选择实现接口，或者继承一个基类，或者同时使用这两种方法。</p>
+<blockquote>
+<p>import java.nio.file.Paths; import java.nio.file.Path; 为什么会存在两个歧义性很高的两个包在同一个包下，二者的功能的区别是什么</p>
+</blockquote>
+<p>在这个例子中，我们使用了两个不同的类，它们都在 <code>java.nio.file</code> 包中：<code>Paths</code> 和 <code>Path</code>。虽然它们的名称很相似，但它们具有不同的功能和用途。</p>
+<ol>
+<li><code>java.nio.file.Path</code>：<code>Path</code> 是一个接口，表示文件系统中文件或目录的路径。它提供了一种在文件系统中导航和操作文件的方法。<code>Path</code> 对象包含了路径信息，可以用来创建、删除、读取和修改文件或目录。</li>
+<li><code>java.nio.file.Paths</code>：<code>Paths</code> 是一个工具类，包含一些静态方法，用于创建 <code>Path</code> 对象。它是一个方便的工具类，用于将字符串路径转换为 <code>Path</code> 对象，以便在文件系统中进行操作。</li>
+</ol>
+<p>虽然它们的名字很相似，但它们的功能是互补的。我们通常使用 <code>Paths</code> 类中的静态方法创建一个 <code>Path</code> 对象，然后使用 <code>Path</code> 对象来操作和访问文件系统。</p>
+<p>在本例中，我们使用 <code>Paths.get()</code> 方法将字符串形式的目录路径转换为 <code>Path</code> 对象。接着，我们使用 <code>Path</code> 对象来操作文件路径，例如获取文件名（<code>path.getFileName().toString()</code>）。</p>
 
       
     </div>
@@ -385,7 +403,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9E%84%E9%80%A0%E5%99%A8%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%96%B9%E6%B3%95%E7%BB%91%E5%AE%9A%E4%BA%86%E5%AD%90%E7%B1%BB%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Set%3CInteger%3E%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%B8%80%E4%B8%AA%20int%20%E6%95%B0%E7%BB%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -398,7 +416,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9E%84%E9%80%A0%E5%99%A8%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%96%B9%E6%B3%95%E7%BB%91%E5%AE%9A%E4%BA%86%E5%AD%90%E7%B1%BB%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">为什么构造器中的动态绑定方法绑定了子类方法</a>
+          <a href="/2023/04/19/Set%3CInteger%3E%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%B8%80%E4%B8%AA%20int%20%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">Set<Integer> 转换为一个 int 数组</a>
         </h2>
 
         <div class="post-meta-container">
@@ -410,7 +428,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -423,10 +441,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #多态 #构造器 #动态绑定 </p>
+          <p>时间：2023-04-18<br>标签： #Java #Set #数组 </p>
 <hr>
-<p>在 Java 中，除了 <code>static</code> 和 <code>final</code> 方法（<code>private</code> 方法也是隐式的 <code>final</code>）以外，其他所有方法都是后期绑定，即动态绑定。这意味着在编译时并不确定要调用哪个方法，而是在运行时根据对象的实际类型来确定要调用哪个方法。</p>
-<p>在你提供的示例中，<code>Base</code> 类的构造器中调用了 <code>show()</code> 方法。当我们创建一个 <code>Derived</code> 类的实例时，它首先会调用父类 <code>Base</code> 的构造器。此时，虽然是在父类构造器中调用 <code>show()</code> 方法，但实际创建的对象是 <code>Derived</code> 类型。由于 <code>show()</code> 方法是动态绑定的，因此在运行时，Java 会根据对象的实际类型（<code>Derived</code> 类型）来确定调用哪个方法。因此，此时调用的是 <code>Derived</code> 类中重写的 <code>show()</code> 方法，而不是 <code>Base</code> 类中的 <code>show()</code> 方法。</p>
+<p>如果你想将一个 <code>Set&lt;Integer&gt;</code> 转换为一个 <code>int[]</code> 数组，你可以使用以下方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.IntStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个 Set&lt;Integer&gt;</span></span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        set.add(<span class="number">1</span>);</span><br><span class="line">        set.add(<span class="number">2</span>);</span><br><span class="line">        set.add(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将 Set&lt;Integer&gt; 转换为 int[]</span></span><br><span class="line">        <span class="keyword">int</span>[] intArray = set.stream().mapToInt(Integer::intValue).toArray();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印结果</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : intArray) &#123;</span><br><span class="line">            System.out.println(num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里我们使用 Java 8 引入的 Stream API。首先，我们通过调用 <code>set.stream()</code> 获取一个 <code>Stream&lt;Integer&gt;</code>，然后使用 <code>mapToInt()</code> 方法将每个 <code>Integer</code> 对象转换为对应的基本类型 <code>int</code>。最后，我们调用 <code>toArray()</code> 方法将流转换为 <code>int[]</code> 数组。</p>
 
       
     </div>
@@ -446,7 +465,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

@@ -390,4 +390,1029 @@
     <content><![CDATA[<p>做尽量少的事让对象进入良好状态。如果有可能的话，尽量不要调用类中的任何方法。在基类的构造器中能安全调用的只有基类的 <strong>final</strong> 方法（这也适用于可被看作是 <strong>final</strong> 的 <strong>private</strong> 方法）。这些方法不能被重写，因此不会产生意想不到的结果。你可能无法永远遵循这条规范，但应该朝着它努力。</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>Fold Level</title>
+    <url>/2023/04/19/Fold%20Level/</url>
+    <content><![CDATA[<h1 id="Usage-amp-Commands"><a href="#Usage-amp-Commands" class="headerlink" title="Usage &amp; Commands"></a>Usage &amp; Commands</h1><p>Set shortcuts:</p>
+<ol>
+<li>Press<ul>
+<li>  Mac: <code>Command + Shift + p</code></li>
+<li>  Win: <code>Ctrl + Shift + p</code></li>
+</ul>
+</li>
+<li> <code>Open Keyboard Shortcuts File</code></li>
+<li>Append:</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;    </span><br><span class="line">	<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;alt+1&quot;</span>,    </span><br><span class="line">	<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;vikyd.FoldLevel.level1&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line">&#123;    </span><br><span class="line">	<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;alt+2&quot;</span>,    </span><br><span class="line">	<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;vikyd.FoldLevel.level2&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line">&#123;    </span><br><span class="line">	<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;alt+3&quot;</span>,    </span><br><span class="line">	<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;vikyd.FoldLevel.level3&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line">&#123;    </span><br><span class="line">	<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;alt+4&quot;</span>,    </span><br><span class="line">	<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;vikyd.FoldLevel.level4&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line">&#123;    </span><br><span class="line">	<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;alt+5&quot;</span>,    </span><br><span class="line">	<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;vikyd.FoldLevel.level5&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line">&#123;    </span><br><span class="line">	<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;alt+6&quot;</span>,    </span><br><span class="line">	<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;vikyd.FoldLevel.level6&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ↓  optional</span></span><br><span class="line">&#123;    </span><br><span class="line">	<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;alt+-&quot;</span>,    </span><br><span class="line">	<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;editor.foldAll&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// ↓  optional</span></span><br><span class="line">&#123;    </span><br><span class="line">	<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;alt+=&quot;</span>,    </span><br><span class="line">	<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;editor.unfoldAll&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>Java中this的使用</title>
+    <url>/2023/04/19/Java%E4%B8%ADthis%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #this关键字</p>
+<hr>
+<p>在 Java 中，<code>this</code> 是一个特殊的关键字，它可以在类的实例方法或构造器中使用，用于引用当前对象。<code>this</code> 的主要用途包括以下几点：</p>
+<ol>
+<li><p> <strong>解决实例变量和局部变量之间的命名冲突</strong>：当实例变量和方法中的局部变量或参数具有相同的名称时，可以使用 <code>this</code> 关键字引用实例变量。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，构造函数的参数 <code>name</code> 和实例变量 <code>name</code> 具有相同的名称。使用 <code>this.name</code> 来引用实例变量，从而避免命名冲突。</p>
+</li>
+<li><p> <strong>在构造器中调用另一个构造器</strong>：<code>this</code>关键字还可以用于构造器中调用同一类的另一个构造器。这通常用于减少重复代码。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(name, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，有两个构造器。第一个构造器接受一个 <code>name</code> 参数，它使用 <code>this(name, 0)</code> 调用第二个构造器，将 <code>age</code> 参数设置为0。</p>
+</li>
+<li><p> <strong>链式方法调用</strong>：有时候，方法可能会返回 <code>this</code> 引用，从而实现链式调用。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，<code>setName</code> 和 <code>setAge</code> 方法都返回 <code>this</code> 引用，这使得我们可以进行链式调用，如下所示：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Employee employee = <span class="keyword">new</span> Employee().setName(<span class="string">&quot;Alice&quot;</span>).setAge(<span class="number">30</span>);</span><br></pre></td></tr></table></figure>
+<p>总之，Java中的<code>this</code>关键字用于引用当前对象，它在解决命名冲突、调用其他构造器和实现链式方法调用等场景中非常有用。</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>this关键字</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 中为什么使用 super 表示父类而不是 base</title>
+    <url>/2023/04/19/Java%20%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%20super%20%E8%A1%A8%E7%A4%BA%E7%88%B6%E7%B1%BB%E8%80%8C%E4%B8%8D%E6%98%AF%20base/</url>
+    <content><![CDATA[<p>时间：2023-04-11<br>标签： #Java #super #父类 #历史背景</p>
+<hr>
+<blockquote>
+<p>为什么我们在 java 中使用 super 来表示父类而不是用 base，这是因为什么原因，有什么历史因素或背后的故事么</p>
+</blockquote>
+<p>在 Java 中，我们使用 super 关键字来表示父类，而不是使用 base。这个设计决策的背后有一定的历史因素和原因：</p>
+<ol>
+<li><p>语言设计者的选择：<br>Java 的创建者 James Gosling 和他的团队在设计 Java 语言时，选择了”super”作为访问父类成员的关键字。这种选择可能是基于他们的编程经验、对现有编程语言的了解，以及他们对 Java 语言的愿景。</p>
+</li>
+<li><p>与其他语言的区分：<br>当时已有的一些编程语言，如 C++和 Object Pascal（Delphi）等，使用其他关键字表示父类。例如，C++中使用”:: “操作符，Object Pascal 中使用”inherited”关键字。Java 选择使用 super 作为父类表示，可以帮助区分这些编程语言。</p>
+</li>
+<li><p>表达清晰：<br>Super 这个词在英语中表示”上级”或”超级”，在这个语境下，表示”父类”是合适的。这个词简洁、易懂，可以清晰地表达出父类的概念。</p>
+</li>
+</ol>
+<p>总之，Java 中使用 super 表示父类而不是 base，主要是由于语言设计者的选择和对其他编程语言的区分。在实际编程过程中，使用 super 关键字可以清晰地表示出访问父类成员的意图，使代码易于理解。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>父类</tag>
+        <tag>super</tag>
+        <tag>历史背景</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Path 与 Paths 的关系与区别</title>
+    <url>/2023/04/19/Path%20%E4%B8%8E%20Paths%20%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #Path #Paths</p>
+<hr>
+<blockquote>
+<p>import java.nio.file.Paths; import java.nio.file.Path; 为什么会存在两个歧义性很高的两个包在同一个包下，二者的功能的区别是什么</p>
+</blockquote>
+<p>在这个例子中，我们使用了两个不同的类，它们都在 <code>java.nio.file</code> 包中：<code>Paths</code> 和 <code>Path</code>。虽然它们的名称很相似，但它们具有不同的功能和用途。</p>
+<ol>
+<li><code>java.nio.file.Path</code>：<code>Path</code> 是一个接口，表示文件系统中文件或目录的路径。它提供了一种在文件系统中导航和操作文件的方法。<code>Path</code> 对象包含了路径信息，可以用来创建、删除、读取和修改文件或目录。</li>
+<li><code>java.nio.file.Paths</code>：<code>Paths</code> 是一个工具类，包含一些静态方法，用于创建 <code>Path</code> 对象。它是一个方便的工具类，用于将字符串路径转换为 <code>Path</code> 对象，以便在文件系统中进行操作。</li>
+</ol>
+<p>虽然它们的名字很相似，但它们的功能是互补的。我们通常使用 <code>Paths</code> 类中的静态方法创建一个 <code>Path</code> 对象，然后使用 <code>Path</code> 对象来操作和访问文件系统。</p>
+<p>在本例中，我们使用 <code>Paths.get()</code> 方法将字符串形式的目录路径转换为 <code>Path</code> 对象。接着，我们使用 <code>Path</code> 对象来操作文件路径，例如获取文件名（<code>path.getFileName().toString()</code>）。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>Path</tag>
+        <tag>Paths</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Set&lt;Integer&gt; 转换为一个 int 数组</title>
+    <url>/2023/04/19/Set%3CInteger%3E%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%B8%80%E4%B8%AA%20int%20%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #Set #数组 </p>
+<hr>
+<p>如果你想将一个 <code>Set&lt;Integer&gt;</code> 转换为一个 <code>int[]</code> 数组，你可以使用以下方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.IntStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个 Set&lt;Integer&gt;</span></span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        set.add(<span class="number">1</span>);</span><br><span class="line">        set.add(<span class="number">2</span>);</span><br><span class="line">        set.add(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将 Set&lt;Integer&gt; 转换为 int[]</span></span><br><span class="line">        <span class="keyword">int</span>[] intArray = set.stream().mapToInt(Integer::intValue).toArray();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印结果</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : intArray) &#123;</span><br><span class="line">            System.out.println(num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里我们使用 Java 8 引入的 Stream API。首先，我们通过调用 <code>set.stream()</code> 获取一个 <code>Stream&lt;Integer&gt;</code>，然后使用 <code>mapToInt()</code> 方法将每个 <code>Integer</code> 对象转换为对应的基本类型 <code>int</code>。最后，我们调用 <code>toArray()</code> 方法将流转换为 <code>int[]</code> 数组。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>Set</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Visual Studio Code 中的 Source Actions 功能简介</title>
+    <url>/2023/04/19/Visual%20Studio%20Code%20%E4%B8%AD%E7%9A%84%20Source%20Actions%20%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #VisualStudioCode #VSCode #SourceActions #代码重构 #代码生成 #开发工具 </p>
+<hr>
+<p>在 Visual Studio Code 中，Source Actions 是一组针对源代码进行操作的快捷功能。它们可以帮助您自动执行常见的代码重构和改进任务，例如排序导入、移除未使用的导入、自动生成方法实现等。这些功能可以提高开发效率，减少手动修改代码的需求。</p>
+<p>以下是一些常见的 Source Actions：</p>
+<ol>
+<li> **Organize Imports (整理导入)**：自动整理和优化当前文件的导入语句。它会删除未使用的导入，同时按字母顺序或其他规则对导入进行排序。</li>
+<li> **Generate Getters and Setters (生成 getter 和 setter 方法)**：针对选定的类属性自动生成 getter 和 setter 方法。这可以方便地封装类的内部实现，提供统一的访问接口。</li>
+<li> **Generate Constructors (生成构造函数)**：自动生成构造函数，以便根据类的属性初始化对象。</li>
+<li> **Generate toString(), hashCode() and equals() methods (生成 toString()、hashCode() 和 equals() 方法)**：自动生成类的 toString()、hashCode() 和 equals() 方法，用于实现对象的字符串表示、哈希计算和相等性判断。</li>
+<li> **Extract Method (提取方法)**：将选定的代码片段提取到一个新的方法中，以便重用和简化代码。</li>
+<li> **Extract Variable (提取变量)**：将选定的表达式提取到一个新的变量中，以便重用和简化代码。</li>
+</ol>
+<p>要使用 Source Actions，您可以右键单击编辑器中的代码，然后选择 “Source Action” 菜单。此外，您还可以打开命令面板（按 <code>Ctrl+Shift+P</code> 或 <code>Cmd+Shift+P</code>），然后输入 “Source Action” 来查找和执行相应的操作。在使用特定编程语言时，可能需要安装相应的扩展以启用 Source Actions 功能。例如，在使用 Java 时，可以安装 “Java Extension Pack” 扩展来启用这些功能。</p>
+<p>原本 Source Actions 功能并没有设置快捷键，在我们按下 <code>Ctrl+Shift+P</code> 或  <code>Cmd+Shift+P </code>并输入”Source Action” 后，相应的后面有一个齿轮图标，点击该图标按钮可以在弹出的页面中为该功能设置快捷键，例如，<code>Cmd+option+a</code></p>
+]]></content>
+      <tags>
+        <tag>VisualStudioCode</tag>
+        <tag>VSCode</tag>
+        <tag>SourceActions</tag>
+        <tag>代码重构</tag>
+        <tag>代码生成</tag>
+        <tag>开发工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>onJava8-接口-摘录</title>
+    <url>/2023/04/19/onJava8-%E6%8E%A5%E5%8F%A3-%E6%91%98%E5%BD%95/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #java #接口 #摘录 </p>
+<hr>
+<p>一个接口表示 ：所有实现了该接口的类看起来都像这样。因此，任何使用某特定接口的代码都知道可以调用该接口的哪些方法，而且仅需知道这些。所以，接口被用来建立类之间的协议。</p>
+<p>接口同样可以包含属性，这些属性被隐式指明为 <strong>static</strong> 和 <strong>final</strong>。</p>
+<p>方法签名包括方法名和参数类型 – 返回类型不算在方法签名里。</p>
+<p>Java 8 允许在接口中添加静态方法。这么做能恰当地把工具功能置于接口中，从而操作接口，或者成为通用的工具</p>
+<p>有一条实际经验：尽可能地抽象。因此，更倾向使用接口而不是抽象类。只有当必要时才使用抽象类。除非必须使用，否则不要用接口和抽象类。大多数时候，普通类已经做得很好，如果不行的话，再移动到接口或抽象类中。</p>
+<p>使用接口的核心原因之一：为了能够向上转型为多个基类型（以及由此带来的灵活性）。然而，使用接口的第二个原因与使用抽象基类相同：防止客户端程序员创建这个类的对象，确保这仅仅只是一个接口。这带来了一个问题：应该使用接口还是抽象类呢？如果创建不带任何方法定义或成员变量的基类，就选择接口而不是抽象类。事实上，如果知道某事物是一个基类，可以考虑用接口实现它</p>
+<p>认为接口是好的选择，从而使用接口不用具体类，这具有诱惑性。几乎任何时候，创建类都可以替代为创建一个接口和工厂。</p>
+<p>很多人都掉进了这个陷阱，只要有可能就创建接口和工厂。这种逻辑看起来像是可能会使用不同的实现，所以总是添加这种抽象性。==这变成了一种过早的设计优化==。</p>
+<p>任何抽象性都应该是由真正的需求驱动的。当有必要时才应该使用接口进行重构，而不是到处添加额外的间接层，从而带来额外的复杂性。这种复杂性非常显著，如果你让某人去处理这种复杂性，只是因为你意识到“以防万一”而添加新接口，而没有其他具有说服力的原因——好吧，如果我碰上了这种设计，就会质疑此人所作的所有其他设计了。</p>
+<p>恰当的原则是优先使用类而不是接口。从类开始，如果使用接口的必要性变得很明确，那么就重构。接口是一个伟大的工具，但它们容易被滥用。</p>
+]]></content>
+      <tags>
+        <tag>接口</tag>
+        <tag>java</tag>
+        <tag>摘录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>bashrc 与 zshrc的区别</title>
+    <url>/2023/04/19/bashrc%20%E4%B8%8E%20zshrc%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #bash #zsh </p>
+<hr>
+<p><code>~/.bashrc</code>（Bash 用户）和 <code>~/.zshrc</code>（Zsh 用户）是 shell 配置文件。它们分别为 Bash 和 Zsh shell 提供配置和个性化设置。当您打开一个新的终端会话时，系统会自动加载这些配置文件，从而应用您为 shell 定义的任何自定义设置、别名、环境变量等。</p>
+<ol>
+<li><strong>Bash</strong>：Bash（Bourne Again Shell）是许多Linux发行版中默认的shell。macOS的早期版本也使用了Bash作为默认shell。<code>~/.bashrc</code>文件用于为Bash shell提供个性化设置。它可以包含您希望在每个新的终端会话中自动执行的命令和设置，例如定义别名、设置环境变量和更改提示符样式。</li>
+<li><strong>Zsh</strong>：Zsh（Z shell）是另一种流行的Unix shell，它为用户提供了一些额外的功能，如命令补全、主题和插件支持。从macOS Catalina开始，Zsh成为macOS的默认shell。<code>~/.zshrc</code>文件用于为Zsh shell提供个性化设置，其功能与<code>~/.bashrc</code>相似，但针对Zsh shell。</li>
+</ol>
+<p>您只有<code>~/.zshrc</code>文件可能是因为您的系统使用Zsh作为默认shell。要确认当前正在使用的shell，请在终端中运行以下命令：</p>
+<p>bashCopy code</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo $SHELL</span><br></pre></td></tr></table></figure>
+
+<p>这将显示您正在使用的shell，例如<code>/bin/bash</code>或<code>/bin/zsh</code>。</p>
+<p>您可以根据需要在<code>~/.zshrc</code>文件中添加自定义设置、别名和环境变量。要编辑此文件，您可以使用文本编辑器（例如<code>nano</code>、<code>vim</code>或<code>Visual Studio Code</code>）打开它，然后保存更改。在更改配置文件后，请确保运行<code>source ~/.zshrc</code>命令以使更改生效。</p>
+]]></content>
+      <tags>
+        <tag>bash</tag>
+        <tag>zsh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java中的回调机制及其优势</title>
+    <url>/2023/04/19/Java%E4%B8%AD%E7%9A%84%E5%9B%9E%E8%B0%83%E6%9C%BA%E5%88%B6%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8A%BF/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #回调 #异步编程 #事件驱动编程 #接口 #自定义行为 #编程模式 </p>
+<hr>
+<p>回调（Callback）是一种编程模式，它允许将一个函数（或方法）作为参数传递给另一个函数（或方法）。当被调用的函数执行完毕后，会调用传递进来的回调函数，以完成某些特定任务或通知调用者任务已完成。这种编程方式在异步编程、事件处理和自定义函数行为等场景中非常有用。</p>
+<p>关于 Java 没有回调的说法，并不准确。Java 实际上支持回调，但它实现回调的方式与其他语言（如 JavaScript）略有不同。在 Java 中，我们通常使用接口来实现回调。以下是一个简单的例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 回调接口</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Callback</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">onFinished</span><span class="params">(String result)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Worker</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">doWork</span><span class="params">(Callback callback)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 执行某些任务</span></span><br><span class="line">        String result = <span class="string">&quot;任务完成&quot;</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 调用回调函数</span></span><br><span class="line">        callback.onFinished(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Worker worker = <span class="keyword">new</span> Worker();</span><br><span class="line">        worker.doWork(<span class="keyword">new</span> Callback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFinished</span><span class="params">(String result)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;回调结果: &quot;</span> + result);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们定义了一个名为 <code>Callback</code> 的接口，然后在 <code>Worker</code> 类的 <code>doWork</code> 方法中接受一个实现了 <code>Callback</code> 接口的对象。这样，在 <code>doWork</code> 方法完成任务后，可以调用回调函数 <code>onFinished</code>。</p>
+<p>回调的主要机制和好处如下：</p>
+<ol>
+<li>异步编程：回调使得程序可以在执行耗时操作时，不阻塞其他操作的进行。一旦耗时操作完成，回调函数会被触发，从而实现异步编程。</li>
+<li>事件驱动编程：回调可以用来实现事件驱动编程，当特定事件发生时触发相应的回调函数。这种方式使得代码更具可扩展性和可维护性。</li>
+<li>自定义行为：通过将回调函数作为参数传递，可以让调用者自定义函数的行为，提高代码的复用性和灵活性。</li>
+</ol>
+<p>虽然回调有很多好处，但过度使用回调可能导致代码变得难以理解和维护，这种现象被称为“回调地狱”。为了解决这个问题，可以使用更高级的抽象概念，如Java中的<code>Future</code>、<code>CompletableFuture</code>和<code>Stream</code>等。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>接口</tag>
+        <tag>回调</tag>
+        <tag>异步编程</tag>
+        <tag>事件驱动编程</tag>
+        <tag>自定义行为</tag>
+        <tag>编程模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>unicode</title>
+    <url>/2023/04/19/unicode/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #java #unicode</p>
+<hr>
+<p>Unicode 是一种字符集，用于表示和处理世界上大多数书面语言中的文本。在 Unicode 中，英文字符的编码范围在 U+0020 到 U+007E 之间，包括了英文字母、数字、标点符号以及一些其他特殊字符。以下是一些常见英文字符的 Unicode 编码：</p>
+<ul>
+<li>  大写英文字母：从 U+0041 (A) 到 U+005A (Z)</li>
+<li>  小写英文字母：从 U+0061 (a) 到 U+007A (z)</li>
+<li>  数字：从 U+0030 (0) 到 U+0039 (9)</li>
+<li>  空格：U+0020 ( )</li>
+<li>  常见标点符号：如 U+002C (,), U+002E (.), U+003A (:), U+003B (;) 等。</li>
+</ul>
+<p>请注意，Unicode 字符集包含了许多其他字符，不仅仅是英文字符。它包括了其他语言的字符、表情符号、数学符号等等。Unicode 提供了一种统一的方式来表示和处理多种语言和符号系统。</p>
+<p>在 Unicode 中，U+005A 和 U+0061 之间的字符如下：</p>
+<ul>
+<li>  U+005A：大写字母 Z</li>
+<li>  U+005B：左方括号 [</li>
+<li>  U+005C：反斜杠 \</li>
+<li>  U+005D：右方括号 ]</li>
+<li>  U+005E：脱字符 ^</li>
+<li>  U+005F：下划线 _</li>
+<li>  U+0060：反引号 `</li>
+<li>  U+0061：小写字母 a</li>
+</ul>
+<p>这些字符主要包括一些特殊字符和标点符号，以及英文大小写字母的分界点。</p>
+<p>在 Unicode 中，数字的编码范围如下：</p>
+<ul>
+<li>  U+0030：数字 0</li>
+<li>  U+0031：数字 1</li>
+<li>  U+0032：数字 2</li>
+<li>  U+0033：数字 3</li>
+<li>  U+0034：数字 4</li>
+<li>  U+0035：数字 5</li>
+<li>  U+0036：数字 6</li>
+<li>  U+0037：数字 7</li>
+<li>  U+0038：数字 8</li>
+<li>  U+0039：数字 9</li>
+</ul>
+<p>这些数字的 Unicode 编码从 U+0030（数字 0）开始，依次递增到 U+0039（数字 9）。</p>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>unicode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一个方法里面或者在任意的作用域内定义内部类</title>
+    <url>/2023/04/19/%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95%E9%87%8C%E9%9D%A2%E6%88%96%E8%80%85%E5%9C%A8%E4%BB%BB%E6%84%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%86%85%E5%AE%9A%E4%B9%89%E5%86%85%E9%83%A8%E7%B1%BB/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #内部类 </p>
+<hr>
+<p>在一个方法里面或者在任意的作用域内定义内部类。</p>
+<p>这么做有两个理由：</p>
+<ol>
+<li> 如前所示，你实现了某类型的接口，于是可以创建并返回对其的引用。</li>
+<li> 你要解决一个复杂的问题，想创建一个类来辅助你的解决方案，但是又不希望这个类是公共可用的。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>内部类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>zsh command not found hexo</title>
+    <url>/2023/04/19/zsh%20command%20not%20found%20hexo/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #zsh #hexo #环境配置</p>
+<hr>
+<blockquote>
+<p>zsh: command not found: hexo</p>
+</blockquote>
+<p>这个错误通常是由于 Hexo 没有正确安装或者没有将其添加到系统路径中导致的。请按照以下步骤尝试解决这个问题：</p>
+<ol>
+<li><p> 确保您已经安装了 Node.js 和 npm。您可以在命令行中运行以下命令来检查它们的版本：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>如果您还没有安装它们，请访问 <a href="https://nodejs.org/">Node.js官方网站</a>下载并安装相应的版本。</p>
+</li>
+<li><p> 全局安装 Hexo。在命令行中运行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>这将在全局范围内安装 Hexo 命令行工具。在安装过程中，可能需要管理员权限。</p>
+</li>
+<li><p> 检查 Hexo 是否已成功安装。在命令行中运行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<p>如果您看到了 Hexo 的版本信息，那么说明 Hexo 已经成功安装。接下来，您可以继续按照之前的说明操作。</p>
+</li>
+</ol>
+<p>如果您仍然遇到“command not found”的错误，那么可能是因为Hexo的可执行文件没有被添加到系统路径中。请按照以下步骤进行操作：</p>
+<ol>
+<li><p> 找到 Hexo 的安装路径。运行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm config get prefix</span><br></pre></td></tr></table></figure>
+<p>这将显示 npm 的全局安装路径。Hexo 的可执行文件通常位于该路径下的 <code>bin</code> 文件夹中。</p>
+</li>
+<li><p> 将Hexo的可执行文件路径添加到系统路径中。对于macOS和Linux用户，您需要编辑<code>~/.bashrc</code>（Bash用户）或<code>~/.zshrc</code>（Zsh用户）文件。对于Windows用户，您需要编辑环境变量。具体操作方法如下：</p>
+</li>
+</ol>
+<ul>
+<li>  <strong>macOS/Linux</strong>：打开 <code>~/.bashrc</code> 或 <code>~/.zshrc</code> 文件，添加以下内容（==替换 <code>&lt;npm-global-path&gt;</code> 为实际路径==）：<figure class="highlight zsh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:&lt;npm-global-path&gt;/bin</span><br></pre></td></tr></table></figure>
+然后运行以下命令以使更改生效：<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+或<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure></li>
+<li>  <strong>Windows</strong>：右键点击“计算机”（或“此电脑”）图标，选择“属性”。在“系统”窗口中，点击“高级系统设置” &gt; “环境变量”。在“系统变量”区域中，找到名为“Path”的变量，点击“编辑”按钮。在“编辑环境变量”窗口中，将Hexo的可执行文件路径（<code>&lt;npm-global-path&gt;\bin</code>）添加到变量值中。请注意，不同路径之间应使用分号（<code>;</code>）分隔。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>zsh</tag>
+        <tag>hexo</tag>
+        <tag>环境配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么Integer.toString(i)是静态方法而不是i.toString()</title>
+    <url>/2023/04/19/%E4%B8%BA%E4%BB%80%E4%B9%88Integer.toString(i)%E6%98%AF%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E8%80%8C%E4%B8%8D%E6%98%AFi.toString()/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #Integer #静态方法</p>
+<hr>
+<p>Java 中 <code>Integer.toString(i)</code> 使用静态方法的原因主要有以下几点：</p>
+<ol>
+<li><strong>基本类型与包装类</strong>：Java中的<code>int</code>是基本类型，而非对象。基本类型没有方法，因此不能像对象一样调用方法（如<code>i.toString()</code>）。为了解决这个问题，Java提供了<code>Integer</code>包装类，它包含一些静态方法，如<code>toString()</code>，可以将基本类型<code>int</code>转换为字符串表示。</li>
+<li><strong>性能考虑</strong>：将<code>int</code>类型值转换为字符串表示时，使用静态方法可以避免创建不必要的<code>Integer</code>对象。如果使用<code>i.toString()</code>，需要先将<code>int</code>类型转换为<code>Integer</code>对象，然后调用<code>toString()</code>方法。这会产生额外的对象创建和垃圾回收开销。</li>
+<li><strong>易用性</strong>：静态方法可以直接使用类名调用，而无需创建对象。这使得<code>Integer.toString(i)</code>在使用上更加简便。</li>
+</ol>
+<p>总之，<code>Integer.toString(i)</code>设计为静态方法，主要是为了解决基本类型与包装类之间的差异，提高性能，并提供更简便的使用方式。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>静态方法</tag>
+        <tag>Integer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么在用vscode运行代码的时候没有生成class文件</title>
+    <url>/2023/04/19/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E7%94%A8vscode%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%B6%E5%80%99%E6%B2%A1%E6%9C%89%E7%94%9F%E6%88%90class%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #VSCode #Java #Class </p>
+<hr>
+<p>在使用 VSCode 编写并运行 Java 代码时，默认情况下，编译生成的 <code>.class</code> 文件通常存储在内存中，并不会直接在文件系统中生成。这使得运行 Java 代码更加高效，因为不需要频繁地读写磁盘。这也是为什么你在项目目录下没有看到 <code>.class</code> 文件的原因。</p>
+<p>但是，如果你希望查看或保存生成的<code>.class</code>文件，可以通过以下步骤将它们输出到项目目录中：</p>
+<ol>
+<li><p> 在VSCode中，打开Settings（快捷键<code>Ctrl+,</code>），然后点击右上角的“Open Settings (JSON)”图标，这将打开<code>settings.json</code>文件。</p>
+</li>
+<li><p> 在 <code>settings.json</code> 文件中，添加以下配置：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;java.debug.settings.console&quot;</span>: <span class="string">&quot;internalConsole&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;java.dependency.outputPath&quot;</span>: <span class="string">&quot;output&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;java.project.outputPath&quot;</span>: <span class="string">&quot;output&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里，我们将 <code>java.project.outputPath</code> 设置为 <code>output</code>。这意味着编译生成的 <code>.class</code> 文件将被保存到名为 <code>output</code> 的文件夹中。你可以根据自己的需求更改该值。</p>
+</li>
+<li><p> 保存<code>settings.json</code>文件，然后重新运行你的Java程序。</p>
+</li>
+</ol>
+<p>现在，在你指定的输出文件夹（如<code>output</code>）中，你应该能够看到生成的<code>.class</code>文件。请注意，这种做法会在磁盘上生成额外的文件，可能会影响性能。在开发过程中，通常不需要将<code>.class</code>文件保存到磁盘。这种方法主要用于调试或特殊需求。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>VSCode</tag>
+        <tag>Class</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么称之为基类子对象而不是派生类对象</title>
+    <url>/2023/04/19/%E4%B8%BA%E4%BB%80%E4%B9%88%E7%A7%B0%E4%B9%8B%E4%B8%BA%E5%9F%BA%E7%B1%BB%E5%AD%90%E5%AF%B9%E8%B1%A1%E8%80%8C%E4%B8%8D%E6%98%AF%E6%B4%BE%E7%94%9F%E7%B1%BB%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<p>时间：2023-04-11<br>标签： #Java #继承 #基类 #派生类 #子对象</p>
+<hr>
+<p>首先，我们需要明确一点：基类子对象和派生类对象是不同的概念。我们来分析一下这两个概念的含义和区别：</p>
+<ol>
+<li>基类子对象：<ul>
+<li>  基类子对象是指派生类对象中与基类对应的部分。当我们创建一个派生类的对象时，这个对象实际上包含了基类的一个实例，即基类子对象。基类子对象包含了继承自基类的属性和方法。</li>
+</ul>
+</li>
+<li>派生类对象：<ul>
+<li>  派生类对象是指一个派生类的实例。它包含了基类子对象以及派生类特有的属性和方法。从外部看，派生类对象具有基类的接口（属性和方法），同时还可能具有一些额外的方法和字段。</li>
+</ul>
+</li>
+</ol>
+<p>我们称之为基类子对象，是为了强调这部分对象与基类的关联，以及它在派生类对象中的地位。基类子对象是派生类对象的一部分，它体现了继承关系中基类对派生类的影响。</p>
+<p>而派生类对象是一个更宽泛的概念，它包括了基类子对象和派生类特有的属性和方法。因此，在讨论继承关系中基类在派生类对象中的表现时，我们更倾向于使用“基类子对象”这个术语，以区分它与整个派生类对象的区别。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>继承</tag>
+        <tag>基类</tag>
+        <tag>派生类</tag>
+        <tag>子对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用 Java 中的 var 关键字简化代码</title>
+    <url>/2023/04/19/%E4%BD%BF%E7%94%A8%20Java%20%E4%B8%AD%E7%9A%84%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E7%AE%80%E5%8C%96%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #Java #JDK10</p>
+<hr>
+<p>Java 10 引入了一个新的关键字 <code>var</code>，用于支持局部变量类型推断。本文将探讨使用 <code>var</code> 的优点、局限性以及在实际代码中的应用。</p>
+<h3 id="为什么要使用-var？"><a href="#为什么要使用-var？" class="headerlink" title="为什么要使用 var？"></a>为什么要使用 var？</h3><p>使用 <code>var</code> 的主要目的是为了提高代码的简洁性和可读性。使用 <code>var</code> 可以让编译器自动推断变量的类型，从而避免在声明变量时显式地指定类型。</p>
+<p>以下是使用 <code>var</code> 的一些优点：</p>
+<ol>
+<li> <strong>简洁性</strong>：使用 <code>var</code> 可以减少代码冗余。在声明具有复杂类型的变量时，使用 <code>var</code> 可以简化代码。</li>
+<li> <strong>可读性</strong>：<code>var</code> 有助于提高代码的可读性。当变量的类型可以从上下文或初始化表达式中推断时，使用 <code>var</code> 可以使代码更容易阅读。</li>
+<li> <strong>改进重构</strong>：使用 <code>var</code> 可以使重构过程更加简单。当修改变量的类型时，使用 <code>var</code> 可以减少需要更改的代码量。</li>
+</ol>
+<h3 id="var-的局限性"><a href="#var-的局限性" class="headerlink" title="var 的局限性"></a>var 的局限性</h3><p>尽管 <code>var</code> 提供了许多便利，但它也有一些限制：</p>
+<ol>
+<li> 只能用于局部变量，不能用于方法参数、返回类型、字段等。</li>
+<li> 在某些情况下，过度使用 <code>var</code> 可能导致代码可读性降低。</li>
+</ol>
+<p>因此，在使用 <code>var</code> 时需要权衡代码的简洁性和可读性。</p>
+<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><p>以下示例展示了如何在实际代码中使用 <code>var</code>。</p>
+<p><strong>不使用 var</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String, List&lt;String&gt;&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(); </span><br><span class="line">InputStreamReader reader = <span class="keyword">new</span> InputStreamReader(inputStream,</span><br><span class="line">												 StandardCharsets.UTF_8);</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用 var</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> map = <span class="keyword">new</span> HashMap&lt;String, List&lt;String&gt;&gt;();</span><br><span class="line"><span class="keyword">var</span> reader = <span class="keyword">new</span> InputStreamReader(inputStream, StandardCharsets.UTF_8);</span><br></pre></td></tr></table></figure>
+
+<p>在这些示例中，使用 <code>var</code> 可以简化代码，并提高可读性。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>Java 中的 <code>var</code> 关键字为局部变量类型推断提供了一种简洁且易于阅读的方法。在实际项目中，开发者可以根据具体需求和场景来决定是否使用 <code>var</code>。同时，要注意在使用 <code>var</code> 时不要过度简化代码，以免降低代码可读性。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>JDK10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用GitHub Pages搭建个人博客网站</title>
+    <url>/2023/04/19/%E4%BD%BF%E7%94%A8GitHub%20Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签: #GitHub #GitHubPages #个人博客 #Markdown #静态网站</p>
+<hr>
+<p>根据您的需求，我将为您提供一个简单的执行框架。在执行过程中，您可以随时告诉我您已完成的步骤，我会为您提供详细的说明和指导。</p>
+<ol>
+<li>创建一个GitHub帐户并设置GitHub Pages<ul>
+<li>  注册GitHub帐户</li>
+<li>  新建一个仓库</li>
+<li>  在仓库设置中启用GitHub Pages</li>
+</ul>
+</li>
+<li>选择一个静态网站生成器<ul>
+<li>  推荐使用Jekyll或Hugo等流行的静态网站生成器</li>
+</ul>
+</li>
+<li>设置和配置静态网站生成器<ul>
+<li>  安装所选静态网站生成器</li>
+<li>  为博客选择一个主题</li>
+<li>  配置相关设置</li>
+</ul>
+</li>
+<li>使用Markdown编写博客文章<ul>
+<li>  创建一个新的Markdown文件</li>
+<li>  使用Markdown语法编写内容</li>
+<li>  添加元数据（如标题、日期等）</li>
+</ul>
+</li>
+<li>发布博客文章<ul>
+<li>  将博客文章添加到仓库</li>
+<li>  提交更改并推送到GitHub</li>
+<li>  检查GitHub Pages上的博客更新</li>
+</ul>
+</li>
+<li>优化博客网站<ul>
+<li>  添加可交互的插件</li>
+<li>  优化样式和功能</li>
+<li>  确保数据迁移和工作流的顺畅</li>
+</ul>
+</li>
+</ol>
+<p>现在，请按照上述执行框架的步骤操作。完成每一步后，请告诉我，我会为您提供详细的说明和指导。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>使用@Override 注解的好处</title>
+    <url>/2023/04/19/%E4%BD%BF%E7%94%A8@Override%20%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%A5%BD%E5%A4%84/</url>
+    <content><![CDATA[<p>时间：2023-04-11<br>标签： #Java  #注解  #Override</p>
+<hr>
+<blockquote>
+<p>@Override 是可选的，但它有助于验证你没有拼写错误 (或者更微妙地说，大小写字母输入错误)。</p>
+</blockquote>
+<p>在 Java 编程中，<code>@Override</code> 注解确实是可选的，但它具有一定的好处，可以提高代码的可读性和减少错误。下面列举了几个使用 <code>@Override</code> 注解的优点：</p>
+<ol>
+<li><p><strong>增强代码可读性</strong>：<br>使用<code>@Override</code>注解表明这个方法是重写父类或实现接口的方法，这使得代码阅读者更容易理解代码的结构和意图。</p>
+</li>
+<li><p><strong>避免拼写错误和大小写敏感错误</strong>：<br>如果你使用了<code>@Override</code>注解，编译器会检查该方法是否确实重写了父类或接口的方法。这有助于防止因为方法名拼写错误或大小写输入错误而导致的问题。</p>
+</li>
+<li><p><strong>捕获重构引入的错误</strong>：<br>当父类或接口的方法签名发生变化时，使用<code>@Override</code>注解的子类方法会报编译错误。这有助于开发者在重构过程中捕获到问题，并及时修复错误。</p>
+</li>
+<li><p><strong>避免意外的方法重载</strong>：<br>在没有使用<code>@Override</code>的情况下，你可能会意外地重载父类的方法，而不是重写它。使用<code>@Override</code>可以确保你的方法确实是重写父类的方法，而不是创建一个新的重载方法。</p>
+</li>
+</ol>
+<p>总结：虽然<code>@Override</code>注解在Java中是可选的，但它可以提高代码的可读性，减少错误，并在重构过程中捕获潜在问题。因此，建议在重写父类或实现接口的方法时，使用<code>@Override</code>注解。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>注解</tag>
+        <tag>Override</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/19/%E4%BD%BF%E7%94%A8hexo%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #hexo #github #GitHubPages #shell #blog</p>
+<hr>
+<p>按照以下步骤将您的 Markdown 文件发布到博客上：</p>
+<ol>
+<li> <strong>创建新文章</strong>：在 Hexo 项目目录中，运行以下命令以创建一个新的文章文件：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new post &quot;文章标题&quot;</span><br></pre></td></tr></table></figure>
+<p>这将在 <code>source/_posts</code> 目录下创建一个新的 Markdown 文件，您可以用文本编辑器打开它。</p>
+<ol start="2">
+<li><p> <strong>编辑文章</strong>：将您已经编写好的 Markdown 文件内容复制到新创建的文章文件中。如果需要，您可以在文件顶部的 front matter 中添加或编辑元数据（如标题、日期、标签等）。例如：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">&quot;文章标题&quot;</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2023-04-15</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签1</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">标签2</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">文章正文...</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p> <strong>生成静态页面</strong>：在项目目录中，运行以下命令以生成静态页面：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>这将在 <code>public</code> 文件夹中生成静态网页文件。</p>
+</li>
+<li><p> <strong>部署到 GitHub Pages</strong>：在 Hexo 项目目录中的 <code>_config.yml</code> 文件中，配置好您的 GitHub Pages 仓库信息：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/your-username/your-username.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+<p>然后安装 hexo-deployer-git 插件：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>部署博客：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>这将把生成的静态页面推送到您的 GitHub Pages 仓库。</p>
+</li>
+<li><p> <strong>查看博客</strong>：访问<code>https://your-username.github.io</code>，您应该能看到更新后的博客。请注意，GitHub Pages可能需要几分钟的时间来部署更新。</p>
+</li>
+</ol>
+<p>完成这些步骤后，您的Markdown文章就会发布到Hexo博客上。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>使用抽象类阻止实例化</title>
+    <url>/2023/04/19/%E4%BD%BF%E7%94%A8%E6%8A%BD%E8%B1%A1%E7%B1%BB%E9%98%BB%E6%AD%A2%E5%AE%9E%E4%BE%8B%E5%8C%96/</url>
+    <content><![CDATA[<p>时间：2023-04-14<br>标签： #Java #abstract类 #设计模式 </p>
+<hr>
+<blockquote>
+<p>可以将一个不包含任何抽象方法的类指明为 abstract，在类中的抽象方法没啥意义但想阻止创建类的对象时，这么做就很有用。<br>——————<br>这是有用的，可是这么做的意义是什么呢，在实际开发过程中，能举个例子么？</p>
+</blockquote>
+<p>在实际开发过程中，有时候我们希望一个类仅仅作为其他类的基类，而不允许直接创建该类的实例。这种情况下，将这个类声明为抽象类是有意义的。即使这个抽象类没有抽象方法，它仍然不能被实例化，从而确保了这个类仅作为基类存在。</p>
+<p>例如，假设我们有一个系统，其中包含各种类型的员工。我们想创建一个通用的基类 <code>Employee</code>，该类包含一些共享的属性和方法，但我们希望用户只能创建具体类型的员工实例（如 <code>Manager</code>、<code>Developer</code> 等），而不是直接创建 <code>Employee</code> 实例。</p>
+<p>下面是一个简单的例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 其他共享的方法</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String name, <span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name, id);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Manager特有的方法</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Developer</span> <span class="keyword">extends</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Developer</span><span class="params">(String name, <span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name, id);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Developer特有的方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们将 <code>Employee</code> 类声明为抽象类，即使它没有抽象方法。这样一来，用户只能创建 <code>Manager</code> 和 <code>Developer</code> 等具体类型的员工实例，而不能直接创建 <code>Employee</code> 实例。这有助于我们在代码中实现更清晰的层次结构和逻辑。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>abstract类</tag>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关闭airpods的自动链接</title>
+    <url>/2023/04/12/%E5%85%B3%E9%97%ADairpods%E7%9A%84%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<p>时间： 2023-04-12<br>标签： #Apple #airpods #airpods #ios #iPadOS #macOS </p>
+<hr>
+<p>要关闭 AirPods 的自动连接功能，您可以尝试以下步骤：</p>
+<ol>
+<li> 首先，确保您的 AirPods 已连接到您的设备（iPhone、iPad 或 Mac）。</li>
+<li> 对于 iPhone 或 iPad，转到“设置”&gt;“蓝牙”。</li>
+<li> 在“我的设备”列表中找到您的 AirPods，然后点击蓝牙列表中 AirPods 名称旁边的小蓝色 “i” 图标。</li>
+<li> 在弹出的菜单中，您可以关闭或打开“自动连接”。关闭它将禁用 AirPods 的自动连接功能。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Apple</tag>
+        <tag>airpods</tag>
+        <tag>ios</tag>
+        <tag>iPadOS</tag>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>内部类-摘录</title>
+    <url>/2023/04/19/%E5%86%85%E9%83%A8%E7%B1%BB-%E6%91%98%E5%BD%95/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #java #内部类 </p>
+<hr>
+<p>设计模式总是将变化的事物与保持不变的事物分离开</p>
+<p>既然局部内部类的名字在方法外是不可见的，那为什么我们仍然使用局部内部类而不是匿名内部类呢？唯一的理由是，我们需要一个已命名的构造器，或者需要重载构造器，而匿名内部类只能用于实例初始化。</p>
+<p>当读者见到这些语言特性的实际应用时，就能最终理解它们了。</p>
+<blockquote>
+<p>所以说现在阅读完这个章节之后，其预期设置为能够看懂代码的运行机制就可以了。对于如何使用，使用的场景的把握，落在后续在阅读大量代码之后再进行深度体会就好，大可不必于现在，就理解其设计缘由以及对于各种设计模式有所熟练的掌握。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>内部类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>可变参数（Varargs）在Java中的用法</title>
+    <url>/2023/04/19/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%EF%BC%88Varargs%EF%BC%89%E5%9C%A8Java%E4%B8%AD%E7%9A%84%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #可变参数 #Varargs #接口 </p>
+<hr>
+<p>在这个代码片段中，<code>Operations... ops</code> 是一个可变参数（Varargs）的例子。可变参数是 Java 5引入的一个特性，它允许你在方法参数列表中使用零个或多个参数。可变参数类型使用省略号 <code>...</code> 来表示。</p>
+<p>在这个示例中，<code>runOps</code>方法接受一个可变参数<code>ops</code>，类型为<code>Operations</code>。这意味着当你调用这个方法时，可以传入零个、一个或多个<code>Operations</code>类型的对象。实际上，Java编译器在内部将这些参数转换为一个数组，因此在<code>runOps</code>方法内部，你可以像操作数组一样操作这些参数。</p>
+<p>以下是一个关于如何使用 <code>runOps</code> 方法的示例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Operations op1 = <span class="keyword">new</span> SomeOperation(); <span class="comment">// 假设SomeOperation实现了Operations接口</span></span><br><span class="line">Operations op2 = <span class="keyword">new</span> AnotherOperation(); <span class="comment">// 假设AnotherOperation实现了Operations接口</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用runOps方法，传入一个或多个Operations类型的对象</span></span><br><span class="line">Operations.runOps(op1, op2);</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，我们创建了两个实现了<code>Operations</code>接口的对象<code>op1</code>和<code>op2</code>，然后将它们作为参数传递给<code>runOps</code>方法。由于<code>runOps</code>方法接受可变参数，因此我们可以传入任意数量的<code>Operations</code>对象。在<code>runOps</code>方法内部，我们使用增强的for循环（foreach循环）遍历传入的参数，然后调用每个对象的<code>execute()</code>方法。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>接口</tag>
+        <tag>可变参数</tag>
+        <tag>Varargs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在开发过程中应该如何管理枚举类型数据</title>
+    <url>/2023/04/19/%E5%9C%A8%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #Java #枚举类型 </p>
+<hr>
+<p>在开发过程中，为了保持代码的整洁和可维护性，我们可以采用以下几种方式来管理不同的枚举类型数据：</p>
+<ol>
+<li>单独创建枚举类文件：将每个枚举类型放在一个单独的 Java 文件中。这种方式可以让枚举类型更容易找到，并有助于代码的组织。例如，对于用户角色，我们可以创建一个名为<code>UserRole.java</code>的文件来存放<code>UserRole</code>枚举。</li>
+<li>适当分组：如果有一组密切相关的枚举类型，可以将它们放在一个 Java 文件中。这样可以避免过多的文件数量。例如，我们可以创建一个名为<code>PaymentConstants.java</code>的文件，将<code>PaymentMethod</code>和<code>PaymentStatus</code>等与支付相关的枚举类型放在一起。</li>
+<li>使用包来组织：将相关的枚举类型放在同一个包（package）中，可以帮助我们更好地组织代码。例如，将所有与订单管理相关的枚举类型放在<code>com.example.orders.enums</code>包中。</li>
+<li>命名规范：为枚举类型选择有意义的名称，以便其他开发人员能够轻松理解它们的用途。同时，遵循项目中的命名规范。通常，枚举类型的名称应该使用驼峰命名法（CamelCase），且每个单词的首字母大写。</li>
+<li>文档注释：为每个枚举类型编写文档注释，解释枚举类型的用途和各个值的含义。这可以帮助其他开发人员更容易地理解和使用这些枚举类型。</li>
+</ol>
+<p>通过以上方法，我们可以更好地管理项目中的枚举类型数据，提高代码的可读性和可维护性。在项目中，我们应该根据业务需求和功能模块来组织枚举类型，而不是简单地将所有枚举类型放在一个包内进行管理。</p>
+<p>将枚举类型按照业务进行切分，有以下好处：</p>
+<ol>
+<li>更好的代码组织：将相关的枚举类型放在同一个包中，可以让代码结构更加清晰，便于开发人员快速找到所需的枚举类型。</li>
+<li>提高代码可读性：将枚举类型根据业务需求和功能模块分组，有助于提高代码的可读性，使其他开发人员更容易理解项目的业务逻辑。</li>
+<li>便于维护：当需要修改或扩展某个业务功能时，相关的枚举类型都在同一个包中，这样可以更方便地进行修改和维护。</li>
+</ol>
+<p>因此，在实际项目开发中，我们应该根据业务需求和功能模块来组织枚举类型，以提高代码的可读性、可维护性和易用性。同时，也要遵循项目的整体架构和编码规范，以保持代码的一致性。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>枚举类型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>向上转型的概念</title>
+    <url>/2023/04/19/%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B%E7%9A%84%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #Java #概念 </p>
+<hr>
+<p>继承图中派生类转型为基类是向上的，所以通常称作==<strong>向上转型</strong>==。因为是从一个更具体的类转化为一个更一般的类，所以向上转型永远是安全的。也就是说，派生类是基类的一个超集。它可能比基类包含更多的方法，但它必须至少具有与基类一样的方法。在向上转型期间，类接口只可能失去方法，不会增加方法。这就是为什么编译器在没有任何明确转型或其他特殊标记的情况下，仍然允许向上转型的原因。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>概念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在 VS Code 中使用 Spring Boot Extension Pack 创建 Spring Boot 项目</title>
+    <url>/2023/04/19/%E5%9C%A8%20VS%20Code%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20Spring%20Boot%20Extension%20Pack%20%E5%88%9B%E5%BB%BA%20Spring%20Boot%20%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #VSCode #SpringBoot #SpringInitializr #Java #项目创建 #依赖管理 #ExtensionPack</p>
+<hr>
+<p>以下是使用 VS Code 的 Spring Boot Extension Pack 来创建 Spring Boot 项目的步骤：</p>
+<ol>
+<li>在 VS Code 中，按下 <code>Ctrl + Shift + P</code>（Mac 下为 <code>Cmd + Shift + P</code>）打开命令面板。</li>
+<li>在命令面板中输入 “Spring Initializr”，然后选择 “Spring Initializr: Generate a Maven Project”（或 “Spring Initializr: Generate a Gradle Project”，取决于你喜欢的构建工具）。</li>
+<li>选择 “Java” 作为编程语言。</li>
+<li>输入 Group ID，这通常是你的公司或项目的域名反转，例如 “com.example”。</li>
+<li>输入 Artifact ID，这是你的项目名称，例如 “myproject”。</li>
+<li>选择项目打包方式，推荐选择 “Jar”。</li>
+<li>选择 Java 版本，推荐使用 “11” 或更高版本。</li>
+<li>在依赖列表中，添加所需的依赖，例如：<ul>
+<li>  搜索 “web” 并选择 “Spring Web”（用于创建 Web 应用和 RESTful API）。</li>
+<li>  搜索 “mysql” 或 “postgresql” 并选择对应的 “MySQL Driver” 或 “PostgreSQL Driver”（根据你的数据库类型选择合适的驱动）。</li>
+<li>  搜索 “jpa” 并选择 “Spring Data JPA”（用于实现数据访问层，可选）。</li>
+<li>  根据项目需求，添加其他依赖。</li>
+</ul>
+</li>
+<li>点击 “Finish” 生成项目。选择一个文件夹来保存生成的项目。VS Code 将自动解压项目并打开它。</li>
+</ol>
+<p>至此，你已经使用 VS Code 的 Spring Boot Extension Pack 创建了一个 Spring Boot 项目。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>VSCode</tag>
+        <tag>SpringBoot</tag>
+        <tag>SpringInitializr</tag>
+        <tag>项目创建</tag>
+        <tag>依赖管理</tag>
+        <tag>ExtensionPack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基类子对象的概念和示例</title>
+    <url>/2023/04/19/%E5%9F%BA%E7%B1%BB%E5%AD%90%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E7%A4%BA%E4%BE%8B/</url>
+    <content><![CDATA[<p>时间：2023-04-11<br>标签： #Java #继承 #基类 #派生类 #子对象</p>
+<hr>
+<p>基类子对象是指在派生类对象中，与基类对应的部分。当创建一个派生类的对象时，这个对象实际上包含了基类的一个实例，这个实例被称为基类子对象。换句话说，基类子对象是派生类对象中继承自基类的那部分属性和方法。</p>
+<p>我们来看一个简单的例子：</p>
+<p>```java</p>
+<p>// 基类<br>class Animal {<br>    String name;<br>​<br>    public void makeSound() {<br>        System.out.println(“The animal makes a sound”);<br>    }<br>}<br>​<br>// 派生类<br>class Dog extends Animal {<br>    String breed;<br>​<br>    public void bark() {<br>        System.out.println(“The dog barks”);<br>    }<br>}<br>​<br>public class Main {<br>    public static void main(String[] args) {<br>        Dog myDog = new Dog();<br>        myDog.name = “Buddy”;<br>        myDog.breed = “Golden Retriever”;<br>        myDog.makeSound();<br>        myDog.bark();<br>    }<br>}```</p>
+<p>在这个例子中，<code>Animal</code>是基类，<code>Dog</code>是派生类。当我们创建一个<code>Dog</code>对象时（<code>Dog myDog = new Dog();</code>），这个对象包含了一个<code>Animal</code>子对象。这个<code>Animal</code>子对象包含了<code>Animal</code>类的属性（如<code>name</code>）和方法（如<code>makeSound()</code>）。</p>
+<p>这就是所谓的基类子对象。从外部看，我们在使用<code>Dog</code>对象时，可以直接访问继承自<code>Animal</code>的属性和方法，实际上就是在操作基类子对象。同时，<code>Dog</code>对象还具有派生类特有的属性（如<code>breed</code>）和方法（如<code>bark()</code>）。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>继承</tag>
+        <tag>基类</tag>
+        <tag>派生类</tag>
+        <tag>子对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何查看项目有没有使用spring boot框架</title>
+    <url>/2023/04/19/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E9%A1%B9%E7%9B%AE%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8spring%20boot%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<p>时间：2023-04-19<br>标签： #java #spring #SpringBoot </p>
+<hr>
+<p>要查看项目是否使用了 Spring Boot 框架，可以通过以下方式进行：</p>
+<ol>
+<li> 查看项目依赖</li>
+</ol>
+<p>在项目的 pom.xml 文件中查找是否存在 spring-boot-starter-parent 或 spring-boot-starter-web 等 Spring Boot 相关的依赖。这些依赖通常是 Spring Boot 项目所必需的，并且包含了 Spring Boot 相关的配置和功能。</p>
+<p>例如，下面是一个 Spring Boot 项目的 pom.xml 文件示例：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在上述示例代码中，可以看到该项目的父依赖为 spring-boot-starter-parent，并且项目依赖了 spring-boot-starter-web，这表明该项目是一个基于 Spring Boot 框架构建的 Web 项目。</p>
+<ol start="2">
+<li> 查看启动类<br>在项目的源代码中查找是否存在类似于以下代码的启动类：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(MyApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在上述示例代码中，使用 <code>@SpringBootApplication</code> 注解标注了 <code>MyApplication</code> 类，并且在 <code>main</code> 方法中调用了 <code>SpringApplication.run</code> 方法启动应用程序。这是 Spring Boot 项目的典型启动方式，因此如果存在类似的启动类，则表明该项目是基于 Spring Boot 框架构建的。</p>
+<p>如果以上方式均没有找到 Spring Boot 相关的依赖和启动类，那么该项目可能没有使用 Spring Boot 框架。</p>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>SpringBoot</tag>
+        <tag>spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>局部内部类的使用</title>
+    <url>/2023/04/19/%E5%B1%80%E9%83%A8%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #局部内部类</p>
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Parcel6</span> </span>&#123; </span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">internalTracking</span><span class="params">(<span class="keyword">boolean</span> b)</span> </span>&#123; </span><br><span class="line">		<span class="keyword">if</span>(b) &#123; </span><br><span class="line">			<span class="class"><span class="keyword">class</span> <span class="title">TrackingSlip</span> </span>&#123; </span><br><span class="line">				<span class="keyword">private</span> String id; </span><br><span class="line">				TrackingSlip(String s) &#123; id = s; &#125; </span><br><span class="line">				<span class="function">String <span class="title">getSlip</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> id; &#125; </span><br><span class="line">			&#125; </span><br><span class="line">				TrackingSlip ts = <span class="keyword">new</span> TrackingSlip(<span class="string">&quot;slip&quot;</span>); </span><br><span class="line">				String s = ts.getSlip(); </span><br><span class="line">		&#125; </span><br><span class="line">		<span class="comment">// Can&#x27;t use it here! Out of scope: </span></span><br><span class="line">		<span class="comment">//- TrackingSlip ts = new TrackingSlip(&quot;x&quot;); </span></span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">track</span><span class="params">()</span> </span>&#123; </span><br><span class="line">		internalTracking(<span class="keyword">true</span>); </span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; </span><br><span class="line">		Parcel6 p = <span class="keyword">new</span> Parcel6(); p.track(); </span><br><span class="line">	&#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>——————<br>这么做的意义是什么，直接创建一个 String trackingSlip = “slip”； 不好么</p>
+</blockquote>
+<p>在这个例子中，<code>Parcel6</code> 类中的 <code>internalTracking</code> 方法使用了一个局部内部类 <code>TrackingSlip</code>。局部内部类是定义在方法中的类，其作用范围仅限于该方法。这样做的目的是将类的实现细节隐藏在方法中，使得类在方法外部无法访问。</p>
+<p>局部内部类适用于以下情况：</p>
+<ol>
+<li>当一个类仅在某个方法中有用，而在方法外部没有任何作用时，可以考虑使用局部内部类。这样可以将实现细节封装在方法内部，提高代码的可读性和维护性。</li>
+<li>局部内部类可以访问方法中的局部变量（前提是局部变量需要被声明为<code>final</code>或实际上是<code>final</code>），这使得局部内部类可以与方法的其他部分共享状态。</li>
+</ol>
+<p>在这个例子中，<code>TrackingSlip</code>类仅在<code>internalTracking</code>方法中有意义，因此将其定义为局部内部类是合理的。这使得<code>TrackingSlip</code>类在方法外部无法访问，从而实现了一种封装。</p>
+<p>当然，你提到的直接创建一个<code>String trackingSlip = &quot;slip&quot;;</code>也是一种解决方案，但这个例子主要是为了展示局部内部类的概念和使用方法。在实际开发中，如果局部内部类的功能可以简单地用一个变量或简单的方法来实现，那么采用更简单的方案通常是更好的选择。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>局部内部类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>客户端程序员概念</title>
+    <url>/2023/04/19/%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%A8%8B%E5%BA%8F%E5%91%98%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #客户端程序员 #Java </p>
+<hr>
+<p>“客户端程序员”指的是那些使用你编写的类、库或框架的其他程序员。在这个上下文中，”客户端”并不是指一个运行在用户设备上的应用程序，而是指那些依赖于你提供的代码的其他程序员或他们编写的代码。</p>
+<p>当你创建一个类、库或框架时，你可能会为其他程序员提供一组 API（应用程序编程接口），以便他们能够轻松地使用你的代码来实现特定功能。客户端程序员会基于你提供的 API 编写他们自己的代码，而不需要了解你代码的内部实现细节。这种封装和分离有助于提高代码的可维护性和可扩展性。</p>
+<p>例如，假设你编写了一个名为 MyMathLibrary 的数学库，它包含一些有用的数学函数（如加法、减法、乘法等）。客户端程序员（在这种情况下，可能是其他软件开发人员）将使用你提供的 MyMathLibrary API 来调用这些函数，而不需要了解这些函数的具体实现。这样，他们可以专注于自己的应用程序逻辑，而不必担心底层的数学操作。</p>
+<p>因此，当我们在之前的回答中讨论客户端程序员时，我们是指那些使用你提供的类、库或框架的其他程序员，他们需要依赖于你提供的 API 来实现他们的需求。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>客户端程序员</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抽象类的目的和作用</title>
+    <url>/2023/04/19/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E7%9B%AE%E7%9A%84%E5%92%8C%E4%BD%9C%E7%94%A8/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #抽象类 #面向对象 #封装 #设计原则</p>
+<hr>
+<blockquote>
+<p>一定程度上，我们声明一个类为抽象类，是为了防止客户端程序员对这个类进行实例化的一种防范手段。除此之外，还有别的使用抽象类的目的么？</p>
+</blockquote>
+<p>将一个类声明为抽象类可以阻止客户端程序员直接实例化这个类。这样做的目的是表明这个类只能作为其他类的基类，而不能直接使用。此外，抽象类还有以下作用：</p>
+<ol>
+<li><strong>提供共享实现</strong>：抽象类可以包含一些共享的状态（属性）和方法实现，这些代码可以被子类继承和复用。这样，我们可以把一些通用的功能放在抽象类中，减少重复代码，提高代码的可维护性。</li>
+<li><strong>定义接口规范</strong>：抽象类可以包含抽象方法，这些方法定义了子类应该实现的接口规范。通过抽象方法，我们可以明确地表示子类需要实现哪些方法，以满足特定的功能需求。</li>
+<li><strong>实现多态</strong>：抽象类可以作为一种多态机制的实现手段。通过让子类重写抽象类中的方法，我们可以在运行时通过抽象类引用实际的子类对象，实现动态绑定和多态行为。</li>
+<li><strong>模板方法模式</strong>：抽象类可以实现模板方法模式，这是一种行为设计模式。在这种模式中，抽象类定义了一个算法的框架，将一些具体的实现步骤延迟到子类中。这样，子类可以在不改变算法结构的情况下，重定义某些特定的实现步骤。</li>
+</ol>
+<p>总之，抽象类除了防止直接实例化之外，还有很多其他作用。它可以用于提供共享实现、定义接口规范、实现多态以及实现模板方法模式等。在设计类结构时，我们可以根据实际需求选择使用抽象类。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>设计原则</tag>
+        <tag>抽象类</tag>
+        <tag>封装</tag>
+        <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>枚举类型（Enumerate）的实际应用</title>
+    <url>/2023/04/19/%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%EF%BC%88Enumerate%EF%BC%89%E7%9A%84%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #Java #枚举类型 </p>
+<hr>
+<p>在日常的 Java 生产工作中，枚举类型（Enum）确实会被广泛应用。枚举类型能够提供一组固定的值集合，它们在编译时就已经确定。使用枚举类型可以增强代码的可读性和健壮性，因为它可以限制变量的取值范围。</p>
+<p>以下是一个具体的业务场景示例：</p>
+<p>假设我们正在为一个在线购物网站开发一个订单管理系统。在系统中，我们需要处理不同状态的订单，例如已提交、已支付、已发货、已完成、已取消等。这时候，我们可以使用枚举类型来表示订单的各种状态。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">OrderStatus</span> </span>&#123;     </span><br><span class="line">	SUBMITTED, <span class="comment">// 已提交     </span></span><br><span class="line">	PAID,      <span class="comment">// 已支付     </span></span><br><span class="line">	SHIPPED,   <span class="comment">// 已发货     </span></span><br><span class="line">	COMPLETED, <span class="comment">// 已完成     </span></span><br><span class="line">	CANCELED   <span class="comment">// 已取消 </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接下来，在订单类（Order）中，我们可以使用这个枚举类型来表示订单的状态：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Order</span> </span>&#123;     </span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">long</span> id;     </span><br><span class="line">	<span class="keyword">private</span> List&lt;OrderItem&gt; items;     </span><br><span class="line">	<span class="keyword">private</span> Date createdAt;     </span><br><span class="line">	<span class="keyword">private</span> OrderStatus status;      </span><br><span class="line">	<span class="comment">// 构造方法、getter 和 setter 方法等 </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>有了枚举类型，我们就能在代码中清晰地表达订单状态的变化，同时也限制了订单状态的取值范围，降低了出错的可能性。例如，当一个订单被支付后，我们可以将其状态更改为已支付：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Order order = <span class="keyword">new</span> Order(); </span><br><span class="line">order.setStatus(OrderStatus.SUBMITTED); <span class="comment">// ... 其他操作 ...</span></span><br><span class="line">order.setStatus(OrderStatus.PAID);</span><br></pre></td></tr></table></figure>
+
+<p>总之，枚举类型在日常的 Java 生产工作中非常有用，可以帮助我们编写更可读、更健壮的代码。</p>
+<p>当然，还有很多其他业务场景可以使用枚举类型。下面是几个典型的例子：</p>
+<ol>
+<li> 用户角色管理：</li>
+</ol>
+<p>在很多应用系统中，我们需要对用户的角色进行管理，例如普通用户、管理员、超级管理员等。我们可以使用枚举类型来表示不同的用户角色：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">UserRole</span> </span>&#123;</span><br><span class="line">    REGULAR_USER,  <span class="comment">// 普通用户</span></span><br><span class="line">    ADMIN,         <span class="comment">// 管理员</span></span><br><span class="line">    SUPER_ADMIN    <span class="comment">// 超级管理员</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li> 周几表示：</li>
+</ol>
+<p>在处理日期和时间的应用程序中，我们可能需要表示一周中的某一天，可以使用枚举类型来表示周几：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">DayOfWeek</span> </span>&#123;</span><br><span class="line">    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li> 颜色表示：</li>
+</ol>
+<p>在处理颜色相关的应用程序中，我们可能需要表示一些基本的颜色，可以使用枚举类型表示这些颜色：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">Color</span> </span>&#123;</span><br><span class="line">    RED, GREEN, BLUE, YELLOW, ORANGE, PURPLE, WHITE, BLACK</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li> 支付方式表示：</li>
+</ol>
+<p>在处理支付相关的应用程序中，我们可能需要表示不同的支付方式，例如信用卡、支付宝、微信支付等。可以使用枚举类型表示这些支付方式：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">PaymentMethod</span> </span>&#123;</span><br><span class="line">    CREDIT_CARD, ALIPAY, WECHAT_PAY, PAYPAL, BANK_TRANSFER</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>枚举类型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>理解 Java 中的 hashCode() 方法以及与 toString() 和 equals() 方法的关系</title>
+    <url>/2023/04/19/%E7%90%86%E8%A7%A3%20Java%20%E4%B8%AD%E7%9A%84%20hashCode()%20%E6%96%B9%E6%B3%95%E4%BB%A5%E5%8F%8A%E4%B8%8E%20toString()%20%E5%92%8C%20equals()%20%E6%96%B9%E6%B3%95%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #hashCode #equals #toString #对象比较  #散列数据结构</p>
+<hr>
+<blockquote>
+<p>hashCode() 为什么会和 toString equals 方法放在一起，它也很常被重写么，为什么，它的作用是什么</p>
+</blockquote>
+<p><code>hashCode()</code> 方法与 <code>toString()</code> 和 <code>equals()</code> 方法经常放在一起，因为它们都是 Java 中 <code>Object</code> 类的公共方法，通常需要根据实际需求在子类中重写。当您创建自定义类时，重写这些方法可以帮助您更好地处理对象之间的比较、散列存储和调试。</p>
+<p><code>hashCode()</code> 的主要作用是为对象提供一个散列值。这个散列值通常用于散列数据结构（例如 <code>HashMap</code>、<code>HashSet</code>）中，以提高数据存储和检索的性能。当您将对象作为散列数据结构的键时，<code>hashCode()</code> 方法就显得非常重要。</p>
+<p><code>hashCode()</code> 应该遵循以下约定：</p>
+<ol>
+<li> 在同一个 Java 应用程序执行期间，对同一个对象多次调用 <code>hashCode()</code> 应该返回相同的值。</li>
+<li> 如果两个对象根据 <code>equals()</code> 方法相等，那么它们的 <code>hashCode()</code> 应该相等。</li>
+<li> 如果两个对象根据 <code>equals()</code> 方法不相等，它们的 <code>hashCode()</code> 不一定要不同。但是，具有不同散列值的对象可能会提高散列数据结构的性能。</li>
+</ol>
+<p>因此，当您重写 <code>equals()</code> 方法时，通常也需要重写 <code>hashCode()</code> 方法，以确保它们的行为一致。这有助于确保您的自定义类在散列数据结构中表现良好。这也是为什么 <code>hashCode()</code> 与 <code>toString()</code> 和 <code>equals()</code> 方法经常放在一起讨论的原因。</p>
+<p>以下是一个简单的示例，说明如何重写 <code>hashCode()</code> 和 <code>equals()</code> 方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造方法、getter 和 setter 省略</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == obj) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (obj == <span class="keyword">null</span> || getClass() != obj.getClass()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Person person = (Person) obj;</span><br><span class="line">        <span class="keyword">return</span> age == person.age &amp;&amp; name.equals(person.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">17</span>;</span><br><span class="line">        result = <span class="number">31</span> * result + name.hashCode();</span><br><span class="line">        result = <span class="number">31</span> * result + age;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个示例中，我们根据 <code>Person</code> 类的 <code>name</code> 和 <code>age</code> 属性重写了 <code>equals()</code> 和 <code>hashCode()</code> 方法。这样，当我们将 <code>Person</code> 对象作为 <code>HashMap</code> 或 <code>HashSet</code> 的键时，它们将根据 <code>name</code> 和 <code>age</code> 属性正确地进行比较和散列。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>hashCode</tag>
+        <tag>equals</tag>
+        <tag>toString</tag>
+        <tag>对象比较</tag>
+        <tag>散列数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>组合和继承的选择</title>
+    <url>/2023/04/19/%E7%BB%84%E5%90%88%E5%92%8C%E7%BB%A7%E6%89%BF%E7%9A%84%E9%80%89%E6%8B%A9/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #Java #继承 #组合 </p>
+<hr>
+<p>在面向对象编程中，创建和使用代码最有可能的方法是将数据和方法一起打包到类中，然后使用该类的对象。也可以使用已有的类通过组合来创建新类。继承其实不太常用。因此尽管在教授 OOP 的过程中我们多次强调继承，但这并不意味着要尽可能使用它。</p>
+<p><strong>恰恰相反</strong>，==尽量少使用它（继承）==，除非确实使用继承是有帮助的。一种判断使用组合还是继承的最清晰的方法是问一问自己是否需要把新类向上转型为基类。如果必须向上转型，那么继承就是必要的，但如果不需要，则要进一步考虑是否该采用继承。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>继承</tag>
+        <tag>组合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>访问说明符</title>
+    <url>/2023/04/19/%E8%AE%BF%E9%97%AE%E8%AF%B4%E6%98%8E%E7%AC%A6/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #java #访问说明符</p>
+<hr>
+<p>访问说明符（Access Modifiers）是Java中用于设置类、方法或属性访问级别的关键字。它们决定了其他类或对象如何访问特定类、方法或属性。Java中有四种访问说明符：</p>
+<ol>
+<li><code>public</code>：公共访问级别，表示类、方法或属性对所有其他类都是可见的和可访问的。任何类都可以访问public成员。</li>
+<li><code>protected</code>：受保护访问级别，表示类、方法或属性对同一个包（package）中的其他类和所有子类是可见的和可访问的。这意味着，只有在相同包中的类和继承了此类的子类可以访问protected成员。</li>
+<li><code>private</code>：私有访问级别，表示类、方法或属性只能被其所在类访问。私有成员不能被其他类访问，也不能被子类访问。</li>
+<li>默认（没有访问说明符，也称为“包访问级别”或“友元访问级别”）：当不使用任何访问说明符时，类、方法或属性对同一个包（package）中的其他类是可见的和可访问的。这意味着，只有在相同包中的类可以访问默认成员。</li>
+</ol>
+<p>访问说明符使得开发人员能够在类的设计中明确地定义哪些部分可以被其他类访问，哪些部分应该对外部隐藏。这有助于实现封装和信息隐藏，是面向对象编程的重要原则。</p>
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>访问说明符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>遍历map</title>
+    <url>/2023/04/19/%E9%81%8D%E5%8E%86map/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #map </p>
+<hr>
+<p>在 Java 中，遍历 Map 的方式有很多，以下是常见的三种方法：</p>
+<p>方法一：使用 keySet()</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String, Integer&gt; map = ...; <span class="comment">// 假设这是你的Map</span></span><br><span class="line"><span class="keyword">for</span> (String key : map.keySet()) &#123;</span><br><span class="line">    Integer value = map.get(key);</span><br><span class="line">    System.out.println(<span class="string">&quot;Key: &quot;</span> + key + <span class="string">&quot;, Value: &quot;</span> + value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法二：使用 entrySet()</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String, Integer&gt; map = ...; <span class="comment">// 假设这是你的Map</span></span><br><span class="line"><span class="keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) &#123;</span><br><span class="line">    String key = entry.getKey();</span><br><span class="line">    Integer value = entry.getValue();</span><br><span class="line">    System.out.println(<span class="string">&quot;Key: &quot;</span> + key + <span class="string">&quot;, Value: &quot;</span> + value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法三：使用 Java 8 的 forEach() 和 Lambda 表达式</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String, Integer&gt; map = ...; <span class="comment">// 假设这是你的Map</span></span><br><span class="line">map.forEach((key, value) -&gt; System.out.println(<span class="string">&quot;Key: &quot;</span> + key + <span class="string">&quot;, Value: &quot;</span> + value));</span><br></pre></td></tr></table></figure>
+<p>以上是遍历 Map 的三种常见方法，你可以根据实际情况选择合适的方法。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>map</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抽象类的目的以及由来</title>
+    <url>/2023/04/19/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E7%9B%AE%E7%9A%84%E4%BB%A5%E5%8F%8A%E7%94%B1%E6%9D%A5/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #java #抽象类 #由来</p>
+<hr>
+<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>一种介于普通类和接口之间的折中手段</p>
+<h1 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h1><p>对于像 <strong>Instrument</strong> 那样的抽象类来说，它的对象几乎总是没有意义的。创建一个抽象类是为了通过通用接口操纵一系列类。因此，<strong>Instrument</strong> 只是表示接口，不是具体实现，所以创建一个 <strong>Instrument</strong> 的对象毫无意义，我们可能希望阻止用户这么做。通过让 <strong>Instrument</strong> 所有的方法产生错误，就可以达到这个目的，但是这么做会延迟到运行时才能得知错误信息，并且需要用户进行可靠、详尽的测试。最好能在编译时捕捉问题。</p>
+]]></content>
+      <tags>
+        <tag>抽象类</tag>
+        <tag>java</tag>
+        <tag>由来</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>避免接口组合时的方法名冲突</title>
+    <url>/2023/04/19/%E9%81%BF%E5%85%8D%E6%8E%A5%E5%8F%A3%E7%BB%84%E5%90%88%E6%97%B6%E7%9A%84%E6%96%B9%E6%B3%95%E5%90%8D%E5%86%B2%E7%AA%81/</url>
+    <content><![CDATA[<p>时间：2023-04-18<br>标签： #Java #接口 #命名规范 #代码可读性</p>
+<hr>
+<p>避免接口组合时方法名冲突的方法有以下几种：</p>
+<ol>
+<li><strong>明确命名</strong>：确保接口方法的命名清晰明了，尽量表达出方法的作用和所属领域。这样可以减少不同接口中方法名相同的可能性。</li>
+<li><strong>接口分层</strong>：根据功能或领域对接口进行分层。将通用的方法放在基本接口中，然后让更具体的接口继承这些基本接口。这样可以减少方法名冲突的可能性，同时提高代码的可读性和可维护性。</li>
+<li><strong>限制接口的大小</strong>：遵循接口隔离原则，确保每个接口都具有明确的职责。避免在一个接口中包含过多的方法。这样可以降低不同接口之间方法名冲突的风险。</li>
+<li><strong>遵循命名约定</strong>：在团队中制定并遵循一致的命名规范，例如在方法名前加上接口名称的缩写，以区分不同接口中的方法。这样可以降低方法名冲突的可能性，并提高代码的可读性。</li>
+<li><strong>使用Java 8的默认方法</strong>：如果多个接口中有相同的方法名，但实现逻辑相同，可以使用Java 8引入的默认方法特性，在接口中提供默认实现。这样可以避免重复代码，同时消除方法名冲突带来的困扰。</li>
+</ol>
+<p>通过采用这些策略，可以在很大程度上避免接口组合时方法名冲突，提高代码的可读性和可维护性。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>接口</tag>
+        <tag>命名规范</tag>
+        <tag>代码可读性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>默认包访问权限的正确分词</title>
+    <url>/2023/04/19/%E9%BB%98%E8%AE%A4%E5%8C%85%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%88%86%E8%AF%8D/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #Java #概念</p>
+<hr>
+<p>“默认包访问权限”应该分词为”默认”和”包访问权限”。在 Java 中，如果没有为类或类的成员指定访问修饰符（如 public、private、protected），那么它们将具有默认的包访问权限。这意味着这些成员只能被同一个包中的其他类访问，而不能被其他包中的类访问。这种访问级别在某些情况下可以为隐藏类的实现细节提供足够的保护。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+        <tag>概念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿里云购买域名绑定 GitHub 个人主页</title>
+    <url>/2023/04/19/%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%20GitHub%20%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</url>
+    <content><![CDATA[<p>时间：2023-04-12<br>标签： #阿里云 #GitHub #个人主页 #域名 </p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p>在阿里云配置 DNS 记录：<br>    1. 登录到阿里云控制台。<br>    2. 转到【域名与网站】&gt;【域名管理】。<br>    3. 找到您的域名并点击【解析设置】。<br>    4. 添加以下两条 A 记录：<br>        - 主机记录：@<br>        - 记录类型：A<br>        - 记录值：185.199.108.153<br>        - TTL：根据您的需求设置，建议设置为 600（10 分钟）。<br>        - 添加第二条 A 记录，重复上述步骤，但将记录值更改为 185.199.109.153。<br>        - 添加第三条 A 记录，重复上述步骤，但将记录值更改为 185.199.110.153。<br>        - 添加第四条 A 记录，重复上述步骤，但将记录值更改为 185.199.111.153。<br>    5. 如果您希望使用 www 子域名 ，例如 <a href="http://www.example.com/">www.example.com</a> ，则需要添加一条 CNAME 记录：<br>        - 主机记录：www<br>        - 记录类型：CNAME<br>        - 记录值：用户名. Github. Io（将用户名替换为您的 GitHub 用户名）<br>        - TTL：根据您的需求设置，建议设置为 600（10 分钟）。</p>
+<p>等待 DNS 解析生效。这可能需要一些时间，通常在几分钟到几小时之间，最多可能需要 48 小时。</p>
+<p>完成这些步骤后，您的域名应该会成功指向您的 GitHub 个人主页。</p>
+<p>如果在完成上述步骤后仍无法访问您的域名，请检查您的设置或等待 DNS 解析生效。</p>
+<h1 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h1><h2 id="A-这些记录值是在做什么"><a href="#A-这些记录值是在做什么" class="headerlink" title="A. 这些记录值是在做什么"></a>A. 这些记录值是在做什么</h2><p>这里的记录值是 DNS 记录的一部分。在这个过程中，我们添加了 A 记录和 CNAME 记录。下面是这些记录值的解释：</p>
+<ol>
+<li> A 记录（地址记录）：</li>
+</ol>
+<p>A 记录用于将域名解析到一个 IPv4 地址。在这个例子中，我们添加了四个 A 记录，每个记录值是 GitHub Pages 的服务器 IP 地址：</p>
+<ul>
+<li>  185.199.108.153</li>
+<li>  185.199.109.153</li>
+<li>  185.199.110.153</li>
+<li>  185.199.111.153</li>
+</ul>
+<p>当用户访问您的域名时（例如：<code>example.com</code>），DNS 服务器会查找与该域名关联的 IP 地址。通过设置这些 A 记录，您告诉 DNS 服务器，您的域名应该解析到这四个 GitHub Pages 服务器中的一个。这样，当用户访问您的域名时，他们将被引导到托管在 GitHub Pages 上的网站。</p>
+<ol start="2">
+<li> CNAME 记录（规范名称记录）：</li>
+</ol>
+<p>CNAME 记录用于将一个域名（通常是子域名）映射到另一个域名。在这个例子中，我们添加了一个 CNAME 记录，将 <code>www</code> 子域名（如：<code>www.example.com</code>）映射到您的 GitHub Pages 个人主页域名（如：<code>用户名.github.io</code>，将 <code>用户名</code> 替换为您的 GitHub 用户名）。</p>
+<p>添加这个 CNAME 记录后，当用户访问 <code>www.example.com</code> 时，他们将被引导到与 <code>用户名.github.io</code> 关联的相同 GitHub Pages 网站。这样可以确保用户在访问 <code>example.com</code> 和 <code>www.example.com</code> 时看到的内容是一致的。</p>
+<p>总之，这些记录值用于指导 DNS 解析过程，将您的自定义域名解析到托管在 GitHub Pages 上的网站。这样，无论用户访问您的裸域名（如：<code>example.com</code>）还是带有 <code>www</code> 子域名的版本（如：<code>www.example.com</code>），他们都会看到您的 GitHub 个人主页。</p>
+<h2 id="B-如果域名解析还是存在问题"><a href="#B-如果域名解析还是存在问题" class="headerlink" title="B. 如果域名解析还是存在问题"></a>B. 如果域名解析还是存在问题</h2><p>如果您的域名解析仍然存在问题，您可以尝试以下几种方法：</p>
+<ol>
+<li>检查您的 DNS 设置是否正确：<ul>
+<li>  确保您在阿里云的域名管理中已经添加了正确的 A 记录和 CNAME 记录。</li>
+<li>  确保您在 GitHub 仓库中添加了正确的 CNAME 文件，内容应为您的自定义域名。</li>
+<li>如果您在设置过程中更改了任何设置，请确保保存更改。</li>
+</ul>
+</li>
+<li>等待 DNS 解析生效：<ul>
+<li>  请耐心等待，因为 DNS 解析可能需要一段时间（从几分钟到 48 小时）。</li>
+<li>您可以使用在线 DNS 查询工具（如 Google Public DNS 或其他第三方工具）来检查您的域名解析状态。</li>
+</ul>
+</li>
+<li>清除浏览器缓存和 DNS 缓存：<ul>
+<li>  清除浏览器缓存以确保您查看的是最新版本的网站。</li>
+<li>  如果您使用的是 Windows，可以尝试通过命令提示符运行 <code>ipconfig /flushdns</code> 命令来清除 DNS 缓存。</li>
+<li>  对于 macOS，您可以使用 <code>sudo killall -HUP mDNSResponder</code> 命令来清除 DNS 缓存。</li>
+<li>在 Linux 上，您可以使用 <code>sudo systemctl restart nscd</code> 或 <code>sudo /etc/init.d/nscd restart</code> 命令清除 DNS 缓存。</li>
+</ul>
+</li>
+<li>检查防火墙或安全设置：<ul>
+<li>某些防火墙或安全设置可能会阻止域名解析。请检查您的防火墙或安全设置，以确保它们没有阻止您的域名解析。</li>
+</ul>
+</li>
+<li>寻求技术支持：<ul>
+<li>  如果问题仍然存在，请联系阿里云和 GitHub Pages 的技术支持，他们可以帮助您进一步诊断问题。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>阿里云</tag>
+        <tag>GitHub</tag>
+        <tag>个人主页</tag>
+        <tag>域名</tag>
+      </tags>
+  </entry>
 </search>

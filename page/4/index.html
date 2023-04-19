@@ -86,8 +86,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">33</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">18</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">101</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -159,13 +159,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">101</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E5%A4%9A%E6%80%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%9C%BA%E5%88%B6/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Java%E4%B8%AD%E7%9A%84%E5%9B%9E%E8%B0%83%E6%9C%BA%E5%88%B6%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8A%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E5%A4%9A%E6%80%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%9C%BA%E5%88%B6/" class="post-title-link" itemprop="url">多态的实现机制</a>
+          <a href="/2023/04/19/Java%E4%B8%AD%E7%9A%84%E5%9B%9E%E8%B0%83%E6%9C%BA%E5%88%B6%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8A%BF/" class="post-title-link" itemprop="url">Java中的回调机制及其优势</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -286,99 +286,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #多态 #实现机制 #示例 </p>
-<blockquote>
-<p>一旦学会了多态，就可以以多态的思维方式考虑每件事。然而，只有普通的方法调用可以是多态的。例如，如果你直接访问一个属性，该访问会在编译时解析： </p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// polymorphism/FieldAccess.java </span></span><br><span class="line"><span class="comment">// Direct field access is determined at compile time </span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Super</span> </span>&#123; </span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> field = <span class="number">0</span>; </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getField</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> field; </span><br><span class="line">	&#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sub</span> <span class="keyword">extends</span> <span class="title">Super</span> </span>&#123; </span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> field = <span class="number">1</span>; </span><br><span class="line">	<span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getField</span><span class="params">()</span> </span>&#123; </span><br><span class="line">		<span class="keyword">return</span> field; </span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSuperField</span><span class="params">()</span> </span>&#123; </span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">super</span>.field; </span><br><span class="line">	&#125; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FieldAccess</span> </span>&#123; </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; </span><br><span class="line">		Super sup = <span class="keyword">new</span> Sub(); </span><br><span class="line">		<span class="comment">// Upcast </span></span><br><span class="line">		System.out.println(<span class="string">&quot;sup.field = &quot;</span> + sup.field + <span class="string">&quot;, sup.getField() = &quot;</span> + sup.getField()); </span><br><span class="line">		Sub sub = <span class="keyword">new</span> Sub(); </span><br><span class="line">		System.out.println(<span class="string">&quot;sub.field = &quot;</span> + sub.field + <span class="string">&quot;, sub.getField() = &quot;</span> + sub.getField() + <span class="string">&quot;, sub.getSuperField() = &quot;</span> + sub.getSuperField()) </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出： sup.field = 0, sup.getField() = 1 sub.field = 1, sub.getField() = 1, sub.getSuperField() = 0 </span></span><br></pre></td></tr></table></figure>
-
+          <p>时间：2023-04-18<br>标签： #Java #回调 #异步编程 #事件驱动编程 #接口 #自定义行为 #编程模式 </p>
 <hr>
-<blockquote>
-<p>我注意到上述的代码中 sup.field = 0, sup.getField() = 1，这样我对于 Java 底层实现多态的机制有些迷惑，他是如何确定到底是哪个方法要被执行的呢，是否是有个存储方法的栈之类的呢？</p>
-</blockquote>
-<p>在 Java 中，多态仅适用于方法调用，而不适用于字段访问。这就是为什么在上面的例子中，<code>sup.field</code> 的值为0，而 <code>sup.getField()</code> 的值为1。字段的访问在编译时就已经确定，而方法调用则在运行时动态绑定。</p>
-<p>在这个例子中，当我们执行以下语句：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Super sup = <span class="keyword">new</span> Sub(); <span class="comment">// Upcast</span></span><br></pre></td></tr></table></figure>
-<p><code>sup</code> 是一个 <code>Super</code> 类型的引用，但它实际上引用了一个 <code>Sub</code> 类型的对象。当我们访问字段 <code>sup.field</code> 时，编译器在编译时就已经确定我们访问的是 <code>Super</code> 类型的 <code>field</code>，因此返回值为0。</p>
-<p>然而，当我们调用 <code>sup.getField()</code> 时，JVM会在运行时检查<code>sup</code>引用的实际对象类型（即 <code>Sub</code> 类型），并调用 <code>Sub</code> 类中的 <code>getField()</code> 方法。这就是为什么 <code>sup.getField()</code> 返回1的原因。</p>
-<p>多态背后的原理是利用了一种称为“虚方法表”（vtable）的机制。简而言之，当一个类被加载时，JVM会为其创建一个包含其所有方法的表。对于继承自父类的方法，子类中若有重写的方法，虚方法表中的对应条目将被子类方法替换。当我们通过一个引用调用一个方法时，JVM会根据引用的实际对象类型查找对应的虚方法表，然后调用表中对应的方法。</p>
-<p>这就是Java实现多态的基本机制。要注意的是，多态仅适用于方法调用，不适用于字段访问。因此，在处理多态时，需要确保只通过方法调用来实现多态行为。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Taylor Chyi">
-      <meta itemprop="description" content="幸福属于那些自得其乐的人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taylor Chyi's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99/" class="post-title-link" itemprop="url">开闭原则</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #设计原则 #开闭原则 #面向对象设计</p>
-<hr>
-<p>开闭原则（Open-Closed Principle，OCP）是面向对象设计和编程中的一种重要设计原则。该原则的核心思想是：</p>
-<p>软件实体（类、模块、函数等）应该对扩展开放，对修改关闭。这意味着在设计软件时，应当允许在不修改现有代码的情况下，添加新功能或者行为。</p>
-<p>开闭原则的主要优点是提高了软件系统的可维护性和可复用性。遵循开闭原则可以使软件更容易适应变化，因为在添加新功能时，不需要对现有代码进行大量修改。这减少了引入新错误的风险，同时降低了维护成本。</p>
-<p>为了实现开闭原则，通常需要使用以下技术和设计模式：</p>
+<p>回调（Callback）是一种编程模式，它允许将一个函数（或方法）作为参数传递给另一个函数（或方法）。当被调用的函数执行完毕后，会调用传递进来的回调函数，以完成某些特定任务或通知调用者任务已完成。这种编程方式在异步编程、事件处理和自定义函数行为等场景中非常有用。</p>
+<p>关于 Java 没有回调的说法，并不准确。Java 实际上支持回调，但它实现回调的方式与其他语言（如 JavaScript）略有不同。在 Java 中，我们通常使用接口来实现回调。以下是一个简单的例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 回调接口</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Callback</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">onFinished</span><span class="params">(String result)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Worker</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">doWork</span><span class="params">(Callback callback)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 执行某些任务</span></span><br><span class="line">        String result = <span class="string">&quot;任务完成&quot;</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 调用回调函数</span></span><br><span class="line">        callback.onFinished(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Worker worker = <span class="keyword">new</span> Worker();</span><br><span class="line">        worker.doWork(<span class="keyword">new</span> Callback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFinished</span><span class="params">(String result)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;回调结果: &quot;</span> + result);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们定义了一个名为 <code>Callback</code> 的接口，然后在 <code>Worker</code> 类的 <code>doWork</code> 方法中接受一个实现了 <code>Callback</code> 接口的对象。这样，在 <code>doWork</code> 方法完成任务后，可以调用回调函数 <code>onFinished</code>。</p>
+<p>回调的主要机制和好处如下：</p>
 <ol>
-<li>抽象和封装：通过定义抽象类或接口，将可变的部分与不可变的部分分离，使得在不修改现有代码的情况下，可以通过继承或实现接口来扩展功能。</li>
-<li>组合和聚合：通过将不同的功能模块组合在一起，可以在不修改现有代码的情况下，为系统添加新功能。</li>
-<li>使用设计模式：很多设计模式，如策略模式、模板方法模式、装饰器模式等，都可以帮助实现开闭原则。</li>
+<li>异步编程：回调使得程序可以在执行耗时操作时，不阻塞其他操作的进行。一旦耗时操作完成，回调函数会被触发，从而实现异步编程。</li>
+<li>事件驱动编程：回调可以用来实现事件驱动编程，当特定事件发生时触发相应的回调函数。这种方式使得代码更具可扩展性和可维护性。</li>
+<li>自定义行为：通过将回调函数作为参数传递，可以让调用者自定义函数的行为，提高代码的复用性和灵活性。</li>
 </ol>
-<p>当然，实际应用中，完全遵循开闭原则可能是非常困难的。然而，作为一种理念，开闭原则提醒我们在设计软件时要关注可维护性和可扩展性，尽量降低对现有代码的修改。</p>
+<p>虽然回调有很多好处，但过度使用回调可能导致代码变得难以理解和维护，这种现象被称为“回调地狱”。为了解决这个问题，可以使用更高级的抽象概念，如Java中的<code>Future</code>、<code>CompletableFuture</code>和<code>Stream</code>等。</p>
 
       
     </div>
@@ -405,7 +325,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E5%A4%9A%E6%80%81%E4%B8%8E%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E9%99%85%E7%94%9F%E4%BA%A7%E6%A1%88%E4%BE%8B/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/unicode/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -418,7 +338,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E5%A4%9A%E6%80%81%E4%B8%8E%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E9%99%85%E7%94%9F%E4%BA%A7%E6%A1%88%E4%BE%8B/" class="post-title-link" itemprop="url">多态与接口的实际生产案例</a>
+          <a href="/2023/04/19/unicode/" class="post-title-link" itemprop="url">unicode</a>
         </h2>
 
         <div class="post-meta-container">
@@ -430,7 +350,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -443,21 +363,115 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-12<br>标签： #Java #多态 #接口 #实例</p>
-<p>以下是一个简化的网球场地预约系统的例子，以展示多态和接口在实际生产中的应用。</p>
-<p>首先，我们定义一个接口 <code>PaymentMethod</code>，表示不同的支付方式：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PaymentMethod</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">processPayment</span><span class="params">(<span class="keyword">double</span> amount)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>接下来，我们为不同的支付方式创建实现类，例如 <code>CreditCard</code> 和 <code>PayPal</code>：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreditCard</span> <span class="keyword">implements</span> <span class="title">PaymentMethod</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processPayment</span><span class="params">(<span class="keyword">double</span> amount)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Processing credit card payment: $&quot;</span> + amount);</span><br><span class="line">        <span class="comment">// 实际的信用卡支付处理逻辑...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PayPal</span> <span class="keyword">implements</span> <span class="title">PaymentMethod</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processPayment</span><span class="params">(<span class="keyword">double</span> amount)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Processing PayPal payment: $&quot;</span> + amount);</span><br><span class="line">        <span class="comment">// 实际的PayPal支付处理逻辑...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>现在，我们有一个 <code>Booking</code> 类，表示预约。这个类可以接受一个 <code>PaymentMethod</code> 类型的对象，以便在完成预约时处理支付：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Booking</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> PaymentMethod paymentMethod;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Booking</span><span class="params">(PaymentMethod paymentMethod)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.paymentMethod = paymentMethod;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">completeBooking</span><span class="params">(<span class="keyword">double</span> amount)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Completing booking...&quot;</span>);</span><br><span class="line">        paymentMethod.processPayment(amount);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>时间：2023-04-18<br>标签： #java #unicode</p>
+<hr>
+<p>Unicode 是一种字符集，用于表示和处理世界上大多数书面语言中的文本。在 Unicode 中，英文字符的编码范围在 U+0020 到 U+007E 之间，包括了英文字母、数字、标点符号以及一些其他特殊字符。以下是一些常见英文字符的 Unicode 编码：</p>
+<ul>
+<li>  大写英文字母：从 U+0041 (A) 到 U+005A (Z)</li>
+<li>  小写英文字母：从 U+0061 (a) 到 U+007A (z)</li>
+<li>  数字：从 U+0030 (0) 到 U+0039 (9)</li>
+<li>  空格：U+0020 ( )</li>
+<li>  常见标点符号：如 U+002C (,), U+002E (.), U+003A (:), U+003B (;) 等。</li>
+</ul>
+<p>请注意，Unicode 字符集包含了许多其他字符，不仅仅是英文字符。它包括了其他语言的字符、表情符号、数学符号等等。Unicode 提供了一种统一的方式来表示和处理多种语言和符号系统。</p>
+<p>在 Unicode 中，U+005A 和 U+0061 之间的字符如下：</p>
+<ul>
+<li>  U+005A：大写字母 Z</li>
+<li>  U+005B：左方括号 [</li>
+<li>  U+005C：反斜杠 \</li>
+<li>  U+005D：右方括号 ]</li>
+<li>  U+005E：脱字符 ^</li>
+<li>  U+005F：下划线 _</li>
+<li>  U+0060：反引号 `</li>
+<li>  U+0061：小写字母 a</li>
+</ul>
+<p>这些字符主要包括一些特殊字符和标点符号，以及英文大小写字母的分界点。</p>
+<p>在 Unicode 中，数字的编码范围如下：</p>
+<ul>
+<li>  U+0030：数字 0</li>
+<li>  U+0031：数字 1</li>
+<li>  U+0032：数字 2</li>
+<li>  U+0033：数字 3</li>
+<li>  U+0034：数字 4</li>
+<li>  U+0035：数字 5</li>
+<li>  U+0036：数字 6</li>
+<li>  U+0037：数字 7</li>
+<li>  U+0038：数字 8</li>
+<li>  U+0039：数字 9</li>
+</ul>
+<p>这些数字的 Unicode 编码从 U+0030（数字 0）开始，依次递增到 U+0039（数字 9）。</p>
 
-<p>在这个例子中，我们使用了接口和多态的概念。<code>PaymentMethod</code> 接口定义了一个规范，而 <code>CreditCard</code> 和 <code>PayPal</code> 类提供了具体的实现。这样，我们可以灵活地为 <code>Booking</code> 类添加新的支付方式，而不需要修改 <code>Booking</code> 类的代码。多态使得我们可以将不同支付方式的实现类对象赋值给 <code>PaymentMethod</code> 类型的引用，从而在运行时动态调用正确的方法。</p>
-<p>在实际生产中，我们可以利用这种设计更轻松地添加新的支付方式，例如 <code>Alipay</code>、<code>WeChatPay</code> 等，只需要创建新的实现类并实现 <code>PaymentMethod</code> 接口即可。</p>
-<p>以下是一个简单的测试代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        PaymentMethod creditCard = <span class="keyword">new</span> CreditCard();</span><br><span class="line">        PaymentMethod payPal = <span class="keyword">new</span> PayPal();</span><br><span class="line"></span><br><span class="line">        Booking booking1 = <span class="keyword">new</span> Booking(creditCard);</span><br><span class="line">        Booking booking2 = <span class="keyword">new</span> Booking(payPal);</span><br><span class="line"></span><br><span class="line">        booking1.completeBooking(<span class="number">100</span>);</span><br><span class="line">        booking2.completeBooking(<span class="number">150</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
 
-<p>通过这个例子，我们可以看到多态和接口在实际生产中的应用，以及它们是如何提高代码的灵活性和可扩展性的。</p>
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95%E9%87%8C%E9%9D%A2%E6%88%96%E8%80%85%E5%9C%A8%E4%BB%BB%E6%84%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%86%85%E5%AE%9A%E4%B9%89%E5%86%85%E9%83%A8%E7%B1%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Taylor Chyi">
+      <meta itemprop="description" content="幸福属于那些自得其乐的人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taylor Chyi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/19/%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95%E9%87%8C%E9%9D%A2%E6%88%96%E8%80%85%E5%9C%A8%E4%BB%BB%E6%84%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%86%85%E5%AE%9A%E4%B9%89%E5%86%85%E9%83%A8%E7%B1%BB/" class="post-title-link" itemprop="url">一个方法里面或者在任意的作用域内定义内部类</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>时间：2023-04-18<br>标签： #Java #内部类 </p>
+<hr>
+<p>在一个方法里面或者在任意的作用域内定义内部类。</p>
+<p>这么做有两个理由：</p>
+<ol>
+<li> 如前所示，你实现了某类型的接口，于是可以创建并返回对其的引用。</li>
+<li> 你要解决一个复杂的问题，想创建一个类来辅助你的解决方案，但是又不希望这个类是公共可用的。</li>
+</ol>
 
       
     </div>
@@ -477,7 +491,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

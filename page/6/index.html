@@ -86,8 +86,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">33</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">18</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">101</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -159,13 +159,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">101</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E7%90%86%E8%A7%A3%E7%BA%AFis-a%E5%85%B3%E7%B3%BB%E5%92%8Cis-like-a%E5%85%B3%E7%B3%BB/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E4%B8%BA%E4%BB%80%E4%B9%88%E7%A7%B0%E4%B9%8B%E4%B8%BA%E5%9F%BA%E7%B1%BB%E5%AD%90%E5%AF%B9%E8%B1%A1%E8%80%8C%E4%B8%8D%E6%98%AF%E6%B4%BE%E7%94%9F%E7%B1%BB%E5%AF%B9%E8%B1%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E7%90%86%E8%A7%A3%E7%BA%AFis-a%E5%85%B3%E7%B3%BB%E5%92%8Cis-like-a%E5%85%B3%E7%B3%BB/" class="post-title-link" itemprop="url">理解纯is-a关系和is-like-a关系</a>
+          <a href="/2023/04/19/%E4%B8%BA%E4%BB%80%E4%B9%88%E7%A7%B0%E4%B9%8B%E4%B8%BA%E5%9F%BA%E7%B1%BB%E5%AD%90%E5%AF%B9%E8%B1%A1%E8%80%8C%E4%B8%8D%E6%98%AF%E6%B4%BE%E7%94%9F%E7%B1%BB%E5%AF%B9%E8%B1%A1/" class="post-title-link" itemprop="url">为什么称之为基类子对象而不是派生类对象</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -286,18 +286,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #多态 #继承 #is-a关系 #is-like-a关系</p>
+          <p>时间：2023-04-11<br>标签： #Java #继承 #基类 #派生类 #子对象</p>
 <hr>
-<p>这段文字主要在讨论两种不同的继承关系：纯 is-a 关系和 is-like-a 关系。</p>
+<p>首先，我们需要明确一点：基类子对象和派生类对象是不同的概念。我们来分析一下这两个概念的含义和区别：</p>
 <ol>
-<li> 纯is-a关系：在这种关系中，子类只覆盖（重写）基类的方法，而不添加任何新方法。这意味着子类对象可以完美地替换基类对象，因为它们具有相同的接口。在这种情况下，多态会处理一切，你不需要知道子类的额外信息。</li>
+<li>基类子对象：<ul>
+<li>  基类子对象是指派生类对象中与基类对应的部分。当我们创建一个派生类的对象时，这个对象实际上包含了基类的一个实例，即基类子对象。基类子对象包含了继承自基类的属性和方法。</li>
+</ul>
+</li>
+<li>派生类对象：<ul>
+<li>  派生类对象是指一个派生类的实例。它包含了基类子对象以及派生类特有的属性和方法。从外部看，派生类对象具有基类的接口（属性和方法），同时还可能具有一些额外的方法和字段。</li>
+</ul>
+</li>
 </ol>
-<p>这种方式看起来是继承的理想方式，但它并非适用于所有场景。</p>
-<ol start="2">
-<li> is-like-a关系：在这种关系中，子类不仅覆盖基类的方法，还扩展了基类的接口，添加了额外的方法。子类与基类具有相同的基本接口，但还具有其他特性，需要额外的方法来实现。</li>
-</ol>
-<p>这种方法在某些情况下也是有用的，但它有一个缺点。一旦你向上转型（upcast），你就不能调用子类中扩展的那部分接口的方法。在某些情况下，你可能需要重新发现对象的确切类型，以便访问该类型的扩展方法。</p>
-<p>这段文字的目的是让你了解在设计类的继承结构时，可能会遇到这两种不同的情况。在日常开发过程中，根据问题的具体需求，你可能会遇到这两种情况。关键是理解这两种关系的优缺点，并在实际情况中做出合适的设计选择。</p>
+<p>我们称之为基类子对象，是为了强调这部分对象与基类的关联，以及它在派生类对象中的地位。基类子对象是派生类对象的一部分，它体现了继承关系中基类对派生类的影响。</p>
+<p>而派生类对象是一个更宽泛的概念，它包括了基类子对象和派生类特有的属性和方法。因此，在讨论继承关系中基类在派生类对象中的表现时，我们更倾向于使用“基类子对象”这个术语，以区分它与整个派生类对象的区别。</p>
 
       
     </div>
@@ -324,7 +327,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E7%90%86%E8%A7%A3%E6%8E%A5%E5%8F%A3%EF%BC%88Interface%EF%BC%89%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%A6%82%E5%BF%B5/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E4%BD%BF%E7%94%A8%20Java%20%E4%B8%AD%E7%9A%84%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E7%AE%80%E5%8C%96%E4%BB%A3%E7%A0%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -337,7 +340,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E7%90%86%E8%A7%A3%E6%8E%A5%E5%8F%A3%EF%BC%88Interface%EF%BC%89%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">理解接口（Interface）的抽象概念</a>
+          <a href="/2023/04/19/%E4%BD%BF%E7%94%A8%20Java%20%E4%B8%AD%E7%9A%84%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E7%AE%80%E5%8C%96%E4%BB%A3%E7%A0%81/" class="post-title-link" itemprop="url">使用 Java 中的 var 关键字简化代码</a>
         </h2>
 
         <div class="post-meta-container">
@@ -349,7 +352,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -362,15 +365,31 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #接口 #面向对象 #抽象概念</p>
+          <p>时间：2023-04-12<br>标签： #Java #JDK10</p>
 <hr>
-<blockquote>
-<p>我注意到一件事，在我们学习 onjava8这本书的时候，里面是不是的会提及接口（interface）这一概念，但是有的时候似乎并不是说的关键字 interface，而是一种抽象概念的接口—用以表达的是一个类对外开放的那些实现的方，是一种基于 java 面向对象思想而设计的一种抽象层面，即，对外提供接口而不暴露具体实现的这么一种思想，的表述？</p>
-</blockquote>
-<p>你的理解是正确的。在 Java 中，当我们谈论接口（interface）时，它可能有两层含义。一种是具体的关键字 <code>interface</code>，它用于创建一种特殊的类型，这种类型只包含抽象方法和静态常量。另一种含义是抽象概念上的接口，它表示一个类对外暴露的方法和属性，用于与其他类进行交互。</p>
-<p>抽象概念上的接口强调了面向对象编程的一种思想：封装。封装是指将实现细节隐藏起来，仅向外界提供有限的、可控的访问途径。这样，外部代码只需要关注类的接口（即暴露的方法和属性），而不需要了解其内部实现。这使得我们可以在不影响其他代码的情况下，随时更改类的内部实现。</p>
-<p>Java的关键字 <code>interface</code> 实际上也是基于这种抽象概念的接口思想设计的。通过使用关键字 <code>interface</code> 创建的接口类型，我们可以定义一组方法，表示一种规范或协议，实现该接口的类需要遵循这个规范。这样，我们就可以基于接口而非具体实现编写代码，从而提高了代码的灵活性和可扩展性。</p>
-<p>总之，Java中的接口（interface）既可以表示一种具体的类型（关键字 <code>interface</code>），也可以表示一种抽象概念（类对外暴露的方法和属性）。这两种含义都是基于面向对象编程的封装思想而设计的，旨在提高代码的可维护性和可扩展性。</p>
+<p>Java 10 引入了一个新的关键字 <code>var</code>，用于支持局部变量类型推断。本文将探讨使用 <code>var</code> 的优点、局限性以及在实际代码中的应用。</p>
+<h3 id="为什么要使用-var？"><a href="#为什么要使用-var？" class="headerlink" title="为什么要使用 var？"></a>为什么要使用 var？</h3><p>使用 <code>var</code> 的主要目的是为了提高代码的简洁性和可读性。使用 <code>var</code> 可以让编译器自动推断变量的类型，从而避免在声明变量时显式地指定类型。</p>
+<p>以下是使用 <code>var</code> 的一些优点：</p>
+<ol>
+<li> <strong>简洁性</strong>：使用 <code>var</code> 可以减少代码冗余。在声明具有复杂类型的变量时，使用 <code>var</code> 可以简化代码。</li>
+<li> <strong>可读性</strong>：<code>var</code> 有助于提高代码的可读性。当变量的类型可以从上下文或初始化表达式中推断时，使用 <code>var</code> 可以使代码更容易阅读。</li>
+<li> <strong>改进重构</strong>：使用 <code>var</code> 可以使重构过程更加简单。当修改变量的类型时，使用 <code>var</code> 可以减少需要更改的代码量。</li>
+</ol>
+<h3 id="var-的局限性"><a href="#var-的局限性" class="headerlink" title="var 的局限性"></a>var 的局限性</h3><p>尽管 <code>var</code> 提供了许多便利，但它也有一些限制：</p>
+<ol>
+<li> 只能用于局部变量，不能用于方法参数、返回类型、字段等。</li>
+<li> 在某些情况下，过度使用 <code>var</code> 可能导致代码可读性降低。</li>
+</ol>
+<p>因此，在使用 <code>var</code> 时需要权衡代码的简洁性和可读性。</p>
+<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><p>以下示例展示了如何在实际代码中使用 <code>var</code>。</p>
+<p><strong>不使用 var</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, List&lt;String&gt;&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(); </span><br><span class="line">InputStreamReader reader = <span class="keyword">new</span> InputStreamReader(inputStream,</span><br><span class="line">												 StandardCharsets.UTF_8);</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用 var</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> map = <span class="keyword">new</span> HashMap&lt;String, List&lt;String&gt;&gt;();</span><br><span class="line"><span class="keyword">var</span> reader = <span class="keyword">new</span> InputStreamReader(inputStream, StandardCharsets.UTF_8);</span><br></pre></td></tr></table></figure>
+
+<p>在这些示例中，使用 <code>var</code> 可以简化代码，并提高可读性。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>Java 中的 <code>var</code> 关键字为局部变量类型推断提供了一种简洁且易于阅读的方法。在实际项目中，开发者可以根据具体需求和场景来决定是否使用 <code>var</code>。同时，要注意在使用 <code>var</code> 时不要过度简化代码，以免降低代码可读性。</p>
 
       
     </div>
@@ -397,7 +416,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E7%BC%96%E5%86%99%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E4%B8%80%E6%9D%A1%E8%89%AF%E5%A5%BD%E8%A7%84%E8%8C%83/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E4%BD%BF%E7%94%A8GitHub%20Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -410,7 +429,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E7%BC%96%E5%86%99%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E4%B8%80%E6%9D%A1%E8%89%AF%E5%A5%BD%E8%A7%84%E8%8C%83/" class="post-title-link" itemprop="url">编写构造器的一条良好规范</a>
+          <a href="/2023/04/19/%E4%BD%BF%E7%94%A8GitHub%20Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/" class="post-title-link" itemprop="url">使用GitHub Pages搭建个人博客网站</a>
         </h2>
 
         <div class="post-meta-container">
@@ -422,7 +441,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -435,7 +454,46 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>做尽量少的事让对象进入良好状态。如果有可能的话，尽量不要调用类中的任何方法。在基类的构造器中能安全调用的只有基类的 <strong>final</strong> 方法（这也适用于可被看作是 <strong>final</strong> 的 <strong>private</strong> 方法）。这些方法不能被重写，因此不会产生意想不到的结果。你可能无法永远遵循这条规范，但应该朝着它努力。</p>
+          <p>时间：2023-04-14<br>标签: #GitHub #GitHubPages #个人博客 #Markdown #静态网站</p>
+<hr>
+<p>根据您的需求，我将为您提供一个简单的执行框架。在执行过程中，您可以随时告诉我您已完成的步骤，我会为您提供详细的说明和指导。</p>
+<ol>
+<li>创建一个GitHub帐户并设置GitHub Pages<ul>
+<li>  注册GitHub帐户</li>
+<li>  新建一个仓库</li>
+<li>  在仓库设置中启用GitHub Pages</li>
+</ul>
+</li>
+<li>选择一个静态网站生成器<ul>
+<li>  推荐使用Jekyll或Hugo等流行的静态网站生成器</li>
+</ul>
+</li>
+<li>设置和配置静态网站生成器<ul>
+<li>  安装所选静态网站生成器</li>
+<li>  为博客选择一个主题</li>
+<li>  配置相关设置</li>
+</ul>
+</li>
+<li>使用Markdown编写博客文章<ul>
+<li>  创建一个新的Markdown文件</li>
+<li>  使用Markdown语法编写内容</li>
+<li>  添加元数据（如标题、日期等）</li>
+</ul>
+</li>
+<li>发布博客文章<ul>
+<li>  将博客文章添加到仓库</li>
+<li>  提交更改并推送到GitHub</li>
+<li>  检查GitHub Pages上的博客更新</li>
+</ul>
+</li>
+<li>优化博客网站<ul>
+<li>  添加可交互的插件</li>
+<li>  优化样式和功能</li>
+<li>  确保数据迁移和工作流的顺畅</li>
+</ul>
+</li>
+</ol>
+<p>现在，请按照上述执行框架的步骤操作。完成每一步后，请告诉我，我会为您提供详细的说明和指导。</p>
 
       
     </div>
@@ -455,7 +513,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
