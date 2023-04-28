@@ -86,8 +86,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">105</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">203</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">105</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -159,13 +159,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">105</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">105</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E4%BD%BF%E7%94%A8%E7%BB%A7%E6%89%BF%E5%A4%8D%E7%94%A8%E5%85%B1%E4%BA%AB%E4%BB%A3%E7%A0%81%E7%9A%84%E4%BE%8B%E5%AD%90/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Java%E4%B8%ADthis%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E4%BD%BF%E7%94%A8%E7%BB%A7%E6%89%BF%E5%A4%8D%E7%94%A8%E5%85%B1%E4%BA%AB%E4%BB%A3%E7%A0%81%E7%9A%84%E4%BE%8B%E5%AD%90/" class="post-title-link" itemprop="url">使用继承复用共享代码的例子</a>
+          <a href="/2023/04/19/Java%E4%B8%ADthis%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">Java中this的使用</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -286,13 +286,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #继承 #代码复用</p>
+          <p>时间：2023-04-18<br>标签： #Java #this关键字</p>
 <hr>
-<p>以下是一个使用继承来复用共享代码的例子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Animal</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot; is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sleep</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot; is sleeping.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bark</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot; is barking.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bird</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Bird</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot; is flying.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>在这个例子中，<code>Animal</code> 类有两个属性 <code>name</code> 和 <code>age</code>，以及一些共享的方法 <code>eat()</code>、<code>sleep()</code>、<code>getName()</code> 和 <code>getAge()</code>。通过继承 <code>Animal</code> 类，我们可以在 <code>Dog</code> 和 <code>Bird</code> 子类中复用这些共享的代码。</p>
-<p>注意，在子类中我们使用<code>super()</code>调用来调用父类的构造方法，这样我们就可以在子类中设置<code>name</code>和<code>age</code>属性。另外，我们可以通过<code>getName()</code>和<code>getAge()</code>方法访问这些属性，从而在子类中实现自定义行为，如<code>bark()</code>和<code>fly()</code>方法。</p>
-<p>继承使我们能够在不修改<code>Animal</code>类的情况下轻松地为<code>Dog</code>和<code>Bird</code>类添加新功能，同时保持共享代码的一致性。</p>
+<p>在 Java 中，<code>this</code> 是一个特殊的关键字，它可以在类的实例方法或构造器中使用，用于引用当前对象。<code>this</code> 的主要用途包括以下几点：</p>
+<ol>
+<li><p> <strong>解决实例变量和局部变量之间的命名冲突</strong>：当实例变量和方法中的局部变量或参数具有相同的名称时，可以使用 <code>this</code> 关键字引用实例变量。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，构造函数的参数 <code>name</code> 和实例变量 <code>name</code> 具有相同的名称。使用 <code>this.name</code> 来引用实例变量，从而避免命名冲突。</p>
+</li>
+<li><p> <strong>在构造器中调用另一个构造器</strong>：<code>this</code>关键字还可以用于构造器中调用同一类的另一个构造器。这通常用于减少重复代码。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(name, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，有两个构造器。第一个构造器接受一个 <code>name</code> 参数，它使用 <code>this(name, 0)</code> 调用第二个构造器，将 <code>age</code> 参数设置为0。</p>
+</li>
+<li><p> <strong>链式方法调用</strong>：有时候，方法可能会返回 <code>this</code> 引用，从而实现链式调用。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，<code>setName</code> 和 <code>setAge</code> 方法都返回 <code>this</code> 引用，这使得我们可以进行链式调用，如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Employee employee = <span class="keyword">new</span> Employee().setName(<span class="string">&quot;Alice&quot;</span>).setAge(<span class="number">30</span>);</span><br></pre></td></tr></table></figure>
+<p>总之，Java中的<code>this</code>关键字用于引用当前对象，它在解决命名冲突、调用其他构造器和实现链式方法调用等场景中非常有用。</p>
+</li>
+</ol>
 
       
     </div>
@@ -319,7 +331,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E5%9C%A8%E9%80%89%E6%8B%A9%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E5%92%8C%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E6%97%B6%E7%9A%84%E8%80%83%E8%99%91%E5%9B%A0%E7%B4%A0/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Java%20%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%20super%20%E8%A1%A8%E7%A4%BA%E7%88%B6%E7%B1%BB%E8%80%8C%E4%B8%8D%E6%98%AF%20base/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -332,7 +344,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E5%9C%A8%E9%80%89%E6%8B%A9%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E5%92%8C%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E6%97%B6%E7%9A%84%E8%80%83%E8%99%91%E5%9B%A0%E7%B4%A0/" class="post-title-link" itemprop="url">在选择接口实现和继承关系时的考虑因素</a>
+          <a href="/2023/04/19/Java%20%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%20super%20%E8%A1%A8%E7%A4%BA%E7%88%B6%E7%B1%BB%E8%80%8C%E4%B8%8D%E6%98%AF%20base/" class="post-title-link" itemprop="url">Java 中为什么使用 super 表示父类而不是 base</a>
         </h2>
 
         <div class="post-meta-container">
@@ -344,7 +356,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -357,18 +369,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #接口 #继承 #设计原则 </p>
+          <p>时间：2023-04-11<br>标签： #Java #super #父类 #历史背景</p>
 <hr>
 <blockquote>
-<p>所以我们可以说，在选用接口实现还是继承关系上，我们可以通过判断到底是各各类之之间只是行为上相似，还是在不仅仅行为上、状态上也有信息需要共享，是这样么？希望更正或补充，如果表述上有欠缺的。</p>
+<p>为什么我们在 java 中使用 super 来表示父类而不是用 base，这是因为什么原因，有什么历史因素或背后的故事么</p>
 </blockquote>
-<p>是的，您的理解是正确的。在选择使用接口实现还是继承关系时，我们需要根据类之间的关系来判断。以下是一些关键点，可以帮助您决定使用哪种方式：</p>
+<p>在 Java 中，我们使用 super 关键字来表示父类，而不是使用 base。这个设计决策的背后有一定的历史因素和原因：</p>
 <ol>
-<li>如果类之间存在共享的状态（属性）和行为（方法实现），那么使用继承关系可能更合适。这样可以通过父类来复用这些共享代码，同时保持代码的一致性。</li>
-<li>如果类之间仅仅在行为上相似，但没有共享的状态或方法实现，那么使用接口实现更合适。接口可以定义一组共享的行为，强制实现类遵循这些行为，但不强制它们共享任何状态或方法实现。</li>
-<li>另外，还要考虑”单一职责原则”和”开闭原则”等设计原则。遵循这些原则可以帮助您创建更加灵活、易于维护的代码。</li>
+<li><p>语言设计者的选择：<br>Java 的创建者 James Gosling 和他的团队在设计 Java 语言时，选择了”super”作为访问父类成员的关键字。这种选择可能是基于他们的编程经验、对现有编程语言的了解，以及他们对 Java 语言的愿景。</p>
+</li>
+<li><p>与其他语言的区分：<br>当时已有的一些编程语言，如 C++和 Object Pascal（Delphi）等，使用其他关键字表示父类。例如，C++中使用”:: “操作符，Object Pascal 中使用”inherited”关键字。Java 选择使用 super 作为父类表示，可以帮助区分这些编程语言。</p>
+</li>
+<li><p>表达清晰：<br>Super 这个词在英语中表示”上级”或”超级”，在这个语境下，表示”父类”是合适的。这个词简洁、易懂，可以清晰地表达出父类的概念。</p>
+</li>
 </ol>
-<p>总之，在选择使用接口实现还是继承关系时，关键是了解类之间的关系，以及它们之间需要共享的信息。您可以根据这些信息来决定使用哪种方式，以满足代码的复用、扩展和维护需求。</p>
+<p>总之，Java 中使用 super 表示父类而不是 base，主要是由于语言设计者的选择和对其他编程语言的区分。在实际编程过程中，使用 super 关键字可以清晰地表示出访问父类成员的意图，使代码易于理解。</p>
 
       
     </div>
@@ -395,7 +410,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E5%A4%9A%E6%80%81%E3%80%81%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E6%84%8F%E4%B9%89/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Path%20%E4%B8%8E%20Paths%20%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -408,7 +423,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E5%A4%9A%E6%80%81%E3%80%81%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E6%84%8F%E4%B9%89/" class="post-title-link" itemprop="url">多态、接口与抽象类的关系与意义</a>
+          <a href="/2023/04/19/Path%20%E4%B8%8E%20Paths%20%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">Path 与 Paths 的关系与区别</a>
         </h2>
 
         <div class="post-meta-container">
@@ -420,7 +435,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -433,27 +448,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #多态 #接口 #抽象类 #设计</p>
+          <p>时间：2023-04-18<br>标签： #Java #Path #Paths</p>
 <hr>
 <blockquote>
-<p>当我们已经有多态这一机制了之后，为什么还有 implements 这一设计呢？直接设计一个最上层的父类然后设计很多需要子类实现的抽象方法不就好了么？如果这样的方式不是多态的目的，那么抽象方法本身存在的意义又是什么呢？能否同时举例说明上述问题？</p>
+<p>import java.nio.file.Paths; import java.nio.file.Path; 为什么会存在两个歧义性很高的两个包在同一个包下，二者的功能的区别是什么</p>
 </blockquote>
-<p>多态是一种编程范式，它允许我们使用一个通用的接口引用不同类型的对象，并在运行时动态调用相应的方法。接口和抽象类都是实现多态的方式，但它们有不同的用途和特点。</p>
+<p>在这个例子中，我们使用了两个不同的类，它们都在 <code>java.nio.file</code> 包中：<code>Paths</code> 和 <code>Path</code>。虽然它们的名称很相似，但它们具有不同的功能和用途。</p>
 <ol>
-<li> 接口（implements）：</li>
+<li><code>java.nio.file.Path</code>：<code>Path</code> 是一个接口，表示文件系统中文件或目录的路径。它提供了一种在文件系统中导航和操作文件的方法。<code>Path</code> 对象包含了路径信息，可以用来创建、删除、读取和修改文件或目录。</li>
+<li><code>java.nio.file.Paths</code>：<code>Paths</code> 是一个工具类，包含一些静态方法，用于创建 <code>Path</code> 对象。它是一个方便的工具类，用于将字符串路径转换为 <code>Path</code> 对象，以便在文件系统中进行操作。</li>
 </ol>
-<p>接口定义了一组规范，强调了类实现的“能做什么”。接口可以被多个类实现，这样可以实现多重继承的效果。当一个类实现了一个接口时，它承诺实现接口中定义的所有方法。这对于定义一些通用的行为和功能非常有用。接口还允许我们将实现和使用分离，使代码更加灵活和易于维护。</p>
-<ol start="2">
-<li> 抽象类（extends）：</li>
-</ol>
-<p>抽象类是一个特殊的类，它不能被实例化，只能被继承。抽象类中可以包含抽象方法和非抽象方法。抽象方法没有具体的实现，需要子类去实现。抽象类强调类之间的“是什么”关系，即子类“是一种”父类。抽象类适用于在类之间共享部分实现的情况。</p>
-<p>以下是一个举例说明：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 接口：表示可飞行的对象</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Flyable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 抽象类：表示鸟类，包含共享的属性和方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Bird</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Bird</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot; is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">sing</span><span class="params">()</span></span>; <span class="comment">// 抽象方法</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 具体类：鹦鹉，继承自Bird类，实现Flyable接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Parrot</span> <span class="keyword">extends</span> <span class="title">Bird</span> <span class="keyword">implements</span> <span class="title">Flyable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Parrot</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Parrot is flying.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Parrot is singing.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在这个例子中，我们定义了一个 <code>Flyable</code> 接口和一个 <code>Bird</code> 抽象类。<code>Parrot</code> 类继承了 <code>Bird</code> 类，并实现了 <code>Flyable</code> 接口。这样，我们可以使用多态的特性，将 <code>Parrot</code> 类的对象赋值给 <code>Bird</code> 类型或 <code>Flyable</code> 类型的引用，并在运行时动态调用相应的方法。</p>
-<p>总之，接口和抽象类都是实现多态的方式，但它们有不同的目的和使用场景。接口强调行为和功能，适用于定义通用的规范；抽象类强调类之间的关系，适用于在类之间共享部分实现。在实际的软件设计中，我们通常根据需求选择合适的方式来实现多态。</p>
-<p>对于你提到的“为什么还有implements这一设计”的问题，这是因为Java不支持多重继承，即一个类不能继承多个父类。通过接口，我们可以实现类似多重继承的效果。接口允许我们定义一组行为，并可以被多个类实现，使得代码更加灵活和模块化。</p>
-<p>关于抽象方法的存在意义，抽象方法强制子类去实现某些特定的行为。当我们定义一个抽象类时，我们可以预见到子类需要实现某些共同的行为，但这些行为的具体实现可能因子类而异。通过抽象方法，我们可以确保所有的子类都会实现这些行为，而不需要在每个子类中重复编写相同的代码。</p>
-<p>例如，在上述的例子中，<code>Bird</code> 抽象类中的 <code>sing</code> 方法是一个抽象方法。这表示所有继承自 <code>Bird</code> 的子类都必须实现 <code>sing</code> 方法，以确保它们都具有唱歌的行为。这样，我们可以在处理 <code>Bird</code> 类型的对象时，确保它们都可以调用 <code>sing</code> 方法，而不需要关心具体的实现细节。</p>
+<p>虽然它们的名字很相似，但它们的功能是互补的。我们通常使用 <code>Paths</code> 类中的静态方法创建一个 <code>Path</code> 对象，然后使用 <code>Path</code> 对象来操作和访问文件系统。</p>
+<p>在本例中，我们使用 <code>Paths.get()</code> 方法将字符串形式的目录路径转换为 <code>Path</code> 对象。接着，我们使用 <code>Path</code> 对象来操作文件路径，例如获取文件名（<code>path.getFileName().toString()</code>）。</p>
 
       
     </div>
@@ -473,7 +479,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

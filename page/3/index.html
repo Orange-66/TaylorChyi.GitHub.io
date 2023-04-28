@@ -86,8 +86,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">105</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">203</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">105</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -159,13 +159,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">105</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">105</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/onJava8-%E6%8E%A5%E5%8F%A3-%E6%91%98%E5%BD%95/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/Lambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E4%BB%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/onJava8-%E6%8E%A5%E5%8F%A3-%E6%91%98%E5%BD%95/" class="post-title-link" itemprop="url">onJava8-接口-摘录</a>
+          <a href="/2023/04/28/Lambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E4%BB%8B/" class="post-title-link" itemprop="url">Lambda 表达式简介</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -286,18 +286,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #java #接口 #摘录 </p>
+          <p>时间：2023-04-27<br>标签： #Java #Lambda表达式 #函数式编程</p>
 <hr>
-<p>一个接口表示 ：所有实现了该接口的类看起来都像这样。因此，任何使用某特定接口的代码都知道可以调用该接口的哪些方法，而且仅需知道这些。所以，接口被用来建立类之间的协议。</p>
-<p>接口同样可以包含属性，这些属性被隐式指明为 <strong>static</strong> 和 <strong>final</strong>。</p>
-<p>方法签名包括方法名和参数类型 – 返回类型不算在方法签名里。</p>
-<p>Java 8 允许在接口中添加静态方法。这么做能恰当地把工具功能置于接口中，从而操作接口，或者成为通用的工具</p>
-<p>有一条实际经验：尽可能地抽象。因此，更倾向使用接口而不是抽象类。只有当必要时才使用抽象类。除非必须使用，否则不要用接口和抽象类。大多数时候，普通类已经做得很好，如果不行的话，再移动到接口或抽象类中。</p>
-<p>使用接口的核心原因之一：为了能够向上转型为多个基类型（以及由此带来的灵活性）。然而，使用接口的第二个原因与使用抽象基类相同：防止客户端程序员创建这个类的对象，确保这仅仅只是一个接口。这带来了一个问题：应该使用接口还是抽象类呢？如果创建不带任何方法定义或成员变量的基类，就选择接口而不是抽象类。事实上，如果知道某事物是一个基类，可以考虑用接口实现它</p>
-<p>认为接口是好的选择，从而使用接口不用具体类，这具有诱惑性。几乎任何时候，创建类都可以替代为创建一个接口和工厂。</p>
-<p>很多人都掉进了这个陷阱，只要有可能就创建接口和工厂。这种逻辑看起来像是可能会使用不同的实现，所以总是添加这种抽象性。==这变成了一种过早的设计优化==。</p>
-<p>任何抽象性都应该是由真正的需求驱动的。当有必要时才应该使用接口进行重构，而不是到处添加额外的间接层，从而带来额外的复杂性。这种复杂性非常显著，如果你让某人去处理这种复杂性，只是因为你意识到“以防万一”而添加新接口，而没有其他具有说服力的原因——好吧，如果我碰上了这种设计，就会质疑此人所作的所有其他设计了。</p>
-<p>恰当的原则是优先使用类而不是接口。从类开始，如果使用接口的必要性变得很明确，那么就重构。接口是一个伟大的工具，但它们容易被滥用。</p>
+<p>Lambda 表达式（Lambda Expression）是 Java 8 引入的一种新的编程构造，用于表示一种简洁、匿名的函数表达式。它允许您将函数（方法）作为参数传递给其他方法，或者作为返回值。Lambda 表达式在函数式编程中尤为重要，因为它们提供了一种更简洁、易读的方式来表示代码中的行为。</p>
+<p>关于 Lambda 的名字来源于计算机科学中的 Lambda 演算（Lambda Calculus），这是一种数学形式化系统，用于研究函数抽象、函数应用等概念。Lambda 演算在计算机科学中具有重要地位，因为它为理解编程语言的基本结构和原理提供了理论基础。</p>
+<p>在 Java 中，Lambda 表达式的语法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(parameters) -&gt; &#123; body &#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>parameters</code>：表示输入参数列表，可以是零个、一个或多个参数。如果只有一个参数，可以省略括号。</li>
+<li><code>-&gt;</code>：箭头符号，表示将参数传递给函数体。</li>
+<li><code>body</code>：表示函数体，包含执行的代码。如果函数体只有一条语句，可以省略大括号。</li>
+</ul>
+<p>Lambda 表达式的一个典型应用场景是 Java 中的函数式接口。函数式接口是只包含一个抽象方法的接口，如 Runnable、Comparator 和 Callable 等。使用 Lambda 表达式，可以简洁地表示这些接口的实现，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Runnable r = () -&gt; System.out.println(<span class="string">&quot;Hello, Lambda!&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这里，Lambda 表达式 <code>() -&gt; System.out.println(&quot;Hello, Lambda!&quot;);</code> 表示一个没有参数且没有返回值的函数，实现了 Runnable 接口的 <code>run</code> 方法。使用 Lambda 表达式可以使代码更简洁、易读，尤其是在处理集合、流（Stream）操作或其他高阶函数时。</p>
 
       
     </div>
@@ -324,7 +329,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/bashrc%20%E4%B8%8E%20zshrc%E7%9A%84%E5%8C%BA%E5%88%AB/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/Lambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%9B%AE%E7%9A%84%E5%92%8C%E9%9C%80%E6%B1%82/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -337,7 +342,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/bashrc%20%E4%B8%8E%20zshrc%E7%9A%84%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">bashrc 与 zshrc的区别</a>
+          <a href="/2023/04/28/Lambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%9B%AE%E7%9A%84%E5%92%8C%E9%9C%80%E6%B1%82/" class="post-title-link" itemprop="url">Lambda 表达式的目的和需求</a>
         </h2>
 
         <div class="post-meta-container">
@@ -349,7 +354,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -362,19 +367,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #bash #zsh </p>
+          <p>时间：2023-04-27<br>标签： #Java #Lambda表达式 #函数式编程</p>
 <hr>
-<p><code>~/.bashrc</code>（Bash 用户）和 <code>~/.zshrc</code>（Zsh 用户）是 shell 配置文件。它们分别为 Bash 和 Zsh shell 提供配置和个性化设置。当您打开一个新的终端会话时，系统会自动加载这些配置文件，从而应用您为 shell 定义的任何自定义设置、别名、环境变量等。</p>
+<p>Lambda 表达式在 Java 8 中被引入，主要目的是满足以下需求：</p>
 <ol>
-<li><strong>Bash</strong>：Bash（Bourne Again Shell）是许多Linux发行版中默认的shell。macOS的早期版本也使用了Bash作为默认shell。<code>~/.bashrc</code>文件用于为Bash shell提供个性化设置。它可以包含您希望在每个新的终端会话中自动执行的命令和设置，例如定义别名、设置环境变量和更改提示符样式。</li>
-<li><strong>Zsh</strong>：Zsh（Z shell）是另一种流行的Unix shell，它为用户提供了一些额外的功能，如命令补全、主题和插件支持。从macOS Catalina开始，Zsh成为macOS的默认shell。<code>~/.zshrc</code>文件用于为Zsh shell提供个性化设置，其功能与<code>~/.bashrc</code>相似，但针对Zsh shell。</li>
+<li>简化匿名内部类：在 Java 8 之前，开发者通常使用匿名内部类来实现函数式编程。但匿名内部类的语法相对繁琐。Lambda 表达式提供了一种更简洁的方式来表示函数式编程。</li>
 </ol>
-<p>您只有<code>~/.zshrc</code>文件可能是因为您的系统使用Zsh作为默认shell。要确认当前正在使用的shell，请在终端中运行以下命令：</p>
-<p>bashCopy code</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $SHELL</span><br></pre></td></tr></table></figure>
+<p>例如，考虑一个简单的线程创建：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用匿名内部类</span></span><br><span class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello from anonymous inner class&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).start();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 Lambda 表达式</span></span><br><span class="line"><span class="keyword">new</span> Thread(() -&gt; System.out.println(<span class="string">&quot;Hello from Lambda&quot;</span>)).start();</span><br></pre></td></tr></table></figure>
 
-<p>这将显示您正在使用的shell，例如<code>/bin/bash</code>或<code>/bin/zsh</code>。</p>
-<p>您可以根据需要在<code>~/.zshrc</code>文件中添加自定义设置、别名和环境变量。要编辑此文件，您可以使用文本编辑器（例如<code>nano</code>、<code>vim</code>或<code>Visual Studio Code</code>）打开它，然后保存更改。在更改配置文件后，请确保运行<code>source ~/.zshrc</code>命令以使更改生效。</p>
+<p>使用 Lambda 表达式，代码更加简洁和易读。</p>
+<ol start="2">
+<li><p>支持函数式编程：Lambda 表达式是 Java 对函数式编程的支持的一部分，它允许您将函数作为参数传递给其他方法，或者将函数作为返回值。这使得您可以编写更加灵活、模块化的代码，特别是在处理集合、流（Stream）操作或其他高阶函数时。</p>
+</li>
+<li><p>提高性能：在某些情况下，使用 Lambda 表达式相较于匿名内部类可以带来性能优势，因为 Lambda 表达式可以被编译器优化为静态方法调用，从而减少对象创建和内存开销。</p>
+</li>
+</ol>
+<p>利弊对比：</p>
+<ul>
+<li>优势：Lambda 表达式的语法简洁，易于阅读和理解。在某些情况下，还可以带来性能优势。</li>
+<li>劣势：Lambda 表达式可能导致代码的可读性降低，特别是在较长、复杂的 Lambda 表达式中。此外，对于 Java 8 之前的版本，Lambda 表达式不可用。</li>
+</ul>
+<p>总之，Lambda 表达式的引入主要是为了简化函数式编程的表示方式，提高代码的可读性和性能。通过使用 Lambda 表达式，您可以编写更加简洁、模块化的代码，特别是在处理集合和流操作时。</p>
 
       
     </div>
@@ -401,7 +415,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Java%E4%B8%AD%E7%9A%84%E5%9B%9E%E8%B0%83%E6%9C%BA%E5%88%B6%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8A%BF/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/OOP%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -414,7 +428,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/Java%E4%B8%AD%E7%9A%84%E5%9B%9E%E8%B0%83%E6%9C%BA%E5%88%B6%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8A%BF/" class="post-title-link" itemprop="url">Java中的回调机制及其优势</a>
+          <a href="/2023/04/28/OOP%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99/" class="post-title-link" itemprop="url">OOP七大原则</a>
         </h2>
 
         <div class="post-meta-container">
@@ -426,7 +440,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -439,19 +453,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #Java #回调 #异步编程 #事件驱动编程 #接口 #自定义行为 #编程模式 </p>
+          <p>时间：2022-04-29<br>标签： #DesignPatterns #OOP </p>
 <hr>
-<p>回调（Callback）是一种编程模式，它允许将一个函数（或方法）作为参数传递给另一个函数（或方法）。当被调用的函数执行完毕后，会调用传递进来的回调函数，以完成某些特定任务或通知调用者任务已完成。这种编程方式在异步编程、事件处理和自定义函数行为等场景中非常有用。</p>
-<p>关于 Java 没有回调的说法，并不准确。Java 实际上支持回调，但它实现回调的方式与其他语言（如 JavaScript）略有不同。在 Java 中，我们通常使用接口来实现回调。以下是一个简单的例子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 回调接口</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Callback</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">onFinished</span><span class="params">(String result)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Worker</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">doWork</span><span class="params">(Callback callback)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 执行某些任务</span></span><br><span class="line">        String result = <span class="string">&quot;任务完成&quot;</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 调用回调函数</span></span><br><span class="line">        callback.onFinished(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Worker worker = <span class="keyword">new</span> Worker();</span><br><span class="line">        worker.doWork(<span class="keyword">new</span> Callback() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFinished</span><span class="params">(String result)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;回调结果: &quot;</span> + result);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>在这个例子中，我们定义了一个名为 <code>Callback</code> 的接口，然后在 <code>Worker</code> 类的 <code>doWork</code> 方法中接受一个实现了 <code>Callback</code> 接口的对象。这样，在 <code>doWork</code> 方法完成任务后，可以调用回调函数 <code>onFinished</code>。</p>
-<p>回调的主要机制和好处如下：</p>
-<ol>
-<li>异步编程：回调使得程序可以在执行耗时操作时，不阻塞其他操作的进行。一旦耗时操作完成，回调函数会被触发，从而实现异步编程。</li>
-<li>事件驱动编程：回调可以用来实现事件驱动编程，当特定事件发生时触发相应的回调函数。这种方式使得代码更具可扩展性和可维护性。</li>
-<li>自定义行为：通过将回调函数作为参数传递，可以让调用者自定义函数的行为，提高代码的复用性和灵活性。</li>
-</ol>
-<p>虽然回调有很多好处，但过度使用回调可能导致代码变得难以理解和维护，这种现象被称为“回调地狱”。为了解决这个问题，可以使用更高级的抽象概念，如Java中的<code>Future</code>、<code>CompletableFuture</code>和<code>Stream</code>等。</p>
+<p>开放封闭原则 -&gt; 对扩展开放，对修改关闭</p>
+<p>里氏替换原则 -&gt; 继承必须确保超类所拥有的性质在子类中仍然成立</p>
+<p>依赖倒置原则 -&gt; 要面向接口编程，不要面对实现编程</p>
+<p>单一职责原则 -&gt; 控制类的粒度大小，将对象解耦、提高其内聚性</p>
+<p>接口隔离原则 -&gt; 要为各个类江宁里他们需要的专用接口</p>
+<p>迪米特法则 -&gt; 只与你的直接朋友交谈，不跟“陌生人说话”</p>
+<p>合成复用原则  -&gt; 尽量先使用组合或聚合等关系来实现，其次才考虑继承关系来实现</p>
 
       
     </div>
@@ -471,7 +481,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

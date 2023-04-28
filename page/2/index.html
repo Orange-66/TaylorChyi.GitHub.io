@@ -86,8 +86,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">105</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">203</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">105</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -159,13 +159,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">105</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">105</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Path%20%E4%B8%8E%20Paths%20%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/Java%20%E4%B8%AD%E7%9A%84%20NIO/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/Path%20%E4%B8%8E%20Paths%20%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">Path 与 Paths 的关系与区别</a>
+          <a href="/2023/04/28/Java%20%E4%B8%AD%E7%9A%84%20NIO/" class="post-title-link" itemprop="url">Java 中的 NIO</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -286,18 +286,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #Java #Path #Paths</p>
+          <p>时间：2023-04-27<br>标签： #Java #NIO #非阻塞IO</p>
 <hr>
-<blockquote>
-<p>import java.nio.file.Paths; import java.nio.file.Path; 为什么会存在两个歧义性很高的两个包在同一个包下，二者的功能的区别是什么</p>
-</blockquote>
-<p>在这个例子中，我们使用了两个不同的类，它们都在 <code>java.nio.file</code> 包中：<code>Paths</code> 和 <code>Path</code>。虽然它们的名称很相似，但它们具有不同的功能和用途。</p>
+<p>在 Java 中，NIO 是“Non-blocking Input/Output”的缩写，意为非阻塞输入输出。NIO 是 Java 的一个 I/O（输入输出）框架，提供了与传统 I/O 不同的处理数据的方式。从 Java 1.4 开始引入 NIO，主要目的是提高数据传输的性能，降低系统资源占用，并提供更灵活的 I/O 操作。</p>
+<p>NIO 的主要特点和优势包括：</p>
 <ol>
-<li><code>java.nio.file.Path</code>：<code>Path</code> 是一个接口，表示文件系统中文件或目录的路径。它提供了一种在文件系统中导航和操作文件的方法。<code>Path</code> 对象包含了路径信息，可以用来创建、删除、读取和修改文件或目录。</li>
-<li><code>java.nio.file.Paths</code>：<code>Paths</code> 是一个工具类，包含一些静态方法，用于创建 <code>Path</code> 对象。它是一个方便的工具类，用于将字符串路径转换为 <code>Path</code> 对象，以便在文件系统中进行操作。</li>
+<li><p>非阻塞模式：</p>
+<ul>
+<li>传统的 Java I/O 是阻塞式的，即在读取或写入数据时，线程会被阻塞，直到操作完成。而 NIO 支持非阻塞模式，在执行 I/O 操作时，线程可以继续处理其他任务，从而提高程序的并发性能。</li>
+</ul>
+</li>
+<li><p>缓冲区和通道：</p>
+<ul>
+<li>NIO 引入了缓冲区（Buffer）和通道（Channel）的概念。缓冲区用于暂存数据，通道用于在缓冲区和数据源（如文件或网络连接）之间传输数据。这种设计可以有效地管理数据传输，提高数据处理的性能。</li>
+</ul>
+</li>
+<li><p>选择器：</p>
+<ul>
+<li>NIO 提供了选择器（Selector）的概念，它允许单个线程处理多个通道的事件。这意味着，使用 NIO 可以用较少的线程处理大量的 I/O 操作，从而降低系统资源占用。</li>
+</ul>
+</li>
 </ol>
-<p>虽然它们的名字很相似，但它们的功能是互补的。我们通常使用 <code>Paths</code> 类中的静态方法创建一个 <code>Path</code> 对象，然后使用 <code>Path</code> 对象来操作和访问文件系统。</p>
-<p>在本例中，我们使用 <code>Paths.get()</code> 方法将字符串形式的目录路径转换为 <code>Path</code> 对象。接着，我们使用 <code>Path</code> 对象来操作文件路径，例如获取文件名（<code>path.getFileName().toString()</code>）。</p>
+<p>在 <code>java.nio.file</code> 包中，主要包含了与文件系统相关的 NIO 功能，如文件操作、目录监控和文件属性等。这些功能允许你使用 NIO 的特性来处理文件系统相关的任务，提高文件操作的性能和灵活性。</p>
 
       
     </div>
@@ -324,7 +334,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Set%3CInteger%3E%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%B8%80%E4%B8%AA%20int%20%E6%95%B0%E7%BB%84/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/Java%20%E4%B8%AD%E7%9A%84%E6%B5%81%EF%BC%88Stream%EF%BC%89%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -337,7 +347,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/Set%3CInteger%3E%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%B8%80%E4%B8%AA%20int%20%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">Set<Integer> 转换为一个 int 数组</a>
+          <a href="/2023/04/28/Java%20%E4%B8%AD%E7%9A%84%E6%B5%81%EF%BC%88Stream%EF%BC%89%E6%93%8D%E4%BD%9C%E7%AE%80%E4%BB%8B/" class="post-title-link" itemprop="url">Java 中的流（Stream）操作简介</a>
         </h2>
 
         <div class="post-meta-container">
@@ -349,7 +359,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -362,11 +372,31 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #Java #Set #数组 </p>
+          <p>时间：2023-04-27<br>标签： #Java #Stream #函数式编程</p>
 <hr>
-<p>如果你想将一个 <code>Set&lt;Integer&gt;</code> 转换为一个 <code>int[]</code> 数组，你可以使用以下方法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.IntStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个 Set&lt;Integer&gt;</span></span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        set.add(<span class="number">1</span>);</span><br><span class="line">        set.add(<span class="number">2</span>);</span><br><span class="line">        set.add(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将 Set&lt;Integer&gt; 转换为 int[]</span></span><br><span class="line">        <span class="keyword">int</span>[] intArray = set.stream().mapToInt(Integer::intValue).toArray();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印结果</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : intArray) &#123;</span><br><span class="line">            System.out.println(num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里我们使用 Java 8 引入的 Stream API。首先，我们通过调用 <code>set.stream()</code> 获取一个 <code>Stream&lt;Integer&gt;</code>，然后使用 <code>mapToInt()</code> 方法将每个 <code>Integer</code> 对象转换为对应的基本类型 <code>int</code>。最后，我们调用 <code>toArray()</code> 方法将流转换为 <code>int[]</code> 数组。</p>
+<p>Java 8 引入了流（Stream）操作，这是一种新的抽象，允许对集合进行高效、声明式的处理。流操作主要用于对集合进行各种转换、过滤、排序等操作，使得处理数据更加简洁、易读。</p>
+<p>流（Stream）的核心特点如下：</p>
+<ol>
+<li><p>声明式编程：流操作使用声明式编程风格，这使得您可以表达想要完成的任务，而不需要指定如何执行任务的详细步骤。</p>
+</li>
+<li><p>无状态：流操作是无状态的，这意味着流操作不会修改底层数据结构。相反，它们通过生成新的结果来处理数据。</p>
+</li>
+<li><p>懒加载：流操作支持懒加载，这意味着操作仅在需要结果时才会执行，从而提高性能。</p>
+</li>
+<li><p>并行化：流操作可以自动并行化处理，这使得在多核处理器上处理大量数据更加高效。</p>
+</li>
+</ol>
+<p>流操作主要分为两类：</p>
+<ol>
+<li><p>中间操作（Intermediate Operations）：这些操作在 Stream 上执行，返回一个新的 Stream。这些操作是惰性的，只有在终止操作被调用时才会执行。例如：filter、map、flatMap 等。</p>
+</li>
+<li><p>终止操作（Terminal Operations）：这些操作会终止 Stream 并生成结果。当终止操作被调用时，所有的中间操作会一次性执行。例如：collect、reduce、forEach、sum 等。</p>
+</li>
+</ol>
+<p>以下是一个简单的 Stream 操作示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; names = Arrays.asList(<span class="string">&quot;John&quot;</span>, <span class="string">&quot;Alice&quot;</span>, <span class="string">&quot;Bob&quot;</span>, <span class="string">&quot;Cathy&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 Stream 操作过滤、转换和排序名字列表</span></span><br><span class="line">List&lt;String&gt; sortedNames = names.stream()</span><br><span class="line">    .filter(name -&gt; name.length() &gt; <span class="number">3</span>)      <span class="comment">// 过滤长度大于 3 的名字</span></span><br><span class="line">    .map(String::toUpperCase)               <span class="comment">// 将名字转换为大写</span></span><br><span class="line">    .sorted()                               <span class="comment">// 对名字进行排序</span></span><br><span class="line">    .collect(Collectors.toList());          <span class="comment">// 将结果收集为一个新的列表</span></span><br><span class="line"></span><br><span class="line">System.out.println(sortedNames);           <span class="comment">// 输出：[ALICE, CATHY]</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，我们使用流操作对名字列表进行过滤、转换和排序。使用 Stream API，我们可以以一种更加声明式、易读的方式完成这些操作。</p>
 
       
     </div>
@@ -393,7 +423,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/Visual%20Studio%20Code%20%E4%B8%AD%E7%9A%84%20Source%20Actions%20%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/Java%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%8D%95%E5%90%91%E7%A7%BB%E5%8A%A8%E5%8E%9F%E5%9B%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -406,7 +436,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/Visual%20Studio%20Code%20%E4%B8%AD%E7%9A%84%20Source%20Actions%20%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B/" class="post-title-link" itemprop="url">Visual Studio Code 中的 Source Actions 功能简介</a>
+          <a href="/2023/04/28/Java%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%8D%95%E5%90%91%E7%A7%BB%E5%8A%A8%E5%8E%9F%E5%9B%A0/" class="post-title-link" itemprop="url">Java 迭代器的单向移动原因</a>
         </h2>
 
         <div class="post-meta-container">
@@ -418,7 +448,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -431,20 +461,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #VisualStudioCode #VSCode #SourceActions #代码重构 #代码生成 #开发工具 </p>
+          <p>时间：2023-04-27<br>标签： #Java #迭代器 #Iterator #单向移动</p>
 <hr>
-<p>在 Visual Studio Code 中，Source Actions 是一组针对源代码进行操作的快捷功能。它们可以帮助您自动执行常见的代码重构和改进任务，例如排序导入、移除未使用的导入、自动生成方法实现等。这些功能可以提高开发效率，减少手动修改代码的需求。</p>
-<p>以下是一些常见的 Source Actions：</p>
+<p>Java 的迭代器（Iterator）设计为只能单向移动的原因主要有以下几点：</p>
 <ol>
-<li> **Organize Imports (整理导入)**：自动整理和优化当前文件的导入语句。它会删除未使用的导入，同时按字母顺序或其他规则对导入进行排序。</li>
-<li> **Generate Getters and Setters (生成 getter 和 setter 方法)**：针对选定的类属性自动生成 getter 和 setter 方法。这可以方便地封装类的内部实现，提供统一的访问接口。</li>
-<li> **Generate Constructors (生成构造函数)**：自动生成构造函数，以便根据类的属性初始化对象。</li>
-<li> **Generate toString(), hashCode() and equals() methods (生成 toString()、hashCode() 和 equals() 方法)**：自动生成类的 toString()、hashCode() 和 equals() 方法，用于实现对象的字符串表示、哈希计算和相等性判断。</li>
-<li> **Extract Method (提取方法)**：将选定的代码片段提取到一个新的方法中，以便重用和简化代码。</li>
-<li> **Extract Variable (提取变量)**：将选定的表达式提取到一个新的变量中，以便重用和简化代码。</li>
+<li><p>简化实现：</p>
+<ul>
+<li>设计迭代器为单向移动可以简化实现，避免反向遍历带来的复杂性。这有助于保持迭代器的轻量级特性，降低内存占用和性能开销。</li>
+</ul>
+</li>
+<li><p>适用于更多场景：</p>
+<ul>
+<li>单向移动的迭代器适用于各种集合，包括链表、数组、树等。反向遍历在某些数据结构（如单向链表）上实现起来较为复杂，因此单向移动的迭代器具有更广泛的适用性。</li>
+</ul>
+</li>
+<li><p>降低使用复杂度：</p>
+<ul>
+<li>单向移动的迭代器在使用时更加直观和简单，用户不需要处理双向移动带来的额外逻辑。这有助于提高代码的可读性和易用性。</li>
+</ul>
+</li>
 </ol>
-<p>要使用 Source Actions，您可以右键单击编辑器中的代码，然后选择 “Source Action” 菜单。此外，您还可以打开命令面板（按 <code>Ctrl+Shift+P</code> 或 <code>Cmd+Shift+P</code>），然后输入 “Source Action” 来查找和执行相应的操作。在使用特定编程语言时，可能需要安装相应的扩展以启用 Source Actions 功能。例如，在使用 Java 时，可以安装 “Java Extension Pack” 扩展来启用这些功能。</p>
-<p>原本 Source Actions 功能并没有设置快捷键，在我们按下 <code>Ctrl+Shift+P</code> 或  <code>Cmd+Shift+P </code>并输入”Source Action” 后，相应的后面有一个齿轮图标，点击该图标按钮可以在弹出的页面中为该功能设置快捷键，例如，<code>Cmd+option+a</code></p>
+<p>尽管 Java 的迭代器（Iterator）只能单向移动，但 Java 提供了另一个名为 ListIterator 的接口，它支持在列表上的双向遍历。ListIterator 继承自 Iterator 接口，添加了向前移动、获取当前索引等方法。当需要双向遍历时，可以考虑使用 ListIterator 接口。不过，ListIterator 仅适用于列表类型的集合，如 ArrayList 和 LinkedList。</p>
+<p>总之，Java 的 Iterator 设计为单向移动，主要是为了简化实现、适用于更多场景以及降低使用复杂度。在需要双向遍历的场景中，可以考虑使用 ListIterator 接口。</p>
 
       
     </div>
@@ -464,7 +502,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

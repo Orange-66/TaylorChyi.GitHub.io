@@ -86,8 +86,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">105</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">203</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">105</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -159,13 +159,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">105</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">105</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E5%9C%A8%20VS%20Code%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20Spring%20Boot%20Extension%20Pack%20%E5%88%9B%E5%BB%BA%20Spring%20Boot%20%E9%A1%B9%E7%9B%AE/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/%E5%9C%A8%20VS%20Code%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20Spring%20Boot%20Extension%20Pack%20%E5%88%9B%E5%BB%BA%20Spring%20Boot%20%E9%A1%B9%E7%9B%AE/" class="post-title-link" itemprop="url">在 VS Code 中使用 Spring Boot Extension Pack 创建 Spring Boot 项目</a>
+          <a href="/2023/04/28/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">工厂模式</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -286,27 +286,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-12<br>标签： #VSCode #SpringBoot #SpringInitializr #Java #项目创建 #依赖管理 #ExtensionPack</p>
+          <p>时间：2022-04-29<br>标签： #DesignPatterns #工厂模式</p>
 <hr>
-<p>以下是使用 VS Code 的 Spring Boot Extension Pack 来创建 Spring Boot 项目的步骤：</p>
-<ol>
-<li>在 VS Code 中，按下 <code>Ctrl + Shift + P</code>（Mac 下为 <code>Cmd + Shift + P</code>）打开命令面板。</li>
-<li>在命令面板中输入 “Spring Initializr”，然后选择 “Spring Initializr: Generate a Maven Project”（或 “Spring Initializr: Generate a Gradle Project”，取决于你喜欢的构建工具）。</li>
-<li>选择 “Java” 作为编程语言。</li>
-<li>输入 Group ID，这通常是你的公司或项目的域名反转，例如 “com.example”。</li>
-<li>输入 Artifact ID，这是你的项目名称，例如 “myproject”。</li>
-<li>选择项目打包方式，推荐选择 “Jar”。</li>
-<li>选择 Java 版本，推荐使用 “11” 或更高版本。</li>
-<li>在依赖列表中，添加所需的依赖，例如：<ul>
-<li>  搜索 “web” 并选择 “Spring Web”（用于创建 Web 应用和 RESTful API）。</li>
-<li>  搜索 “mysql” 或 “postgresql” 并选择对应的 “MySQL Driver” 或 “PostgreSQL Driver”（根据你的数据库类型选择合适的驱动）。</li>
-<li>  搜索 “jpa” 并选择 “Spring Data JPA”（用于实现数据访问层，可选）。</li>
-<li>  根据项目需求，添加其他依赖。</li>
-</ul>
+<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><ul>
+<li><p>  简单工厂</p>
 </li>
-<li>点击 “Finish” 生成项目。选择一个文件夹来保存生成的项目。VS Code 将自动解压项目并打开它。</li>
-</ol>
-<p>至此，你已经使用 VS Code 的 Spring Boot Extension Pack 创建了一个 Spring Boot 项目。</p>
+<li><p>工厂方法</p>
+<p>  疑问1: 工厂方法为什么相对来讲有是个好模式呢？让所有的汽车都实现Car接口，又设计CarFactory接口来让所有的汽车工厂实现，这和直接调用所有汽车类的方法有什么区别么？</p>
+</li>
+<li><p>  抽象工厂</p>
+</li>
+</ul>
 
       
     </div>
@@ -333,7 +323,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E5%9F%BA%E7%B1%BB%E5%AD%90%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E7%A4%BA%E4%BE%8B/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8%E7%9A%84%E7%9B%AE%E7%9A%84%E5%92%8C%E9%9C%80%E6%B1%82/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -346,7 +336,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/%E5%9F%BA%E7%B1%BB%E5%AD%90%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E7%A4%BA%E4%BE%8B/" class="post-title-link" itemprop="url">基类子对象的概念和示例</a>
+          <a href="/2023/04/28/%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8%E7%9A%84%E7%9B%AE%E7%9A%84%E5%92%8C%E9%9C%80%E6%B1%82/" class="post-title-link" itemprop="url">方法引用的目的和需求</a>
         </h2>
 
         <div class="post-meta-container">
@@ -358,7 +348,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -371,94 +361,117 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-11<br>标签： #Java #继承 #基类 #派生类 #子对象</p>
+          <p>时间：2023-04-27<br>标签： #Java #方法引用 #Lambda表达式 #函数式编程</p>
 <hr>
-<p>基类子对象是指在派生类对象中，与基类对应的部分。当创建一个派生类的对象时，这个对象实际上包含了基类的一个实例，这个实例被称为基类子对象。换句话说，基类子对象是派生类对象中继承自基类的那部分属性和方法。</p>
-<p>我们来看一个简单的例子：</p>
-<p>```java</p>
-<p>// 基类<br>class Animal {<br>    String name;<br>​<br>    public void makeSound() {<br>        System.out.println(“The animal makes a sound”);<br>    }<br>}<br>​<br>// 派生类<br>class Dog extends Animal {<br>    String breed;<br>​<br>    public void bark() {<br>        System.out.println(“The dog barks”);<br>    }<br>}<br>​<br>public class Main {<br>    public static void main(String[] args) {<br>        Dog myDog = new Dog();<br>        myDog.name = “Buddy”;<br>        myDog.breed = “Golden Retriever”;<br>        myDog.makeSound();<br>        myDog.bark();<br>    }<br>}```</p>
-<p>在这个例子中，<code>Animal</code>是基类，<code>Dog</code>是派生类。当我们创建一个<code>Dog</code>对象时（<code>Dog myDog = new Dog();</code>），这个对象包含了一个<code>Animal</code>子对象。这个<code>Animal</code>子对象包含了<code>Animal</code>类的属性（如<code>name</code>）和方法（如<code>makeSound()</code>）。</p>
-<p>这就是所谓的基类子对象。从外部看，我们在使用<code>Dog</code>对象时，可以直接访问继承自<code>Animal</code>的属性和方法，实际上就是在操作基类子对象。同时，<code>Dog</code>对象还具有派生类特有的属性（如<code>breed</code>）和方法（如<code>bark()</code>）。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E9%A1%B9%E7%9B%AE%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8spring%20boot%E6%A1%86%E6%9E%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Taylor Chyi">
-      <meta itemprop="description" content="幸福属于那些自得其乐的人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taylor Chyi's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E9%A1%B9%E7%9B%AE%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8spring%20boot%E6%A1%86%E6%9E%B6/" class="post-title-link" itemprop="url">如何查看项目有没有使用spring boot框架</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-19<br>标签： #java #spring #SpringBoot </p>
-<hr>
-<p>要查看项目是否使用了 Spring Boot 框架，可以通过以下方式进行：</p>
+<p>方法引用（Method Reference）在 Java 8 中被引入，主要是为了满足以下需求：</p>
 <ol>
-<li> 查看项目依赖</li>
+<li>简化 Lambda 表达式：方法引用可以简化一些简单的 Lambda 表达式，使代码更加简洁、易读。当 Lambda 表达式的实现仅仅是调用一个已有的方法时，使用方法引用更加直观。例如：</li>
 </ol>
-<p>在项目的 pom.xml 文件中查找是否存在 spring-boot-starter-parent 或 spring-boot-starter-web 等 Spring Boot 相关的依赖。这些依赖通常是 Spring Boot 项目所必需的，并且包含了 Spring Boot 相关的配置和功能。</p>
-<p>例如，下面是一个 Spring Boot 项目的 pom.xml 文件示例：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在上述示例代码中，可以看到该项目的父依赖为 spring-boot-starter-parent，并且项目依赖了 spring-boot-starter-web，这表明该项目是一个基于 Spring Boot 框架构建的 Web 项目。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 Lambda 表达式</span></span><br><span class="line">list.stream().map(str -&gt; str.toUpperCase()).collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用方法引用</span></span><br><span class="line">list.stream().map(String::toUpperCase).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
 <ol start="2">
-<li> 查看启动类<br>在项目的源代码中查找是否存在类似于以下代码的启动类：</li>
+<li><p>复用现有代码：方法引用允许您直接引用现有的静态方法、实例方法或构造函数，从而避免重复编写相同的逻辑。这有助于提高代码的复用性和可维护性。</p>
+</li>
+<li><p>支持函数式编程：方法引用是 Java 对函数式编程的支持的一部分，它允许您将方法作为参数传递给其他方法，或者将方法作为返回值。这使得您可以编写更加灵活、模块化的代码，特别是在处理集合、流（Stream）操作或其他高阶函数时。</p>
+</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(MyApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在上述示例代码中，使用 <code>@SpringBootApplication</code> 注解标注了 <code>MyApplication</code> 类，并且在 <code>main</code> 方法中调用了 <code>SpringApplication.run</code> 方法启动应用程序。这是 Spring Boot 项目的典型启动方式，因此如果存在类似的启动类，则表明该项目是基于 Spring Boot 框架构建的。</p>
-<p>如果以上方式均没有找到 Spring Boot 相关的依赖和启动类，那么该项目可能没有使用 Spring Boot 框架。</p>
+<p>总之，方法引用的引入主要是为了提高代码的简洁性、可读性和复用性，同时支持函数式编程的编程范式。通过使用方法引用，您可以更加简洁地表示现有方法的调用，从而使代码更加整洁、易于理解。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8%EF%BC%88Method%20Reference%EF%BC%89%E7%AE%80%E4%BB%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Taylor Chyi">
+      <meta itemprop="description" content="幸福属于那些自得其乐的人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taylor Chyi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/28/%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8%EF%BC%88Method%20Reference%EF%BC%89%E7%AE%80%E4%BB%8B/" class="post-title-link" itemprop="url">方法引用（Method Reference）简介</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>时间：2023-04-27<br>标签： #Java #方法引用 #Lambda表达式</p>
+<hr>
+<p>方法引用（Method Reference）是 Java 8 引入的一种简化 lambda 表达式的语法。它允许您直接引用现有方法（静态方法、实例方法、构造函数）而无需显式地编写 lambda 表达式。方法引用通常用在函数式接口的实现中，例如在流（Stream）操作或其他高阶函数中。</p>
+<p>方法引用有四种类型：</p>
+<ol>
+<li>静态方法引用：当引用的方法是一个静态方法时，使用类名:: 方法名的形式表示。例如，<code>Integer::parseInt</code> 是 <code>Integer</code> 类的 <code>parseInt</code> 静态方法的引用。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Function&lt;String, Integer&gt; parseInt = Integer::parseInt;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>实例方法引用：当引用的方法是一个实例方法时，使用对象实例:: 方法名的形式表示。例如，<code>str::toUpperCase</code> 是 <code>str</code> 实例的 <code>toUpperCase</code> 方法的引用。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">Supplier&lt;String&gt; toUpperCase = str::toUpperCase;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>类的实例方法引用：当引用的方法是一个实例方法，但需要用类名引用时，使用类名:: 方法名的形式表示。这种情况下，第一个参数会成为方法的调用者。例如，<code>String::compareToIgnoreCase</code> 是 <code>String</code> 类的 <code>compareToIgnoreCase</code> 实例方法的引用。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Comparator&lt;String&gt; ignoreCaseComparator = String::compareToIgnoreCase;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>构造函数引用：当引用的方法是一个类的构造函数时，使用类名:: new 的形式表示。例如，<code>ArrayList::new</code> 是 <code>ArrayList</code> 类的构造函数引用。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Supplier&lt;ArrayList&lt;String&gt;&gt; arrayListSupplier = ArrayList::<span class="keyword">new</span>;</span><br></pre></td></tr></table></figure>
+
+<p>方法引用提供了一种更简洁、易读的方式来表示 lambda 表达式，尤其是在函数签名与现有方法签名完全匹配的情况下。</p>
+<p>在没有方法引用的情况下，我们可以使用 Lambda 表达式来实现上述示例。这里是原始示例（使用方法引用）：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list.stream().map(String::toUpperCase).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+<p>在不使用方法引用的情况下，我们可以将其改写为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list.stream().map(str -&gt; str.toUpperCase()).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+<p>这里，我们使用了 Lambda 表达式 <code>str -&gt; str.toUpperCase()</code> 来替换原始的方法引用 <code>String::toUpperCase</code>。这个 Lambda 表达式接收一个字符串参数 <code>str</code>，并调用其 <code>toUpperCase()</code> 方法将其转换为大写。虽然这种写法相对于方法引用略显冗长，但在不支持方法引用的情况下，它仍然是一种简洁、易读的替代方案。</p>
 
       
     </div>
@@ -478,7 +491,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

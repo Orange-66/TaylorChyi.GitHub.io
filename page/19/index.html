@@ -86,8 +86,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">105</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">203</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">105</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -159,13 +159,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">105</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">105</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E7%90%86%E8%A7%A3%E7%BA%AFis-a%E5%85%B3%E7%B3%BB%E5%92%8Cis-like-a%E5%85%B3%E7%B3%BB/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95%E9%87%8C%E9%9D%A2%E6%88%96%E8%80%85%E5%9C%A8%E4%BB%BB%E6%84%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%86%85%E5%AE%9A%E4%B9%89%E5%86%85%E9%83%A8%E7%B1%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E7%90%86%E8%A7%A3%E7%BA%AFis-a%E5%85%B3%E7%B3%BB%E5%92%8Cis-like-a%E5%85%B3%E7%B3%BB/" class="post-title-link" itemprop="url">理解纯is-a关系和is-like-a关系</a>
+          <a href="/2023/04/19/%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95%E9%87%8C%E9%9D%A2%E6%88%96%E8%80%85%E5%9C%A8%E4%BB%BB%E6%84%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%86%85%E5%AE%9A%E4%B9%89%E5%86%85%E9%83%A8%E7%B1%BB/" class="post-title-link" itemprop="url">一个方法里面或者在任意的作用域内定义内部类</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -286,18 +286,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #多态 #继承 #is-a关系 #is-like-a关系</p>
+          <p>时间：2023-04-18<br>标签： #Java #内部类 </p>
 <hr>
-<p>这段文字主要在讨论两种不同的继承关系：纯 is-a 关系和 is-like-a 关系。</p>
+<p>在一个方法里面或者在任意的作用域内定义内部类。</p>
+<p>这么做有两个理由：</p>
 <ol>
-<li> 纯is-a关系：在这种关系中，子类只覆盖（重写）基类的方法，而不添加任何新方法。这意味着子类对象可以完美地替换基类对象，因为它们具有相同的接口。在这种情况下，多态会处理一切，你不需要知道子类的额外信息。</li>
+<li> 如前所示，你实现了某类型的接口，于是可以创建并返回对其的引用。</li>
+<li> 你要解决一个复杂的问题，想创建一个类来辅助你的解决方案，但是又不希望这个类是公共可用的。</li>
 </ol>
-<p>这种方式看起来是继承的理想方式，但它并非适用于所有场景。</p>
-<ol start="2">
-<li> is-like-a关系：在这种关系中，子类不仅覆盖基类的方法，还扩展了基类的接口，添加了额外的方法。子类与基类具有相同的基本接口，但还具有其他特性，需要额外的方法来实现。</li>
-</ol>
-<p>这种方法在某些情况下也是有用的，但它有一个缺点。一旦你向上转型（upcast），你就不能调用子类中扩展的那部分接口的方法。在某些情况下，你可能需要重新发现对象的确切类型，以便访问该类型的扩展方法。</p>
-<p>这段文字的目的是让你了解在设计类的继承结构时，可能会遇到这两种不同的情况。在日常开发过程中，根据问题的具体需求，你可能会遇到这两种情况。关键是理解这两种关系的优缺点，并在实际情况中做出合适的设计选择。</p>
 
       
     </div>
@@ -324,7 +320,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E7%90%86%E8%A7%A3%E6%8E%A5%E5%8F%A3%EF%BC%88Interface%EF%BC%89%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%A6%82%E5%BF%B5/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/zsh%20command%20not%20found%20hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -337,7 +333,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E7%90%86%E8%A7%A3%E6%8E%A5%E5%8F%A3%EF%BC%88Interface%EF%BC%89%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">理解接口（Interface）的抽象概念</a>
+          <a href="/2023/04/19/zsh%20command%20not%20found%20hexo/" class="post-title-link" itemprop="url">zsh command not found hexo</a>
         </h2>
 
         <div class="post-meta-container">
@@ -349,7 +345,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -362,15 +358,41 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-14<br>标签： #Java #接口 #面向对象 #抽象概念</p>
+          <p>时间：2023-04-18<br>标签： #zsh #hexo #环境配置</p>
 <hr>
 <blockquote>
-<p>我注意到一件事，在我们学习 onjava8这本书的时候，里面是不是的会提及接口（interface）这一概念，但是有的时候似乎并不是说的关键字 interface，而是一种抽象概念的接口—用以表达的是一个类对外开放的那些实现的方，是一种基于 java 面向对象思想而设计的一种抽象层面，即，对外提供接口而不暴露具体实现的这么一种思想，的表述？</p>
+<p>zsh: command not found: hexo</p>
 </blockquote>
-<p>你的理解是正确的。在 Java 中，当我们谈论接口（interface）时，它可能有两层含义。一种是具体的关键字 <code>interface</code>，它用于创建一种特殊的类型，这种类型只包含抽象方法和静态常量。另一种含义是抽象概念上的接口，它表示一个类对外暴露的方法和属性，用于与其他类进行交互。</p>
-<p>抽象概念上的接口强调了面向对象编程的一种思想：封装。封装是指将实现细节隐藏起来，仅向外界提供有限的、可控的访问途径。这样，外部代码只需要关注类的接口（即暴露的方法和属性），而不需要了解其内部实现。这使得我们可以在不影响其他代码的情况下，随时更改类的内部实现。</p>
-<p>Java的关键字 <code>interface</code> 实际上也是基于这种抽象概念的接口思想设计的。通过使用关键字 <code>interface</code> 创建的接口类型，我们可以定义一组方法，表示一种规范或协议，实现该接口的类需要遵循这个规范。这样，我们就可以基于接口而非具体实现编写代码，从而提高了代码的灵活性和可扩展性。</p>
-<p>总之，Java中的接口（interface）既可以表示一种具体的类型（关键字 <code>interface</code>），也可以表示一种抽象概念（类对外暴露的方法和属性）。这两种含义都是基于面向对象编程的封装思想而设计的，旨在提高代码的可维护性和可扩展性。</p>
+<p>这个错误通常是由于 Hexo 没有正确安装或者没有将其添加到系统路径中导致的。请按照以下步骤尝试解决这个问题：</p>
+<ol>
+<li><p> 确保您已经安装了 Node.js 和 npm。您可以在命令行中运行以下命令来检查它们的版本：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>如果您还没有安装它们，请访问 <a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js官方网站</a>下载并安装相应的版本。</p>
+</li>
+<li><p> 全局安装 Hexo。在命令行中运行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>这将在全局范围内安装 Hexo 命令行工具。在安装过程中，可能需要管理员权限。</p>
+</li>
+<li><p> 检查 Hexo 是否已成功安装。在命令行中运行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<p>如果您看到了 Hexo 的版本信息，那么说明 Hexo 已经成功安装。接下来，您可以继续按照之前的说明操作。</p>
+</li>
+</ol>
+<p>如果您仍然遇到“command not found”的错误，那么可能是因为Hexo的可执行文件没有被添加到系统路径中。请按照以下步骤进行操作：</p>
+<ol>
+<li><p> 找到 Hexo 的安装路径。运行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config get prefix</span><br></pre></td></tr></table></figure>
+<p>这将显示 npm 的全局安装路径。Hexo 的可执行文件通常位于该路径下的 <code>bin</code> 文件夹中。</p>
+</li>
+<li><p> 将Hexo的可执行文件路径添加到系统路径中。对于macOS和Linux用户，您需要编辑<code>~/.bashrc</code>（Bash用户）或<code>~/.zshrc</code>（Zsh用户）文件。对于Windows用户，您需要编辑环境变量。具体操作方法如下：</p>
+</li>
+</ol>
+<ul>
+<li>  <strong>macOS/Linux</strong>：打开 <code>~/.bashrc</code> 或 <code>~/.zshrc</code> 文件，添加以下内容（==替换 <code>&lt;npm-global-path&gt;</code> 为实际路径==）：<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:&lt;npm-global-path&gt;/bin</span><br></pre></td></tr></table></figure>
+然后运行以下命令以使更改生效：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+或<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure></li>
+<li>  <strong>Windows</strong>：右键点击“计算机”（或“此电脑”）图标，选择“属性”。在“系统”窗口中，点击“高级系统设置” &gt; “环境变量”。在“系统变量”区域中，找到名为“Path”的变量，点击“编辑”按钮。在“编辑环境变量”窗口中，将Hexo的可执行文件路径（<code>&lt;npm-global-path&gt;\bin</code>）添加到变量值中。请注意，不同路径之间应使用分号（<code>;</code>）分隔。</li>
+</ul>
 
       
     </div>
@@ -397,7 +419,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/16/%E7%BC%96%E5%86%99%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E4%B8%80%E6%9D%A1%E8%89%AF%E5%A5%BD%E8%A7%84%E8%8C%83/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E4%B8%BA%E4%BB%80%E4%B9%88Integer.toString(i)%E6%98%AF%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E8%80%8C%E4%B8%8D%E6%98%AFi.toString()/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -410,7 +432,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/16/%E7%BC%96%E5%86%99%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E4%B8%80%E6%9D%A1%E8%89%AF%E5%A5%BD%E8%A7%84%E8%8C%83/" class="post-title-link" itemprop="url">编写构造器的一条良好规范</a>
+          <a href="/2023/04/19/%E4%B8%BA%E4%BB%80%E4%B9%88Integer.toString(i)%E6%98%AF%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E8%80%8C%E4%B8%8D%E6%98%AFi.toString()/" class="post-title-link" itemprop="url">为什么Integer.toString(i)是静态方法而不是i.toString()</a>
         </h2>
 
         <div class="post-meta-container">
@@ -422,7 +444,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-16 00:00:00 / Modified: 13:35:55" itemprop="dateCreated datePublished" datetime="2023-04-16T00:00:00+01:00">2023-04-16</time>
+      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
     </span>
 
   
@@ -435,7 +457,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>做尽量少的事让对象进入良好状态。如果有可能的话，尽量不要调用类中的任何方法。在基类的构造器中能安全调用的只有基类的 <strong>final</strong> 方法（这也适用于可被看作是 <strong>final</strong> 的 <strong>private</strong> 方法）。这些方法不能被重写，因此不会产生意想不到的结果。你可能无法永远遵循这条规范，但应该朝着它努力。</p>
+          <p>时间：2023-04-18<br>标签： #Java #Integer #静态方法</p>
+<hr>
+<p>Java 中 <code>Integer.toString(i)</code> 使用静态方法的原因主要有以下几点：</p>
+<ol>
+<li><strong>基本类型与包装类</strong>：Java中的<code>int</code>是基本类型，而非对象。基本类型没有方法，因此不能像对象一样调用方法（如<code>i.toString()</code>）。为了解决这个问题，Java提供了<code>Integer</code>包装类，它包含一些静态方法，如<code>toString()</code>，可以将基本类型<code>int</code>转换为字符串表示。</li>
+<li><strong>性能考虑</strong>：将<code>int</code>类型值转换为字符串表示时，使用静态方法可以避免创建不必要的<code>Integer</code>对象。如果使用<code>i.toString()</code>，需要先将<code>int</code>类型转换为<code>Integer</code>对象，然后调用<code>toString()</code>方法。这会产生额外的对象创建和垃圾回收开销。</li>
+<li><strong>易用性</strong>：静态方法可以直接使用类名调用，而无需创建对象。这使得<code>Integer.toString(i)</code>在使用上更加简便。</li>
+</ol>
+<p>总之，<code>Integer.toString(i)</code>设计为静态方法，主要是为了解决基本类型与包装类之间的差异，提高性能，并提供更简便的使用方式。</p>
 
       
     </div>
@@ -455,7 +485,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/18/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/20/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/18/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/20/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

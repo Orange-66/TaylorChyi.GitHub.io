@@ -86,8 +86,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">105</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">203</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">105</span></a></li>
         <li class="menu-item menu-item-curriculum-vitae"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>Curriculum Vitae</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -159,13 +159,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">105</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">105</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E8%AE%BF%E9%97%AE%E8%AF%B4%E6%98%8E%E7%AC%A6/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%BA%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BC%98%E5%8A%BF%E5%8F%8A%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -261,7 +261,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/%E8%AE%BF%E9%97%AE%E8%AF%B4%E6%98%8E%E7%AC%A6/" class="post-title-link" itemprop="url">访问说明符</a>
+          <a href="/2023/04/28/%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%BA%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BC%98%E5%8A%BF%E5%8F%8A%E7%BA%A6%E6%9D%9F%E6%9D%A1%E4%BB%B6/" class="post-title-link" itemprop="url">迭代器为轻量级对象的优势及约束条件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -273,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -286,16 +286,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #java #访问说明符</p>
+          <p>时间：2023-04-27<br>标签： #迭代器 #轻量级对象 #优势 #约束条件</p>
 <hr>
-<p>访问说明符（Access Modifiers）是Java中用于设置类、方法或属性访问级别的关键字。它们决定了其他类或对象如何访问特定类、方法或属性。Java中有四种访问说明符：</p>
+<p>迭代器（Iterator）是一种设计模式，用于在不暴露集合内部结构的情况下，访问一个聚合对象的各个元素。以下是对上述内容的逻辑关系解释：</p>
 <ol>
-<li><code>public</code>：公共访问级别，表示类、方法或属性对所有其他类都是可见的和可访问的。任何类都可以访问public成员。</li>
-<li><code>protected</code>：受保护访问级别，表示类、方法或属性对同一个包（package）中的其他类和所有子类是可见的和可访问的。这意味着，只有在相同包中的类和继承了此类的子类可以访问protected成员。</li>
-<li><code>private</code>：私有访问级别，表示类、方法或属性只能被其所在类访问。私有成员不能被其他类访问，也不能被子类访问。</li>
-<li>默认（没有访问说明符，也称为“包访问级别”或“友元访问级别”）：当不使用任何访问说明符时，类、方法或属性对同一个包（package）中的其他类是可见的和可访问的。这意味着，只有在相同包中的类可以访问默认成员。</li>
+<li><p>轻量级对象的定义：</p>
+<ul>
+<li>轻量级对象（Lightweight Object）指的是创建和使用该对象所需资源较少的对象。相对于重量级对象，轻量级对象具有较小的内存占用和较低的性能开销。</li>
+</ul>
+</li>
+<li><p>迭代器作为轻量级对象的优势：</p>
+<ul>
+<li>创建代价小：由于迭代器是轻量级对象，创建它所需的资源较少。这使得在需要频繁创建和销毁迭代器的场景中，性能开销较小。</li>
+<li>访问集合元素：迭代器提供了统一的接口，方便地遍历不同类型的集合，而无需暴露集合内部结构。这有助于实现代码的解耦和复用。</li>
+</ul>
+</li>
+<li><p>迭代器的奇怪约束：</p>
+<ul>
+<li>由于迭代器的轻量级特性，有时它们的实现会受到一定的约束。例如，为了减小内存占用，迭代器可能无法保存遍历过程中的完整状态信息。在这种情况下，可能需要遵循一定的使用约定，如：避免在遍历过程中修改集合、确保多个迭代器之间互不干扰等。</li>
+</ul>
+</li>
 </ol>
-<p>访问说明符使得开发人员能够在类的设计中明确地定义哪些部分可以被其他类访问，哪些部分应该对外部隐藏。这有助于实现封装和信息隐藏，是面向对象编程的重要原则。</p>
+<p>综上所述，迭代器作为轻量级对象，具有创建代价小、方便访问集合元素的优势，但在实现上可能受到一些约束。在实际使用中，需要注意遵循相应的约定，以确保迭代器的正确性能和功能表现。</p>
 
       
     </div>
@@ -322,7 +334,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E9%81%8D%E5%8E%86map/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -335,7 +347,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/%E9%81%8D%E5%8E%86map/" class="post-title-link" itemprop="url">遍历map</a>
+          <a href="/2023/04/28/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">适配器模式</a>
         </h2>
 
         <div class="post-meta-container">
@@ -347,7 +359,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -360,17 +372,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #Java #map </p>
-<hr>
-<p>在 Java 中，遍历 Map 的方式有很多，以下是常见的三种方法：</p>
-<p>方法一：使用 keySet()</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, Integer&gt; map = ...; <span class="comment">// 假设这是你的Map</span></span><br><span class="line"><span class="keyword">for</span> (String key : map.keySet()) &#123;</span><br><span class="line">    Integer value = map.get(key);</span><br><span class="line">    System.out.println(<span class="string">&quot;Key: &quot;</span> + key + <span class="string">&quot;, Value: &quot;</span> + value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>方法二：使用 entrySet()</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, Integer&gt; map = ...; <span class="comment">// 假设这是你的Map</span></span><br><span class="line"><span class="keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) &#123;</span><br><span class="line">    String key = entry.getKey();</span><br><span class="line">    Integer value = entry.getValue();</span><br><span class="line">    System.out.println(<span class="string">&quot;Key: &quot;</span> + key + <span class="string">&quot;, Value: &quot;</span> + value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>方法三：使用 Java 8 的 forEach() 和 Lambda 表达式</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, Integer&gt; map = ...; <span class="comment">// 假设这是你的Map</span></span><br><span class="line">map.forEach((key, value) -&gt; System.out.println(<span class="string">&quot;Key: &quot;</span> + key + <span class="string">&quot;, Value: &quot;</span> + value));</span><br></pre></td></tr></table></figure>
-<p>以上是遍历 Map 的三种常见方法，你可以根据实际情况选择合适的方法。</p>
-
+          
       
     </div>
 
@@ -396,7 +398,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/19/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E7%9B%AE%E7%9A%84%E4%BB%A5%E5%8F%8A%E7%94%B1%E6%9D%A5/">
+    <link itemprop="mainEntityOfPage" href="http://taylorchyi.xyz/2023/04/28/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88OOP%EF%BC%89%E4%B8%8E%E5%86%85%E5%AD%98%E4%BA%89%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -409,7 +411,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/19/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E7%9B%AE%E7%9A%84%E4%BB%A5%E5%8F%8A%E7%94%B1%E6%9D%A5/" class="post-title-link" itemprop="url">抽象类的目的以及由来</a>
+          <a href="/2023/04/28/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88OOP%EF%BC%89%E4%B8%8E%E5%86%85%E5%AD%98%E4%BA%89%E7%94%A8/" class="post-title-link" itemprop="url">面向对象编程（OOP）与内存争用</a>
         </h2>
 
         <div class="post-meta-container">
@@ -421,7 +423,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-04-19 00:00:00 / Modified: 04:42:47" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:00+01:00">2023-04-19</time>
+      <time title="Created: 2023-04-28 00:00:00 / Modified: 05:11:41" itemprop="dateCreated datePublished" datetime="2023-04-28T00:00:00+01:00">2023-04-28</time>
     </span>
 
   
@@ -434,10 +436,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>时间：2023-04-18<br>标签： #java #抽象类 #由来</p>
+          <p>时间：2023-04-27<br>标签： #面向对象编程 #内存争用 #共享状态</p>
 <hr>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>一种介于普通类和接口之间的折中手段</p>
-<h1 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h1><p>对于像 <strong>Instrument</strong> 那样的抽象类来说，它的对象几乎总是没有意义的。创建一个抽象类是为了通过通用接口操纵一系列类。因此，<strong>Instrument</strong> 只是表示接口，不是具体实现，所以创建一个 <strong>Instrument</strong> 的对象毫无意义，我们可能希望阻止用户这么做。通过让 <strong>Instrument</strong> 所有的方法产生错误，就可以达到这个目的，但是这么做会延迟到运行时才能得知错误信息，并且需要用户进行可靠、详尽的测试。最好能在编译时捕捉问题。</p>
+<p>面向对象编程（OOP）是一种编程范式，其核心概念包括类、对象和继承。在 OOP 中，程序被组织为对象，这些对象具有数据（属性）和操作数据的方法。由于 OOP 允许在对象之间共享状态，因此在多线程环境中可能会导致内存争用。</p>
+<p>以下是为什么 OOP 语言可能会产生内存争用的原因：</p>
+<ol>
+<li>共享状态：OOP 语言通常允许对象之间共享状态。当多个线程访问和修改相同的对象或数据时，可能会导致数据不一致或不可预测的行为。例如，两个线程同时访问并修改同一个对象的属性可能会导致意外的结果。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Counter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">increment</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>Counter</code> 类有一个 <code>count</code> 属性和一个 <code>increment</code> 方法。如果多个线程同时访问和修改 <code>count</code> 属性，它们可能会争用这个共享状态，导致数据不一致。</p>
+<ol start="2">
+<li>非原子操作：在 OOP 语言中，对共享状态的修改可能不是原子的。非原子操作是指在执行过程中可能被其他操作中断的操作。当多个线程在非原子操作上争用时，可能会导致不正确的结果。</li>
+</ol>
+<p>在上面的 <code>Counter</code> 示例中，<code>increment</code> 方法是非原子的，因为它包含读取、修改和写入 <code>count</code> 属性的三个操作。在多线程环境中，这可能导致丢失更新或不一致的状态。</p>
+<p>要解决 OOP 语言中的内存争用问题，开发人员通常需要使用同步机制（如互斥锁、信号量等）来保护共享状态。这些同步机制可以确保在同一时间只有一个线程可以访问和修改共享数据，从而防止内存争用。然而，同步也可能导致性能下降和死锁等问题，因此在实践中需要谨慎使用。</p>
 
       
     </div>
@@ -457,7 +470,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
